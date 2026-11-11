@@ -55,3 +55,7 @@ STORIES.splice(3, 0, {
 ## Hébergement
 Site statique : déposer le dossier tel quel sur Netlify, GitHub Pages, OVH… (aucune étape de build).
 Ouvrir via http(s) ou directement `index.html` ; les polices Google (Fredoka, Nunito) nécessitent une connexion.
+
+## Process Git
+- Toujours travailler sur une branche dédiée et ouvrir une pull request vers `main` ; ne jamais pousser directement sur `main`.
+- Une fois la PR fusionnée, repartir de `main` à jour pour la suite (nouvelle branche ou branche réinitialisée), sans empiler de commits sur l'historique déjà fusionné.
