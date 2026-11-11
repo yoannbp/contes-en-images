@@ -1752,16 +1752,40 @@ function go(n, t) {
   show(n);
   say(story.scenes[n].text, t, function () { guard = setTimeout(function () { go(n + 1, t); }, 900); });
 }
+/* Prononciation : mot affiché -> écriture phonétique, appliquée seulement à la voix (pas au texte affiché). */
+var PRONO = { 'Gizeh': 'Guiza' };
+function spoken(text) {
+  var keys = Object.keys(PRONO);
+  if (!keys.length) return { s: text, map: function (i) { return i; } };
+  var re = new RegExp(keys.join('|'), 'g'), out = '', last = 0, segs = [], m;
+  while ((m = re.exec(text))) {
+    out += text.slice(last, m.index); var a = out.length;
+    out += PRONO[m[0]];
+    segs.push({ a: a, b: out.length, from: m.index, len: m[0].length });
+    last = m.index + m[0].length;
+  }
+  out += text.slice(last);
+  return { s: out, map: function (i) {
+    var shift = 0;
+    for (var k = 0; k < segs.length; k++) {
+      var g = segs[k];
+      if (i < g.a) break;
+      if (i < g.b) return g.from;
+      shift = g.from + g.len - g.b;
+    }
+    return i + shift;
+  } };
+}
 function say(text, t, done) {
   setCaption(text);
   var over = false;
   function fin() { if (over || t !== token) return; over = true; clearTimeout(guard); done(); }
   var est = Math.max(3500, text.length * 85);
   if (!tts) { guard = setTimeout(fin, est); return; }
-  var u = new SpeechSynthesisUtterance(text);
+  var sp = spoken(text), u = new SpeechSynthesisUtterance(sp.s);
   u.lang = 'fr-FR'; u.rate = .86; u.pitch = 1.12;
   if (frVoice) u.voice = frVoice;
-  u.onboundary = function (e) { if (t === token) light(e.charIndex || 0); };
+  u.onboundary = function (e) { if (t === token) light(sp.map(e.charIndex || 0)); };
   u.onend = fin;
   u.onerror = function () { clearTimeout(guard); guard = setTimeout(fin, est); };
   speechSynthesis.cancel();
