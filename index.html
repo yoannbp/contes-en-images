@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Contes en images</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="wrap">
+  <header>
+    <h1>Contes en <span>images</span></h1>
+    <p class="lead">Touche une image pour écouter l'histoire. Les dessins apparaissent un par un pendant que l'histoire est racontée.</p>
+  </header>
+  <ul class="shelf" id="shelf"></ul>
+  <p class="foot">L'histoire est lue par la voix française de l'appareil, avec une petite musique douce en fond. Si tu n'entends rien, vérifie que le son n'est pas coupé.</p>
+</main>
+
+<section class="stage" id="stage" role="dialog" aria-modal="true" aria-labelledby="stTitle" hidden>
+  <div class="stage-in">
+    <div class="stage-bar">
+      <h2 id="stTitle"></h2>
+      <button class="btn" id="close" type="button">Fermer</button>
+    </div>
+    <div class="frame" id="frame"></div>
+    <p class="caption" id="caption" aria-live="polite"></p>
+    <ol class="strip" id="strip"></ol>
+    <div class="controls">
+      <button class="btn main" id="toggle" type="button"></button>
+      <button class="btn" id="again" type="button">Recommencer</button>
+    </div>
+  </div>
+</section>
+
+<audio id="bed" loop preload="auto" src="bed.mp3"></audio>
+<audio id="voice" preload="none"></audio>
+
+<script src="app.js"></script>
+
+</body></html>
