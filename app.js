@@ -1968,7 +1968,7 @@ function go(n, t) {
 }
 /* Prononciation : mot affiché -> écriture phonétique, appliquée seulement à la voix (pas au texte affiché). */
 var PRONO = {
-  'Gizeh': 'Guizé', 'Taj Mahal': 'Taj Mahal', 'Mumbai': 'Moumbaï', 'Washington D.C.': 'Washinnetonne Dici.',
+  'Gizeh': 'Guizé', 'Taj Mahal': 'Taj Mahal', 'Mumbai': 'Moumbaï', 'Washington D.C.': 'Washinnetonne Dé Cé.',
   'Reykjavik': 'Rèkiavik', 'Guédiawaye': 'Guédiaouaï', 'Banjul': 'Bandjoul', 'Mumtaz Mahal': 'Moumtaz Mahal',
   'Shah Jahan': 'Chah Djahan', 'Beethoven': 'Bétovène', 'Bollywood': 'Bolliwoud', 'Big Ben': 'Bigue Bènn',
   'Westminster': 'Ouèstminster', 'Burj Khalifa': 'Bourdj Khalifa', 'Abou Dhabi': 'Abou Dabi', 'Jakarta': 'Djakarta',
