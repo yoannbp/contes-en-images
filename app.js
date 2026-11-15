@@ -1975,7 +1975,7 @@ var PRONO = {
   'Brunei': 'Brunéye', 'Fuji': 'Foudji', 'Machu Picchu': 'Matchou Pitchou', 'Salar d’Uyuni': 'Salar d’Ouyouni',
   'Buenos Aires': 'Bouénoce Aéiresse', 'Rio de Janeiro': 'Rio de Janéiro', 'Brasilia': 'Brazilia', 'Montevideo': 'Montévidéo',
   'La Boca': 'La Boka', 'Sucre': 'Soucré', 'San José': 'San José', 'Kingston': 'Kinneugstonne', 'Nassau': 'Nasso',
-  'New York': 'Niou Yorque', 'New Delhi': 'Niou Dèli', 'Sierra Leone': 'Siéra Léone', 'Tunis': 'Tunisse',
+  'New York': 'Niou Yorque', 'New Delhi': 'Niou Dèli', 'Sierra Leone': 'Siéra Léone', 'Tunis': 'Tunisse', 'Dubaï': 'Doubaï',
   'Let’s go': 'Lètse go !', 'fish and chips': 'fiche ènd tchipse', 'OK': 'Oké', 'Wow': 'Woo'
 };
 function spoken(text) {
