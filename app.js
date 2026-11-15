@@ -1974,7 +1974,7 @@ var PRONO = {
   'Westminster': 'Ouèstminster', 'Burj Khalifa': 'Bourdj Khalifa', 'Abou Dhabi': 'Abou Dabi', 'Jakarta': 'Djakarta',
   'Brunei': 'Brunéï', 'Fuji': 'Foudji', 'Machu Picchu': 'Matchou Pitchou', 'Salar d’Uyuni': 'Salar d’Ouyouni',
   'Buenos Aires': 'Bouénos Aïrès', 'Rio de Janeiro': 'Rio de Janéiro', 'Brasilia': 'Brazilia', 'Montevideo': 'Montévidéo',
-  'La Boca': 'La Boka', 'Sucre': 'Soucré', 'San José': 'San José', 'Kingston': 'Kingstonne', 'Nassau': 'Nasso',
+  'La Boca': 'La Boka', 'Sucre': 'Soucré', 'San José': 'San José', 'Kingston': 'Kinnegstonne', 'Nassau': 'Nasso',
   'New York': 'Niou Yorque', 'New Delhi': 'Niou Dèli', 'Sierra Leone': 'Siéra Léone', 'Tunis': 'Tunisse',
   'Let’s go': 'Lètse go', 'fish and chips': 'fiche ènd tchipse', 'OK': 'Okéï', 'Wow': 'Waou'
 };
