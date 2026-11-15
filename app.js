@@ -1967,11 +1967,22 @@ function go(n, t) {
   say(story.scenes[n].text, t, function () { guard = setTimeout(function () { go(n + 1, t); }, 900); });
 }
 /* Prononciation : mot affiché -> écriture phonétique, appliquée seulement à la voix (pas au texte affiché). */
-var PRONO = { 'Gizeh': 'Guizé', 'Taj Mahal': 'Taj Mahal', 'Mumbai': 'Moumbaï', 'Washington D.C.': 'Ouachington Dî Cî.' };
+var PRONO = {
+  'Gizeh': 'Guizé', 'Taj Mahal': 'Taj Mahal', 'Mumbai': 'Moumbaï', 'Washington D.C.': 'Ouachington Dî Cî.',
+  'Reykjavik': 'Rèkiavik', 'Guédiawaye': 'Guédiaouaï', 'Banjul': 'Bandjoul', 'Mumtaz Mahal': 'Moumtaz Mahal',
+  'Shah Jahan': 'Chah Djahan', 'Beethoven': 'Bétovène', 'Bollywood': 'Bolliwoud', 'Big Ben': 'Bigue Bènn',
+  'Westminster': 'Ouèstminster', 'Burj Khalifa': 'Bourdj Khalifa', 'Abou Dhabi': 'Abou Dabi', 'Jakarta': 'Djakarta',
+  'Brunei': 'Brunéï', 'Fuji': 'Foudji', 'Machu Picchu': 'Matchou Pitchou', 'Salar d’Uyuni': 'Salar d’Ouyouni',
+  'Buenos Aires': 'Bouénos Aïrès', 'Rio de Janeiro': 'Rio de Janéiro', 'Brasilia': 'Brazilia', 'Montevideo': 'Montévidéo',
+  'La Boca': 'La Boka', 'Sucre': 'Soucré', 'San José': 'San José', 'Kingston': 'Kingstonne', 'Nassau': 'Nasso',
+  'New York': 'Niou Yorque', 'New Delhi': 'Niou Dèli', 'Sierra Leone': 'Siéra Léone', 'Tunis': 'Tunisse',
+  'Let’s go': 'Lètse go', 'fish and chips': 'fiche ènd tchipse', 'OK': 'Okéï', 'Wow': 'Waou'
+};
 function spoken(text) {
   var keys = Object.keys(PRONO);
   if (!keys.length) return { s: text, map: function (i) { return i; } };
-  var re = new RegExp(keys.join('|'), 'g'), out = '', last = 0, segs = [], m;
+  keys.sort(function (a, b) { return b.length - a.length; });   /* mot entier : « Tunis » ne doit pas toucher « Tunisie » */
+  var re = new RegExp('(?:' + keys.join('|') + ')(?![A-Za-zÀ-ÿ])', 'g'), out = '', last = 0, segs = [], m;
   while ((m = re.exec(text))) {
     out += text.slice(last, m.index); var a = out.length;
     out += PRONO[m[0]];
