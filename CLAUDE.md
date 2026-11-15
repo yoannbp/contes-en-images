@@ -7,6 +7,8 @@ et des dessins SVG apparaissent au fil de la narration. Projet personnel de Paul
 - `index.html` : structure de la page (étagère de cartes, lecteur plein écran, une balise `<audio>` (voix)).
 - `style.css` : styles.
 - `app.js` : tout le reste, en un seul script classique (pas de module, pas de bibliothèque, pas de build).
+- `prono.html` : page à part pour écouter, modifier et valider les prononciations (`PRONO`). Générée par `python3 scripts/build_prono.py` :
+  la relancer après chaque changement de `PRONO` et commiter le résultat.
 - `scripts/check.py` : vérifie que toutes les scènes s'affichent (voir « Vérifier »).
 
 ## Structure de `app.js` (dans l'ordre, repérer les commentaires `/* ---------- … ---------- */`)
