@@ -1968,15 +1968,15 @@ function go(n, t) {
 }
 /* Prononciation : mot affiché -> écriture phonétique, appliquée seulement à la voix (pas au texte affiché). */
 var PRONO = {
-  'Gizeh': 'Guizé', 'Taj Mahal': 'Taj Mahal', 'Mumbai': 'Moumbaï', 'Washington D.C.': 'Washinnetonne Dé Cé.',
-  'Reykjavik': 'Rèkiavik', 'Guédiawaye': 'Guédiaouaï', 'Banjul': 'Bandjoul', 'Mumtaz Mahal': 'Moumtaz Mahal',
-  'Shah Jahan': 'Chah Djahan', 'Beethoven': 'Bétovène', 'Bollywood': 'Bolliwoud', 'Big Ben': 'Bigue Bènn',
-  'Westminster': 'Ouèstminster', 'Burj Khalifa': 'Bourdj Khalifa', 'Abou Dhabi': 'Abou Dabi', 'Jakarta': 'Djakarta',
-  'Brunei': 'Brunéï', 'Fuji': 'Foudji', 'Machu Picchu': 'Matchou Pitchou', 'Salar d’Uyuni': 'Salar d’Ouyouni',
-  'Buenos Aires': 'Bouénos Aïresse', 'Rio de Janeiro': 'Rio de Janéiro', 'Brasilia': 'Brazilia', 'Montevideo': 'Montévidéo',
-  'La Boca': 'La Boka', 'Sucre': 'Soucré', 'San José': 'San José', 'Kingston': 'Kinnegstonne', 'Nassau': 'Nasso',
+  'Gizeh': 'Guizé', 'Taj Mahal': 'Taje Mahal', 'Mumbai': 'Moumbaille', 'Washington D.C.': 'Washinnegtône Di Ci',
+  'Reykjavik': 'Rèkiavique', 'Guédiawaye': 'Guédiaouaiye', 'Banjul': 'Bandjoul', 'Mumtaz Mahal': 'Moumtaz Mahal',
+  'Shah Jahan': 'Chah Djahan', 'Beethoven': 'Bètoveune', 'Bollywood': 'Bolliwoude', 'Big Ben': 'Bigue Bènn',
+  'Westminster': 'ouést-mine-steur', 'Burj Khalifa': 'Bourj Khalifa', 'Abou Dhabi': 'Abou Dabi', 'Jakarta': 'Djakarta',
+  'Brunei': 'Brunéye', 'Fuji': 'Foudji', 'Machu Picchu': 'Matchou Pitchou', 'Salar d’Uyuni': 'Salar d’Ouyouni',
+  'Buenos Aires': 'Bouénoce Aéiresse', 'Rio de Janeiro': 'Rio de Janéiro', 'Brasilia': 'Brazilia', 'Montevideo': 'Montévidéo',
+  'La Boca': 'La Boka', 'Sucre': 'Soucré', 'San José': 'San José', 'Kingston': 'Kinneugstonne', 'Nassau': 'Nasso',
   'New York': 'Niou Yorque', 'New Delhi': 'Niou Dèli', 'Sierra Leone': 'Siéra Léone', 'Tunis': 'Tunisse',
-  'Let’s go': 'Lètse go', 'fish and chips': 'fiche ènd tchipse', 'OK': 'Okéï', 'Wow': 'Waou'
+  'Let’s go': 'Lètse go !', 'fish and chips': 'fiche ènd tchipse', 'OK': 'Oké', 'Wow': 'Woo'
 };
 function spoken(text) {
   var keys = Object.keys(PRONO);
