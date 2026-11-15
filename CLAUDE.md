@@ -1,13 +1,12 @@
 # Contes en images
 
 Site web pour enfants (lecture seule, sans serveur ni build) : l'enfant touche une image, une histoire est lue à voix haute
-et des dessins SVG apparaissent au fil de la narration. Projet personnel de Yoann, en français.
+et des dessins SVG apparaissent au fil de la narration. Projet personnel de Paul, en français.
 
 ## Fichiers
-- `index.html` : structure de la page (étagère de cartes, lecteur plein écran, deux balises `<audio>`).
+- `index.html` : structure de la page (étagère de cartes, lecteur plein écran, une balise `<audio>` (voix)).
 - `style.css` : styles.
 - `app.js` : tout le reste, en un seul script classique (pas de module, pas de bibliothèque, pas de build).
-- `bed.mp3` : musique douce de fond (volume bas pendant la lecture).
 - `scripts/check.py` : vérifie que toutes les scènes s'affichent (voir « Vérifier »).
 
 ## Structure de `app.js` (dans l'ordre, repérer les commentaires `/* ---------- … ---------- */`)
@@ -37,15 +36,18 @@ STORIES.splice(3, 0, {
 ## Règles d'écriture du texte (la voix lit tel quel)
 - Apostrophes et guillemets typographiques : `’`, jamais `'` dans le texte français (le texte est entre quotes simples en JS).
 - Écrire les nombres comme ils doivent être lus : « 1,4 milliard » (virgule collée), « moins 25 degrés », « 4 807 mètres ».
-- Garder le texte de Yoann ; corriger seulement l'orthographe. Signaler les erreurs de fait à Yoann, ne pas les corriger sans accord.
+- Garder le texte de Paul ; corriger seulement l'orthographe. Signaler les erreurs de fait à Paul, ne pas les corriger sans accord.
 - Dessins : respecter le texte (un chiffre dans un dessin doit être le même que dans la phrase).
+- Prononciation : chaque nom propre (lieu, monument, personne…) qui n’est pas évident doit avoir sa propre entrée dans `PRONO` (`app.js`),
+  avec une écriture phonétique **à la française** (ex. `'Mumbai': 'Moumbaï'`, `'Gizeh': 'Guizé'`). Le texte affiché reste inchangé ; seule la voix utilise `PRONO`.
+  La voix n’est pas testable en ligne de commande : Paul écoute sur l’appareil et ajuste.
 
 ## Vérifier
 - `python3 scripts/check.py` : rend toutes les scènes, cases et couvertures et signale les erreurs JavaScript.
 - Ouvrir `index.html` dans un navigateur pour l'affichage ; la voix dépend de l'appareil (non testable en ligne de commande).
 - Syntaxe seule : `node --check app.js`.
 
-## Points de fait connus (à vérifier / corriger si Yoann le demande)
+## Points de fait connus (à vérifier / corriger si Paul le demande)
 - Amérique du Nord : « Mexico est la plus grande ville du monde » (inexact : l'une des plus grandes) ;
   « un jaguar » en Jamaïque (il n'y en a pas ; plutôt Costa Rica / Panama).
 - Amérique du Sud : Équateur « Monnaie : le peso » (inexact : l'Équateur utilise le dollar américain) ;
@@ -55,9 +57,15 @@ STORIES.splice(3, 0, {
 - Hauteurs vérifiées en nov. 2026 : Mont-Blanc 4 807 m, tour Eiffel 330 m.
 
 ## Hébergement
-Site statique : déposer le dossier tel quel sur Netlify, GitHub Pages, OVH… (aucune étape de build).
+Site statique hébergé sur **GitLab Pages** (aucune étape de build : le dossier est servi tel quel).
 Ouvrir via http(s) ou directement `index.html` ; les polices Google (Fredoka, Nunito) nécessitent une connexion.
 
+## « Publie » (quand Paul dit « publie »)
+1. Commiter et pousser directement sur `main` (voir « Process Git »).
+2. Artifact : `python3 scripts/build_artifact.py <dossier-temporaire>/contes.html`, puis publier ce fichier avec l’outil Artifact
+   sur l’URL existante `https://claude.ai/artifact/HdLRtKmshTXRq7rwKNtuDm` (même lien, pas de nouvel artifact).
+   Si la publication est refusée, lire la version en ligne, vérifier qu’elle n’a pas d’autres changements, puis republier.
+3. Répondre avec le lien de l’artifact.
+
 ## Process Git
-- Toujours travailler sur une branche dédiée et ouvrir une pull request vers `main` ; ne jamais pousser directement sur `main`.
-- Une fois la PR fusionnée, repartir de `main` à jour pour la suite (nouvelle branche ou branche réinitialisée), sans empiler de commits sur l'historique déjà fusionné.
+- On ne passe plus par des pull requests : on pousse directement sur `main`. Ne pas en créer ni en mettre à jour.

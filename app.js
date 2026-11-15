@@ -1876,7 +1876,7 @@ STORIES.forEach(function (s, i) {
 /* ---------- Lecteur ---------- */
 var $ = function (id) { return document.getElementById(id); };
 var stage = $('stage'), frame = $('frame'), strip = $('strip'), caption = $('caption'), toggle = $('toggle');
-var bed = $('bed'), voice = $('voice');
+var voice = $('voice');
 var story = null, scenes = [], tiles = [], idx = -1, token = 0, state = 'idle', lastCard = null, guard = null;
 var tts = 'speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined';
 var frVoice = null;
@@ -1893,7 +1893,7 @@ function setToggle(s) {
 function stopAll() {
   token++; clearTimeout(guard);
   if (tts) speechSynthesis.cancel();
-  voice.pause(); bed.pause();
+  voice.pause();
 }
 function openStory(i) {
   story = STORIES[i];
@@ -1904,7 +1904,8 @@ function openStory(i) {
   });
   var tl = story.tiles || story.scenes.map(function (s) { return s.art; });
   tl.forEach(function (a, k) {
-    var li = document.createElement('li'); li.className = 'tile'; li.innerHTML = '<b>' + (story.mark || (k + 1)) + '</b>' + render(a); strip.appendChild(li); tiles.push(li);
+    var li = document.createElement('li'); li.className = 'tile'; li.tabIndex = 0; li.setAttribute('role', 'button');
+    li.setAttribute('aria-label', 'Aller à la case ' + (k + 1)); li.dataset.k = k; li.innerHTML = '<b>' + (story.mark || (k + 1)) + '</b>' + render(a); strip.appendChild(li); tiles.push(li);
   });
   strip.style.gridTemplateColumns = tl.length > 6 ? 'repeat(auto-fill, minmax(72px, 1fr))' : 'repeat(' + tl.length + ', 1fr)';
   stage.hidden = false; document.body.style.overflow = 'hidden'; stage.scrollTop = 0;
@@ -1943,15 +1944,12 @@ function start() {
   idx = -1;
   tiles.forEach(function (x) { x.classList.remove('got', 'now'); });
   scenes.forEach(function (x) { x.classList.remove('on'); });
-  bed.currentTime = 0; bed.volume = .16;
-  var p = bed.play(); if (p && p.catch) p.catch(function () {});
   setToggle('playing');
   if (story.audio) return playFile(t);
   go(0, t);
 }
 function resume() {
   var t = ++token;
-  var p = bed.play(); if (p && p.catch) p.catch(function () {});
   setToggle('playing');
   if (story.audio) { voice.play(); return; }
   go(Math.max(idx, 0), t);
@@ -1959,7 +1957,7 @@ function resume() {
 function pauseIt() {
   token++; clearTimeout(guard);
   if (tts) speechSynthesis.cancel();
-  voice.pause(); bed.pause();
+  voice.pause();
   setToggle('paused');
 }
 function go(n, t) {
@@ -1969,7 +1967,7 @@ function go(n, t) {
   say(story.scenes[n].text, t, function () { guard = setTimeout(function () { go(n + 1, t); }, 900); });
 }
 /* Prononciation : mot affiché -> écriture phonétique, appliquée seulement à la voix (pas au texte affiché). */
-var PRONO = { 'Gizeh': 'Guiza' };
+var PRONO = { 'Gizeh': 'Guizé', 'Taj Mahal': 'Taj Mahal', 'Mumbai': 'Moumbaï', 'Washington D.C.': 'Ouachington Dî Cî.' };
 function spoken(text) {
   var keys = Object.keys(PRONO);
   if (!keys.length) return { s: text, map: function (i) { return i; } };
@@ -2008,8 +2006,18 @@ function say(text, t, done) {
   speechSynthesis.speak(u);
   guard = setTimeout(fin, est * 2.5 + 2500);
 }
-function playFile(t) {
-  voice.src = story.audio; voice.currentTime = 0;
+function jumpTo(k) {
+  var n = -1;
+  story.scenes.forEach(function (s, i) { var ti = s.tile === undefined ? i : s.tile; if (n < 0 && ti === k) n = i; });
+  if (n < 0) return;
+  stopAll();
+  var t = ++token;
+  setToggle('playing');
+  if (story.audio) return playFile(t, story.scenes[n].at || 0);
+  go(n, t);
+}
+function playFile(t, from) {
+  voice.src = story.audio; voice.currentTime = from || 0;
   voice.ontimeupdate = function () {
     if (t !== token) return;
     var n = -1;
@@ -2023,16 +2031,19 @@ function finish(t) {
   if (t !== token) return;
   clearTimeout(guard);
   caption.querySelectorAll('.w').forEach(function (w) { w.classList.remove('now'); });
-  var v = 16, fade = setInterval(function () {
-    v--; bed.volume = Math.max(0, v / 100);
-    if (v <= 0) { clearInterval(fade); bed.pause(); }
-  }, 120);
   setToggle('done');
 }
 
 $('shelf').addEventListener('click', function (e) {
   var b = e.target.closest('.card'); if (!b) return;
   lastCard = b; openStory(+b.dataset.i);
+});
+strip.addEventListener('click', function (e) {
+  var t = e.target.closest('.tile'); if (t) jumpTo(+t.dataset.k);
+});
+strip.addEventListener('keydown', function (e) {
+  var t = e.target.closest('.tile');
+  if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); jumpTo(+t.dataset.k); }
 });
 $('close').addEventListener('click', closeStory);
 $('again').addEventListener('click', start);
