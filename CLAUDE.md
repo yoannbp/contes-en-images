@@ -57,11 +57,12 @@ STORIES.splice(3, 0, {
 - Hauteurs vérifiées en nov. 2026 : Mont-Blanc 4 807 m, tour Eiffel 330 m.
 
 ## Hébergement
-Site statique hébergé sur **GitLab Pages** (aucune étape de build : le dossier est servi tel quel).
+Site statique hébergé sur **GitHub Pages** (aucune étape de build : le dossier est servi tel quel ; déploiement à chaque commit sur `main`).
 Ouvrir via http(s) ou directement `index.html` ; les polices Google (Fredoka, Nunito) nécessitent une connexion.
 
 ## « Publie » (quand Paul dit « publie »)
-1. Commiter et pousser directement sur `main` (voir « Process Git »).
+1. Forcer la mise à jour de GitHub Pages : changer le commentaire daté en bas de `index.html` (`<!-- maj : AAAA-MM-JJ HH:MM -->`,
+   obtenir l’heure avec `date '+%Y-%m-%d %H:%M'`). Puis commiter et pousser directement sur `main` (voir « Process Git »).
 2. Artifact : `python3 scripts/build_artifact.py <dossier-temporaire>/contes.html`, puis publier ce fichier avec l’outil Artifact
    sur l’URL existante `https://claude.ai/artifact/HdLRtKmshTXRq7rwKNtuDm` (même lien, pas de nouvel artifact).
    Si la publication est refusée, lire la version en ligne, vérifier qu’elle n’a pas d’autres changements, puis republier.
