@@ -16,7 +16,7 @@ et des dessins SVG apparaissent au fil de la narration. Projet personnel de Yoan
    Chaque `it(...)` est un élément qui « surgit » à son tour (ordre d'apparition = ordre dans le tableau).
 2. **Drapeaux** : objet `FL` (`FL.code = [largeur, hauteur, svg]`), `flagArt`, `flagScene`, `flagSceneA`, `flagTile`.
 3. **Histoires** : tableau `STORIES` (3 contes d'origine), puis un bloc par voyage qui s'insère avec
-   `STORIES.unshift(...)` / `STORIES.splice(i, 0, ...)`. Ordre final affiché : Europe, Afrique, Asie, Amérique du Nord, puis les 3 contes.
+   `STORIES.unshift(...)` / `STORIES.splice(i, 0, ...)`. Ordre final affiché : Europe, Afrique, Asie, Amérique du Nord, Amérique du Sud, puis les 3 contes.
 4. **Étagère** : construit les cartes (durée estimée = nombre de caractères / 14).
 5. **Lecteur** : `openStory`, `start`, synthèse vocale du navigateur (`speechSynthesis`, voix française de l'appareil), bande de cases en bas.
 
@@ -48,6 +48,8 @@ STORIES.splice(3, 0, {
 ## Points de fait connus (à vérifier / corriger si Yoann le demande)
 - Amérique du Nord : « Mexico est la plus grande ville du monde » (inexact : l'une des plus grandes) ;
   « un jaguar » en Jamaïque (il n'y en a pas ; plutôt Costa Rica / Panama).
+- Amérique du Sud : Équateur « Monnaie : le peso » (inexact : l'Équateur utilise le dollar américain) ;
+  « dans l’Équateur » (plutôt « en Équateur »).
 - Asie : Chypre, « ligne Verte » décrite comme une route (c'est une zone tampon de l'ONU).
 - Afrique : Afrique du Sud, « capitale : Pretoria » (3 capitales) ; détails de la Voie de Dégagement Nord à Dakar non vérifiés.
 - Hauteurs vérifiées en nov. 2026 : Mont-Blanc 4 807 m, tour Eiffel 330 m.
@@ -55,3 +57,7 @@ STORIES.splice(3, 0, {
 ## Hébergement
 Site statique : déposer le dossier tel quel sur Netlify, GitHub Pages, OVH… (aucune étape de build).
 Ouvrir via http(s) ou directement `index.html` ; les polices Google (Fredoka, Nunito) nécessitent une connexion.
+
+## Process Git
+- Toujours travailler sur une branche dédiée et ouvrir une pull request vers `main` ; ne jamais pousser directement sur `main`.
+- Une fois la PR fusionnée, repartir de `main` à jour pour la suite (nouvelle branche ou branche réinitialisée), sans empiler de commits sur l'historique déjà fusionné.

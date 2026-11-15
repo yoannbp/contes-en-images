@@ -1647,6 +1647,222 @@ STORIES.splice(3, 0, {
   ]
 });
 
+/* ---------- Histoire : l'Amérique du Sud ---------- */
+FL.co = [90, 60, '<rect width="90" height="30" fill="#FCD116"/><rect y="30" width="90" height="15" fill="#003893"/><rect y="45" width="90" height="15" fill="#CE1126"/>'];
+FL.ec = [90, 60, '<rect width="90" height="30" fill="#FFDD00"/><rect y="30" width="90" height="15" fill="#034EA2"/><rect y="45" width="90" height="15" fill="#ED1C24"/><ellipse cx="45" cy="30" rx="8" ry="10" fill="#8C6B2F" stroke="#fff" stroke-width="1.5"/><path d="M40 28 q5 -6 10 0 M40 34 q5 4 10 0" fill="none" stroke="#3C9A4A" stroke-width="2"/>'];
+FL.pe = [90, 60, '<rect width="90" height="60" fill="#D91023"/><rect x="30" width="30" height="60" fill="#fff"/><circle cx="45" cy="30" r="8" fill="#6DBB5A" stroke="#8C6B2F" stroke-width="2"/><circle cx="45" cy="30" r="3" fill="#8C6B2F"/>'];
+FL.bo = [90, 60, '<rect width="90" height="20" fill="#D52B1E"/><rect y="20" width="90" height="20" fill="#F9E300"/><rect y="40" width="90" height="20" fill="#007934"/><circle cx="45" cy="30" r="7" fill="#8C6B2F" stroke="#fff" stroke-width="1.5"/><path d="M40 33 q5 -9 10 0" fill="none" stroke="#3C9A4A" stroke-width="2"/>'];
+FL.ar = [90, 60, '<rect width="90" height="60" fill="#74ACDF"/><rect y="20" width="90" height="20" fill="#fff"/><circle cx="45" cy="30" r="6" fill="#F6B40E"/><circle cx="45" cy="30" r="9" fill="none" stroke="#F6B40E" stroke-width="1.6" stroke-dasharray="2 2.4"/>'];
+FL.uy = [90, 60, (function () { var t = ''; for (var i = 0; i < 9; i++) t += '<rect y="' + (i * 60 / 9).toFixed(2) + '" width="90" height="' + (60 / 9 + .05).toFixed(2) + '" fill="' + (i % 2 ? '#0038A8' : '#fff') + '"/>'; return t + '<rect width="30" height="' + (4 * 60 / 9).toFixed(2) + '" fill="#fff"/><circle cx="15" cy="13.3" r="6" fill="#FCD116"/><circle cx="15" cy="13.3" r="9" fill="none" stroke="#FCD116" stroke-width="1.6" stroke-dasharray="2 2.4"/>'; })()];
+FL.br = [90, 60, '<rect width="90" height="60" fill="#009C3B"/><path d="M45 6 L82 30 L45 54 L8 30Z" fill="#FFDF00"/><circle cx="45" cy="30" r="14" fill="#002776"/><path d="M32 27 Q46 22 58 33" fill="none" stroke="#fff" stroke-width="2.6"/>'];
+
+function saSea() { return it('<rect y="150" width="400" height="150" fill="#3E9BD8"/>' + waves(166, '#fff', .55)); }
+function saIntroArt() {
+  return scene('L’Amérique du Sud', grad('#5FB3E8', '#BFE3F7'), [
+    it(waves(30, '#fff', .45) + waves(285, '#fff', .45)),
+    it('<path d="M120 50 L190 40 L250 64 L322 96 L330 132 L282 172 L262 214 L228 258 L206 282 L190 240 L176 188 L132 148 L110 100Z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="4" stroke-linejoin="round"/>'),
+    it(label(222, 130, 'Amérique', 26, '#fff') + label(222, 160, 'du Sud', 26, '#fff')),
+    stars([[340, 40, 3], [50, 220, 2.5], [60, 80, 2.5]]).replace(/#FFF3B0/g, '#fff')
+  ]);
+}
+function saBeachArt() {
+  return scene('Une plage en Colombie', grad('#BFE3F7', '#EAF6FB'), [
+    sun(330, 54, 24, '#FFD23F'), cloud(70, 56, 1),
+    it('<rect y="130" width="400" height="90" fill="#3E9BD8"/>' + waves(150, '#fff', .55) + waves(180, '#fff', .45)),
+    it('<path d="M0 214 Q120 180 240 206 T400 196 V300 H0Z" fill="#F2D49B"/>'),
+    it(naPalm(70, 250, 1.1)),
+    it('<g transform="translate(240 236)"><ellipse rx="40" ry="26" fill="#2B9BD6" stroke="#14284B" stroke-width="3"/><circle cx="-14" cy="-4" r="11" fill="#D6F0FA" stroke="#14284B" stroke-width="3"/><circle cx="14" cy="-4" r="11" fill="#D6F0FA" stroke="#14284B" stroke-width="3"/><path d="M-3 -4 H3 M24 -8 Q50 -30 58 -6 Q60 14 46 22" fill="none" stroke="#E63946" stroke-width="6" stroke-linecap="round"/></g>'),
+    it('<rect x="150" y="14" width="110" height="38" rx="19" fill="#14284B"/>' + label(205, 41, 'Plouf !', 24, '#fff'))
+  ]);
+}
+function saPufferArt() {
+  return scene('Un poisson-globe', grad('#7FE0F0', '#1F8FC8'), [
+    it('<path d="M0 262 Q120 240 240 258 T400 250 V300 H0Z" fill="#E9CF94"/>'),
+    it(weed(40, 262, '#2E9E6A') + weed(360, 258, '#2E9E6A')),
+    it('<g transform="translate(200 150)"><path d="M-76 0 L-112 -24 L-112 24Z" fill="#E8A02A" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><circle r="72" fill="#F7D55C" stroke="#14284B" stroke-width="4"/><ellipse cy="26" rx="52" ry="30" fill="#FFF3B0"/><g stroke="#14284B" stroke-width="3" stroke-linecap="round"><path d="M0 -72 V-90 M-36 -62 L-46 -78 M36 -62 L46 -78 M-62 -36 L-78 -46 M62 -36 L78 -46 M-70 0 H-86 M70 0 H86"/></g><circle cx="26" cy="-12" r="13" fill="#fff" stroke="#14284B" stroke-width="3"/><circle cx="29" cy="-11" r="6" fill="#14284B"/><ellipse cx="52" cy="22" rx="8" ry="6" fill="#14284B"/></g>'),
+    bubbles([[320, 80, 8], [340, 52, 5], [70, 90, 6]])
+  ]);
+}
+function saOctopusArt() {
+  return scene('Une pieuvre', grad('#7FE0F0', '#1F8FC8'), [
+    it('<path d="M0 262 Q120 240 240 258 T400 250 V300 H0Z" fill="#E9CF94"/>'),
+    it(weed(40, 262, '#2E9E6A') + weed(360, 258, '#2E9E6A')),
+    it('<g stroke="#14284B" stroke-width="3" fill="#E8798F" stroke-linecap="round"><path d="M140 200 Q100 240 120 262 Q140 270 150 240 Q160 226 168 214Z"/><path d="M172 214 Q150 262 180 272 Q196 270 192 236Z"/><path d="M228 214 Q210 262 230 272 Q252 272 244 236Z"/><path d="M260 200 Q300 240 280 262 Q260 270 250 240Z"/></g>'),
+    it('<ellipse cx="200" cy="150" rx="68" ry="72" fill="#E8798F" stroke="#14284B" stroke-width="4"/><circle cx="174" cy="156" r="14" fill="#fff" stroke="#14284B" stroke-width="3"/><circle cx="226" cy="156" r="14" fill="#fff" stroke="#14284B" stroke-width="3"/><circle cx="176" cy="158" r="6" fill="#14284B"/><circle cx="224" cy="158" r="6" fill="#14284B"/><path d="M182 190 Q200 204 218 190" fill="none" stroke="#14284B" stroke-width="3" stroke-linecap="round"/><circle cx="170" cy="112" r="7" fill="#F5A3B3"/><circle cx="208" cy="100" r="9" fill="#F5A3B3"/>'),
+    bubbles([[320, 80, 8], [340, 52, 5], [70, 90, 6]])
+  ]);
+}
+function saEquatorArt() {
+  return scene('L’Équateur, la ligne autour de la Terre', grad('#0B2A55', '#1B4F8F'), [
+    stars([[50, 50, 3], [350, 60, 3], [60, 250, 2.5], [345, 250, 2.5], [200, 24, 2]]),
+    it('<circle cx="200" cy="150" r="104" fill="#3E9BD8" stroke="#14284B" stroke-width="4"/><path d="M130 90 Q160 70 190 96 Q200 130 176 150 Q150 150 134 124Z M214 150 Q252 140 276 166 Q270 214 236 232 Q216 200 214 150Z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="3"/>'),
+    it('<ellipse cx="200" cy="150" rx="104" ry="18" fill="none" stroke="#E63946" stroke-width="6"/>'),
+    it('<rect x="120" y="266" width="160" height="30" rx="15" fill="#E63946"/>' + label(200, 288, 'L’équateur', 20, '#fff'))
+  ]);
+}
+function saTortoiseArt() {
+  return scene('Une tortue géante aux îles Galapagos', grad('#BFE3F7', '#EAF6FB'), [
+    sun(60, 56, 22, '#FFD23F'), cloud(320, 54, 1),
+    it('<path d="M0 232 Q120 206 240 226 T400 216 V300 H0Z" fill="#CFC3A6"/>'),
+    it('<path d="M36 220 q10 -28 20 -4 q4 -30 16 -2" fill="none" stroke="#6B8E4E" stroke-width="5" stroke-linecap="round"/>'),
+    it('<g transform="translate(200 220)"><path d="M70 -4 L98 -2 L72 6Z" fill="#9DB07A" stroke="#14284B" stroke-width="3"/><rect x="-56" y="-6" width="26" height="30" rx="10" fill="#9DB07A" stroke="#14284B" stroke-width="3"/><rect x="26" y="-6" width="26" height="30" rx="10" fill="#9DB07A" stroke="#14284B" stroke-width="3"/><path d="M-84 8 A84 70 0 0 1 84 8Z" fill="#8A6B2E" stroke="#14284B" stroke-width="4"/><path d="M-40 6 L-24 -36 L24 -36 L40 6 M-24 -36 L-8 6 M24 -36 L8 6 M-62 6 L-52 -22 M62 6 L52 -22" fill="none" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M78 -8 Q108 -50 124 -56" fill="none" stroke="#9DB07A" stroke-width="16" stroke-linecap="round"/><circle cx="126" cy="-58" r="15" fill="#9DB07A" stroke="#14284B" stroke-width="3"/><circle cx="132" cy="-62" r="3.5" fill="#14284B"/><path d="M130 -50 Q136 -48 140 -52" fill="none" stroke="#14284B" stroke-width="2.5" stroke-linecap="round"/></g>'),
+    it('<rect x="90" y="14" width="220" height="38" rx="19" fill="#14284B"/>' + label(200, 41, 'îles Galapagos', 20, '#fff'))
+  ]);
+}
+function saMachuArt() {
+  return scene('Le Machu Picchu et ses ruines incas', grad('#BFE3F7', '#EAF6FB'), [
+    sun(330, 54, 22, '#FFD23F'), cloud(70, 56, 1),
+    it('<path d="M0 170 L90 90 L170 150 L250 70 L340 150 L400 120 V300 H0Z" fill="#6E8F6A" stroke="#4E6E4C" stroke-width="3" stroke-linejoin="round"/>'),
+    it('<path d="M20 266 H380 V236 H340 V210 H290 V184 H236 V160 H176 V184 H120 V210 H70 V236 H20Z" fill="#B8B09C" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M20 236 H340 M70 210 H290 M120 184 H236" fill="none" stroke="#14284B" stroke-width="2" opacity=".5"/>'),
+    it('<path d="M150 266 V226 H178 V266Z M240 266 V220 H268 V266Z" fill="#8F8878" stroke="#14284B" stroke-width="3"/><path d="M196 160 L206 138 L216 160Z" fill="#B8B09C" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>'),
+    it('<rect x="90" y="14" width="220" height="38" rx="19" fill="#14284B"/>' + label(200, 41, 'Machu Picchu', 22, '#fff'))
+  ]);
+}
+function saLlamaArt() {
+  return scene('Un lama', grad('#BFE3F7', '#EAF6FB'), [
+    sun(60, 56, 22, '#FFD23F'), cloud(320, 54, 1),
+    it('<path d="M0 232 Q120 206 240 226 T400 216 V300 H0Z" fill="#7CC36A"/>'),
+    it('<g transform="translate(200 250)"><rect x="-52" y="-30" width="14" height="42" rx="6" fill="#E9D8B8" stroke="#14284B" stroke-width="3"/><rect x="26" y="-30" width="14" height="42" rx="6" fill="#E9D8B8" stroke="#14284B" stroke-width="3"/><ellipse cx="-6" cy="-52" rx="62" ry="38" fill="#F3E6C9" stroke="#14284B" stroke-width="4"/><path d="M34 -72 L50 -150" stroke="#F3E6C9" stroke-width="30" stroke-linecap="round"/><path d="M34 -72 L50 -150" stroke="#14284B" stroke-width="3" fill="none" opacity=".25"/><ellipse cx="62" cy="-160" rx="22" ry="18" fill="#F3E6C9" stroke="#14284B" stroke-width="3"/><path d="M52 -176 L48 -198 L62 -178Z M70 -176 L78 -196 L82 -174Z" fill="#F3E6C9" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><circle cx="66" cy="-164" r="3.5" fill="#14284B"/><ellipse cx="78" cy="-154" rx="5" ry="4" fill="#E8798F"/><rect x="-44" y="-70" width="76" height="14" fill="#E63946" opacity=".9"/><path d="M-44 -70 L-30 -56 L-16 -70 L-2 -56 L12 -70 L26 -56 L32 -64" fill="none" stroke="#FFD23F" stroke-width="3"/></g>'),
+    it('<g fill="#fff" stroke="#14284B" stroke-width="2"><circle cx="302" cy="106" r="6"/><circle cx="322" cy="94" r="4"/><circle cx="318" cy="118" r="3"/></g>')
+  ]);
+}
+function saCapitalsArt() {
+  return scene('La Bolivie a deux capitales', grad('#BFE3F7', '#EAF6FB'), [
+    sun(340, 50, 20, '#FFD23F'),
+    it('<path d="M0 250 L70 190 L110 214 L190 120 L250 190 L300 150 L400 230 V300 H0Z" fill="#8FA7C2" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M190 120 L212 148 L194 144 L176 152Z" fill="#fff"/>'),
+    it('<rect y="262" width="400" height="38" fill="#7CC36A"/>'),
+    pin(190, 124, 'La Paz', 190, 82),
+    pin(300, 262, 'Sucre', 300, 224),
+    it('<rect x="30" y="14" width="150" height="34" rx="17" fill="#E63946"/>' + label(105, 38, '2 capitales', 20, '#fff'))
+  ]);
+}
+function saMysteryArt() {
+  return scene('Un endroit mystère', grad('#2E1B5A', '#6A3FA0'), [
+    stars([[50, 50, 3], [350, 60, 3], [60, 240, 2.5], [345, 250, 2.5], [200, 24, 2], [320, 130, 2]]),
+    it('<circle cx="200" cy="150" r="96" fill="#FFF3B0" opacity=".2"/><circle cx="200" cy="150" r="78" fill="#FFD23F" stroke="#14284B" stroke-width="4"/>' + label(200, 192, '?', 120, '#14284B')),
+    it('<rect x="110" y="260" width="180" height="32" rx="16" fill="#fff"/>' + label(200, 284, 'Let’s go !', 22, '#14284B'))
+  ]);
+}
+function saSalarArt() {
+  return scene('Le désert de sel de Salar d’Uyuni', grad('#7FC4F0', '#E3F3FC'), [
+    cloud(80, 50, 1), cloud(300, 70, .9),
+    it('<path d="M0 140 L60 116 L130 134 L200 108 L280 136 L340 118 L400 138 V150 H0Z" fill="#9DB0C8"/>'),
+    it('<rect y="150" width="400" height="150" fill="#F4F8FB"/><path d="M0 220 H400 M0 262 H400 M130 150 L40 300 M270 150 L360 300 M200 150 V300 M70 150 L-40 300 M330 150 L440 300" stroke="#C7D5E2" stroke-width="3" fill="none"/>'),
+    it('<g opacity=".5"><path d="M0 160 L60 184 L130 166 L200 192 L280 164 L340 182 L400 162 V200 H0Z" fill="#BFD3E6"/><g fill="#fff"><circle cx="80" cy="190" r="14"/><circle cx="320" cy="210" r="12"/></g></g>'),
+    it('<rect x="90" y="248" width="220" height="38" rx="19" fill="#14284B"/>' + label(200, 274, 'Désert de sel', 20, '#fff'))
+  ]);
+}
+function saAndesArt() {
+  return scene('La cordillère des Andes', grad('#9FD4F2', '#EAF6FB'), [
+    sun(330, 54, 22, '#FFD23F'), cloud(80, 56, 1),
+    it('<path d="M0 220 L60 150 L110 190 L190 80 L260 170 L320 110 L400 200 V300 H0Z" fill="#8FA7C2" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M190 80 L214 116 L196 110 L176 122Z M320 110 L340 140 L322 134 L304 142Z M60 150 L76 172 L62 168 L46 176Z" fill="#fff"/>'),
+    it('<path d="M0 252 Q100 226 200 246 T400 236 V300 H0Z" fill="#7CC36A"/>'),
+    it(fir(60, 262, .9, '#2F7A32') + fir(340, 262, 1, '#2F7A32')),
+    it('<rect x="90" y="14" width="220" height="38" rx="19" fill="#14284B"/>' + label(200, 41, 'Cordillère des Andes', 19, '#fff'))
+  ]);
+}
+function saFootArt() {
+  var houses = '', cols = ['#E63946', '#FFD23F', '#4D96FF', '#6DBB5A', '#FF8FA3'];
+  for (var i = 0; i < 5; i++) houses += '<rect x="' + (10 + i * 76) + '" y="' + (96 + (i % 2) * 14) + '" width="70" height="' + (80 - (i % 2) * 14) + '" fill="' + cols[i] + '" stroke="#14284B" stroke-width="3"/><rect x="' + (28 + i * 76) + '" y="' + (116 + (i % 2) * 14) + '" width="16" height="20" fill="#FFF8E1" stroke="#14284B" stroke-width="2"/>';
+  return scene('Un match de foot au quartier de La Boca', grad('#BFE3F7', '#EAF6FB'), [
+    it(houses),
+    it('<rect y="176" width="400" height="124" fill="#4FAF4F"/><path d="M0 238 H400 M200 176 V300" stroke="#fff" stroke-width="4" opacity=".8"/><circle cx="200" cy="238" r="30" fill="none" stroke="#fff" stroke-width="4" opacity=".8"/>'),
+    it('<path d="M20 266 V210 H80 V266 M20 210 L8 200 M80 210 L92 200" fill="none" stroke="#fff" stroke-width="5"/>'),
+    it('<g transform="translate(240 250)"><circle r="20" fill="#fff" stroke="#14284B" stroke-width="3"/><path d="M0 -8 L8 -2 L5 8 H-5 L-8 -2Z" fill="#14284B"/></g>'),
+    it('<rect x="130" y="14" width="140" height="42" rx="21" fill="#E63946"/>' + label(200, 44, 'Buuuut !', 26, '#fff'))
+  ]);
+}
+function saUruguayArt() {
+  return scene('L’Uruguay entre l’Argentine et le Brésil, au bord de l’océan Atlantique', grad('#BFE3F7', '#EAF6FB'), [
+    it('<rect x="230" width="170" height="300" fill="#3E9BD8"/>' + waves(60, '#fff', .55) + waves(250, '#fff', .45)),
+    it('<path d="M0 0 H230 L170 120 L140 170 L0 190Z" fill="#8FD4A8" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>'),
+    it('<path d="M170 120 L230 0 H250 L290 60 L250 130 L214 126Z" fill="#F4C76A" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>'),
+    it('<path d="M140 170 L170 120 L214 126 L250 130 L240 190 L200 232 L150 224 L120 196Z" fill="#6DBB5A" stroke="#14284B" stroke-width="4" stroke-linejoin="round"/>'),
+    it(label(70, 100, 'Argentine', 22) + label(240, 50, 'Brésil', 18) + label(190, 184, 'Uruguay', 20, '#fff') + label(330, 160, 'Océan', 20, '#fff') + label(330, 184, 'Atlantique', 20, '#fff'))
+  ]);
+}
+function saBrazilBigArt() {
+  return scene('Le Brésil, cinquième plus grand pays du monde', grad('#D6EFD6', '#FFF6C9'), [
+    it(flagArt('br', 40, 30, 200)),
+    it('<circle cx="320" cy="90" r="46" fill="#FFD23F" stroke="#14284B" stroke-width="4"/>' + label(320, 108, '5', 52, '#14284B')),
+    it('<rect x="20" y="214" width="170" height="34" rx="17" fill="#14284B"/>' + label(105, 238, 'Chine', 20, '#fff') + '<rect x="210" y="214" width="170" height="34" rx="17" fill="#14284B"/>' + label(295, 238, 'États-Unis', 20, '#fff')),
+    it('<rect x="20" y="256" width="170" height="34" rx="17" fill="#14284B"/>' + label(105, 280, 'Canada', 20, '#fff') + '<rect x="210" y="256" width="170" height="34" rx="17" fill="#14284B"/>' + label(295, 280, 'Russie', 20, '#fff'))
+  ]);
+}
+function saCarnavalArt() {
+  var conf = '', cols = ['#E63946', '#FFD23F', '#4D96FF', '#6DBB5A', '#FF8FA3', '#F28C28'];
+  for (var i = 0; i < 18; i++) conf += '<rect x="' + (14 + (i * 67) % 380) + '" y="' + (20 + (i * 41) % 150) + '" width="9" height="14" rx="2" fill="' + cols[i % 6] + '" transform="rotate(' + (i * 37 % 90) + ' ' + (18 + (i * 67) % 380) + ' ' + (27 + (i * 41) % 150) + ')"/>';
+  return scene('Le carnaval de Rio de Janeiro', grad('#3B1F5A', '#B04A8E'), [
+    it('<path d="M0 0 Q100 40 200 10 T400 20" fill="none" stroke="#FFD23F" stroke-width="4"/>' + conf),
+    it('<path d="M0 262 Q140 240 260 258 T400 250 V300 H0Z" fill="#14284B"/>'),
+    it('<g transform="translate(130 250)"><path d="M-24 -86 Q-40 -150 -10 -140 M-8 -90 Q-10 -158 16 -144 M8 -88 Q24 -156 40 -130 M22 -82 Q50 -140 58 -108" fill="none" stroke="#FFD23F" stroke-width="7" stroke-linecap="round"/><path d="M-24 -30 L-30 0 H30 L24 -30Z" fill="#E63946"/><rect x="-22" y="-86" width="44" height="58" rx="14" fill="#4D96FF"/><circle cx="0" cy="-102" r="16" fill="#C98A5A" stroke="#14284B" stroke-width="3"/><path d="M-14 -108 Q0 -126 14 -108Z" fill="#14284B"/><path d="M-22 -70 L-46 -92 M22 -70 L46 -92" stroke="#C98A5A" stroke-width="9" stroke-linecap="round"/></g>'),
+    it('<g transform="translate(270 250)"><rect x="-30" y="-60" width="60" height="60" rx="8" fill="#F28C28" stroke="#14284B" stroke-width="4"/><path d="M-30 -30 H30 M0 -60 V0" stroke="#14284B" stroke-width="3" opacity=".5"/><ellipse cx="0" cy="-62" rx="32" ry="8" fill="#FFE29A" stroke="#14284B" stroke-width="3"/></g>'),
+    it(note(330, 120, '#FFF3B0') + note(360, 80, '#FFC93C') + note(60, 110, '#fff') + note(200, 90, '#FF9FB5'))
+  ]);
+}
+function saChristArt() {
+  return scene('Le Christ Rédempteur à Rio de Janeiro', grad('#7FC4F0', '#E3F3FC'), [
+    sun(60, 56, 22, '#FFD23F'), cloud(320, 54, 1),
+    it('<rect y="240" width="400" height="60" fill="#3E9BD8"/>' + waves(256, '#fff', .55)),
+    it('<path d="M70 250 Q130 130 200 150 T330 250Z" fill="#4E9A58" stroke="#2F7A32" stroke-width="3"/>'),
+    it('<g transform="translate(200 160)"><path d="M-22 0 H22 L18 -14 H-18Z" fill="#D9D2C2" stroke="#14284B" stroke-width="3"/><path d="M-12 -14 L-16 -78 H16 L12 -14Z" fill="#EAE4D6" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><rect x="-62" y="-80" width="124" height="14" rx="7" fill="#EAE4D6" stroke="#14284B" stroke-width="3"/><circle cx="0" cy="-96" r="13" fill="#EAE4D6" stroke="#14284B" stroke-width="3"/></g>'),
+    it('<rect x="80" y="14" width="240" height="38" rx="19" fill="#14284B"/>' + label(200, 41, 'Christ Rédempteur', 20, '#fff')),
+    it('<rect x="110" y="256" width="180" height="34" rx="17" fill="#FFD23F"/>' + label(200, 280, '7 merveilles', 20, '#14284B'))
+  ]);
+}
+function saFinArt() {
+  var codes = ['co', 'ec', 'pe', 'bo', 'ar', 'uy', 'br'], out = [];
+  codes.forEach(function (c, i) {
+    var row = i < 4 ? 0 : 1, col = row ? i - 4 : i, w = 66, x = (row ? 56 : 14) + col * 94, y = row ? 196 : 112;
+    out.push(it('<rect x="' + (x + w / 2 - 2) + '" y="' + (y - 14) + '" width="4" height="14" fill="#8A6B4A"/>' + flagArt(c, x, y, w)));
+  });
+  return scene('Tous les drapeaux visités', grad('#FFE3C2', '#FFF6E8'), [it(label(200, 84, 'Fin', 64)), it('<path d="M0 98 H400 M0 182 H400" stroke="#14284B" stroke-width="3"/>')].concat(out));
+}
+function saCoverArt() {
+  var cs = [['co', 30, 36, -8], ['pe', 150, 28, 5], ['ar', 270, 40, -5], ['br', 36, 150, 6], ['bo', 156, 160, -6], ['ec', 276, 148, 8]], g = '';
+  cs.forEach(function (c) { g += '<g transform="rotate(' + c[3] + ' ' + (c[1] + 50) + ' ' + (c[2] + 33) + ')">' + flagArt(c[0], c[1], c[2], 100) + '</g>'; });
+  return scene('Plein de drapeaux d’Amérique du Sud', grad('#F28C28', '#C2410C'), [sparkle(20, 20, 3), sparkle(380, 270, 3), sparkle(350, 20, 2.5), it(g)]);
+}
+
+STORIES.splice(4, 0, {
+  title: 'Voyage en Amérique du Sud', coverArt: saCoverArt, mark: '?',
+  tiles: ['co', 'ec', 'pe', 'bo', 'ar', 'uy', 'br'].map(flagTile),
+  scenes: [
+    { tile: -1, text: 'C’était bien, l’Amérique du Nord. Maintenant, c’est l’Amérique du Sud.', art: saIntroArt },
+
+    { tile: 0, text: 'Voici la Colombie. Capitale : Bogota. Langue principale : espagnol.', art: flagSceneA('co', 'Colombie', '#FFF3B0', '#FBEDEE') },
+    { tile: 0, text: 'Oh ! Une plage ! Prenons nos masques et nos tubas, pour aller voir ce qui se passe dans la mer ! Plouf ! Plouf !', art: saBeachArt },
+    { tile: 0, text: 'J’ai vu un poisson-globe. Moi aussi ! Je replonge ! Plouf ! Plouf !', art: saPufferArt },
+    { tile: 0, text: 'J’ai vu une pieuvre ! Moi aussi. Direction : l’Équateur.', art: saOctopusArt },
+
+    { tile: 1, text: 'Bienvenue en Équateur. Capitale : Quito. Langues principales : espagnol et quitchoa. Monnaie : le peso.', art: flagSceneA('ec', 'Équateur', '#FFF3B0', '#D3E2F8') },
+    { tile: 1, text: 'On est en Équateur, j’imagine qu’on est près de l’équateur. Correct. Allons faire un tour aux îles Galapagos.', art: saEquatorArt },
+    { tile: 1, text: 'Voici les îles Galapagos. Oh ! Une tortue géante ! Direction : le Pérou.', art: saTortoiseArt },
+
+    { tile: 2, text: 'Voici le Pérou. Capitale : Lima. Langues principales : espagnol et quitchoa.', art: flagSceneA('pe', 'Pérou', '#F8D5D5', '#FDF1F1') },
+    { tile: 2, text: 'Oh ! Voici le Machu Picchu, de grandes ruines incas. C’est tellement beau, le Machu Picchu.', art: saMachuArt },
+    { tile: 2, text: 'Voici un lama. Les lamas crachent, quand ils sont en colère. Direction : la Bolivie.', art: saLlamaArt },
+
+    { tile: 3, text: 'Bienvenue en Bolivie. Capitales : La Paz et Sucre. Langue principale : espagnol.', art: flagSceneA('bo', 'Bolivie', '#FFF3B0', '#D6EFD6') },
+    { tile: 3, text: 'Attends… La Bolivie a 2 capitales ? Correct. Il faut aussi savoir que La Paz est la capitale la plus haute du monde.', art: saCapitalsArt },
+    { tile: 3, text: 'J’ai un endroit mystère. Allons-y ! Let’s go !', art: saMysteryArt },
+    { tile: 3, text: 'On a atterri sur une autre planète ? Non. Voici le grand désert de sel de Salar d’Uyuni. Hein ? Direction suivante : l’Argentine.', art: saSalarArt },
+
+    { tile: 4, text: 'Bienvenue en Argentine. Capitale : Buenos Aires. Langue principale : espagnol.', art: flagSceneA('ar', 'Argentine', '#D3E2F8', '#FFF6C9') },
+    { tile: 4, text: 'Oh ! Des montagnes ! Voici la cordillère des Andes, longeant la côte ouest de l’Amérique du Sud. C’est vrai que depuis qu’on est arrivé dans l’Équateur, j’ai vu plein de montagnes.', art: saAndesArt },
+    { tile: 4, text: 'Allons faire un tour au quartier de La Boca. Oh ! Un match de foot ! Buuuuuuuut ! Allons dans le pays de l’Uruguay.', art: saFootArt },
+
+    { tile: 5, text: 'Voici l’Uruguay. Capitale : Montevideo.', art: flagSceneA('uy', 'Uruguay', '#D3E2F8', '#FBEDEE') },
+    { tile: 5, text: 'L’Uruguay est un pays entre l’Argentine et le Brésil et touche l’Océan Atlantique, deuxième océan le plus grand du monde après l’Océan Pacifique. Direction : le Brésil.', art: saUruguayArt },
+
+    { tile: 6, text: 'Bienvenue au Brésil. Capitale : Brasilia. Langue principale : portugais.', art: flagSceneA('br', 'Brésil', '#D6EFD6', '#FFF6C9') },
+    { tile: 6, text: 'Le Brésil est le cinquième pays le plus grand du monde après la Chine, les États-Unis, le Canada et la Russie.', art: saBrazilBigArt },
+    { tile: 6, text: 'Voici Rio de Janeiro. Allons au carnaval ! Lalalalalalalala !', art: saCarnavalArt },
+    { tile: 6, text: 'Allons regarder le Christ Rédempteur, l’une des 7 merveilles modernes du monde. Voici le Christ Rédempteur.', art: saChristArt },
+    { tile: 6, text: 'Fin', art: saFinArt }
+  ]
+});
+
 /* ---------- Étagère ---------- */
 var shelf = document.getElementById('shelf');
 STORIES.forEach(function (s, i) {
@@ -1752,16 +1968,40 @@ function go(n, t) {
   show(n);
   say(story.scenes[n].text, t, function () { guard = setTimeout(function () { go(n + 1, t); }, 900); });
 }
+/* Prononciation : mot affiché -> écriture phonétique, appliquée seulement à la voix (pas au texte affiché). */
+var PRONO = { 'Gizeh': 'Guiza' };
+function spoken(text) {
+  var keys = Object.keys(PRONO);
+  if (!keys.length) return { s: text, map: function (i) { return i; } };
+  var re = new RegExp(keys.join('|'), 'g'), out = '', last = 0, segs = [], m;
+  while ((m = re.exec(text))) {
+    out += text.slice(last, m.index); var a = out.length;
+    out += PRONO[m[0]];
+    segs.push({ a: a, b: out.length, from: m.index, len: m[0].length });
+    last = m.index + m[0].length;
+  }
+  out += text.slice(last);
+  return { s: out, map: function (i) {
+    var shift = 0;
+    for (var k = 0; k < segs.length; k++) {
+      var g = segs[k];
+      if (i < g.a) break;
+      if (i < g.b) return g.from;
+      shift = g.from + g.len - g.b;
+    }
+    return i + shift;
+  } };
+}
 function say(text, t, done) {
   setCaption(text);
   var over = false;
   function fin() { if (over || t !== token) return; over = true; clearTimeout(guard); done(); }
   var est = Math.max(3500, text.length * 85);
   if (!tts) { guard = setTimeout(fin, est); return; }
-  var u = new SpeechSynthesisUtterance(text);
+  var sp = spoken(text), u = new SpeechSynthesisUtterance(sp.s);
   u.lang = 'fr-FR'; u.rate = .86; u.pitch = 1.12;
   if (frVoice) u.voice = frVoice;
-  u.onboundary = function (e) { if (t === token) light(e.charIndex || 0); };
+  u.onboundary = function (e) { if (t === token) light(sp.map(e.charIndex || 0)); };
   u.onend = fin;
   u.onerror = function () { clearTimeout(guard); guard = setTimeout(fin, est); };
   speechSynthesis.cancel();
