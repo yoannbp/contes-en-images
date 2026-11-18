@@ -1912,6 +1912,243 @@ STORIES.splice(4, 0, {
   ]
 });
 
+/* ---------- Histoire : l'Océanie ---------- */
+FL.au = [90, 60, '<rect width="90" height="60" fill="#012169"/><svg width="45" height="30" viewBox="0 0 90 60">' + FL.uk[2] + '</svg>' + starP(22.5, 45, 8, '#fff') +
+  [[67, 10, 4], [55, 26, 4], [79, 24, 4], [67, 50, 4], [72, 34, 2.4]].map(function (s) { return starP(s[0], s[1], s[2], '#fff'); }).join('')];
+FL.nz = [90, 60, '<rect width="90" height="60" fill="#00247D"/><svg width="45" height="30" viewBox="0 0 90 60">' + FL.uk[2] + '</svg>' +
+  [[67, 12], [56, 28], [78, 26], [67, 48]].map(function (p) { return starP(p[0], p[1], 7, '#fff') + starP(p[0], p[1], 5, '#CC142B'); }).join('')];
+FL.to = [90, 60, '<rect width="90" height="60" fill="#C10000"/><rect width="38" height="32" fill="#fff"/><rect x="15" y="4" width="8" height="24" fill="#C10000"/><rect x="7" y="12" width="24" height="8" fill="#C10000"/>'];
+FL.tv = [90, 60, '<rect width="90" height="60" fill="#2EA3D8"/><svg width="45" height="30" viewBox="0 0 90 60">' + FL.uk[2] + '</svg>' +
+  [[58, 10], [74, 12], [50, 24], [68, 24], [82, 28], [58, 38], [74, 40], [64, 50], [80, 50]].map(function (p) { return starP(p[0], p[1], 4.2, '#FFD100'); }).join('')];
+FL.fj = [90, 60, '<rect width="90" height="60" fill="#68BFE5"/><svg width="45" height="30" viewBox="0 0 90 60">' + FL.uk[2] + '</svg>' +
+  '<path d="M52 12 H82 V34 Q82 46 67 52 Q52 46 52 34Z" fill="#fff" stroke="#999" stroke-width="1"/><path d="M52 12 H82 V22 H52Z" fill="#CE1126"/><path d="M67 22 V50 M52 34 H82" stroke="#CE1126" stroke-width="3"/>'];
+FL.pg = [90, 60, '<rect width="90" height="60" fill="#000"/><path d="M0 0 H90 V60Z" fill="#CE1126"/><ellipse cx="62" cy="24" rx="13" ry="5" transform="rotate(30 62 24)" fill="#FCD116"/><path d="M52 30 L40 44" stroke="#FCD116" stroke-width="2.5"/>' +
+  [[18, 34, 4.5], [8, 44, 4.5], [28, 44, 4.5], [18, 54, 4.5], [20, 43, 2.4]].map(function (s) { return starP(s[0], s[1], s[2], '#fff'); }).join('')];
+FL.nr = [90, 60, '<rect width="90" height="60" fill="#002B7F"/><rect y="26" width="90" height="8" fill="#FFC61E"/>' + (function () {
+  var pts = []; for (var i = 0; i < 24; i++) { var r = i % 2 ? 5.6 : 8, a = -Math.PI / 2 + i * Math.PI / 12; pts.push((22 + r * Math.cos(a)).toFixed(1) + ',' + (45 + r * Math.sin(a)).toFixed(1)); }
+  return '<polygon points="' + pts.join(' ') + '" fill="#fff"/>'; })()];
+FL.vu = [90, 60, '<rect width="90" height="30" fill="#D21034"/><rect y="30" width="90" height="30" fill="#009543"/><path d="M0 0 L36 30 L0 60 M36 30 H90" fill="none" stroke="#000" stroke-width="27"/><path d="M0 0 L36 30 L0 60 M36 30 H90" fill="none" stroke="#FDCE12" stroke-width="17"/><path d="M0 0 L26 30 L0 60Z" fill="#000"/>'];
+
+function ocPill(x, y, w, txt, size) { return '<rect x="' + (x - w / 2) + '" y="' + (y - 22) + '" width="' + w + '" height="32" rx="16" fill="#14284B"/>' + label(x, y, txt, size || 20, '#fff'); }
+var OCSEA = ['#7CD0F5', '#2F8FD0'];
+function oceaniaIntroArt() {
+  return scene('L’Océanie', grad('#5FB3E8', '#BFE3F7'), [
+    it(waves(30, '#fff', .45) + waves(285, '#fff', .45)),
+    it('<path d="M60 120 Q100 86 176 96 Q232 94 252 130 Q266 172 224 198 Q170 216 108 198 Q54 172 60 120Z" fill="#F4C76A" stroke="#C99A3A" stroke-width="4"/>'),
+    it('<path d="M300 176 q22 -10 26 12 q-6 22 -26 18z M284 214 q24 -4 20 22 q-18 18 -30 8z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="3"/><g fill="#F4C76A" stroke="#C99A3A" stroke-width="2"><circle cx="340" cy="100" r="6"/><circle cx="362" cy="120" r="5"/><circle cx="330" cy="140" r="5"/><circle cx="36" cy="236" r="5"/></g>'),
+    it(label(156, 160, 'Océanie', 34, '#7A4A12')),
+    stars([[340, 36, 3], [60, 60, 2.5], [360, 266, 3]]).replace(/#FFF3B0/g, '#fff')
+  ]);
+}
+function auRankArt() {
+  var rows = [['1', 'Russie', 330], ['2', 'Canada', 290], ['3', 'États-Unis', 260], ['4', 'Chine', 230], ['5', 'Brésil', 200], ['6', 'Australie', 170]], out = '';
+  rows.forEach(function (r, i) {
+    var y = 22 + i * 44, hi = i === 5;
+    out += '<rect x="24" y="' + y + '" width="' + r[2] + '" height="36" rx="18" fill="' + (hi ? '#FF6B4A' : '#fff') + '" stroke="#14284B" stroke-width="3"/>' +
+      '<text x="44" y="' + (y + 26) + '" ' + FONT + ' font-size="22" fill="#14284B">' + r[0] + '. ' + r[1] + '</text>';
+  });
+  return scene('Le classement des plus grands pays : l’Australie est sixième', grad('#FFE9C7', '#FFF6E4'), [it(out)]);
+}
+function uluruArt() {
+  return scene('Oulourou, l’immense rocher rouge', grad('#FFC38A', '#FFF1D6'), [
+    sun(330, 56, 26, '#FF8A3D'),
+    it('<path d="M30 236 Q60 170 130 160 Q210 150 280 166 Q340 182 374 236Z" fill="#C8553D" stroke="#8F3A28" stroke-width="3"/><path d="M110 176 Q120 210 112 236 M180 164 Q192 204 186 236 M250 172 Q262 206 256 236" fill="none" stroke="#9E3F2A" stroke-width="4" stroke-linecap="round"/>'),
+    it('<rect y="232" width="400" height="68" fill="#E5B466"/><path d="M0 268 Q140 248 260 268 T400 262 V300 H0Z" fill="#D49A48"/>'),
+    it('<path d="M44 262 q-4 -16 -14 -20 M44 262 q2 -20 8 -26 M44 262 q8 -12 18 -14" stroke="#4E7A3A" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M350 270 q-4 -14 -12 -18 M350 270 q2 -18 8 -22" stroke="#4E7A3A" stroke-width="3.5" fill="none" stroke-linecap="round"/>'),
+    it(ocPill(200, 62, 150, 'Oulourou', 26))
+  ]);
+}
+function operaArt() {
+  return scene('L’opéra de Sydney, aux formes de voiles', grad('#BFE3FF', '#F2F9FF'), [
+    cloud(40, 50, .8), cloud(300, 40, .7),
+    it('<rect y="222" width="400" height="78" fill="#3E9BD8"/>' + waves(244, '#fff', .55) + waves(272, '#fff', .35)),
+    it('<rect x="40" y="206" width="230" height="22" fill="#D9CFC0" stroke="#14284B" stroke-width="3"/>'),
+    it('<path d="M56 206 Q62 130 120 96 Q110 150 124 206Z" fill="#fff" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M118 206 Q124 118 190 82 Q176 150 196 206Z" fill="#fff" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M190 206 Q196 136 250 110 Q240 160 254 206Z" fill="#fff" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>'),
+    it('<g transform="translate(330 236)"><path d="M-30 0 H30 L20 14 H-20Z" fill="#E63946"/><rect x="-2" y="-62" width="4" height="62" fill="#14284B"/><path d="M4 -62 Q34 -30 4 -8Z" fill="#fff" stroke="#14284B" stroke-width="2.5" stroke-linejoin="round"/><path d="M-4 -52 Q-26 -26 -4 -8Z" fill="#fff" stroke="#14284B" stroke-width="2.5" stroke-linejoin="round"/></g>')
+  ]);
+}
+function tasmaniaArt() {
+  return scene('La Tasmanie et sa ville Hobart', grad(OCSEA[0], OCSEA[1]), [
+    it(waves(150, '#fff', .45) + waves(280, '#fff', .45)),
+    it('<path d="M0 0 H400 V64 Q300 92 200 70 Q100 56 0 84Z" fill="#F4C76A" stroke="#C99A3A" stroke-width="3"/>' + label(200, 40, 'Australie', 26, '#7A4A12')),
+    it('<path d="M150 176 Q182 142 232 156 Q262 178 240 216 Q206 238 176 220 Q146 204 150 176Z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="4"/>'),
+    it(label(110, 200, 'Tasmanie', 24, '#fff')),
+    pinW(224, 224, 'Hobart', 316, 256, 92)
+  ]);
+}
+function nzMapArt() {
+  return scene('Les deux îles de la Nouvelle-Zélande', grad(OCSEA[0], OCSEA[1]), [
+    it(waves(30, '#fff', .45) + waves(285, '#fff', .45)),
+    it('<path d="M212 30 Q256 22 268 60 Q276 96 248 122 Q224 142 202 122 Q220 96 208 72Z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="4"/>'),
+    it('<path d="M170 150 Q224 148 230 190 Q216 242 156 274 Q120 284 102 262 Q144 228 170 190Z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="4"/>'),
+    it(ocPill(330, 84, 124, 'Île du Nord', 20) + ocPill(70, 206, 112, 'Île du Sud', 20))
+  ]);
+}
+function kiwiBirdArt() {
+  return scene('Le kiwi, un oiseau rare et unique', grad('#BDE9B0', '#F0FADD'), [
+    it('<path d="M0 232 Q120 212 240 234 T400 224 V300 H0Z" fill="#6DBB5A"/><path d="M0 268 Q140 250 260 268 T400 262 V300 H0Z" fill="#4E9E50"/>'),
+    it('<path d="M150 240 v22 M190 244 v20" stroke="#E8C07A" stroke-width="7" stroke-linecap="round"/><ellipse cx="190" cy="196" rx="72" ry="56" fill="#8B5E3C"/><path d="M140 176 q18 -12 36 0 M170 160 q22 -12 44 0 M200 190 q20 -10 40 2 M150 206 q22 -8 44 2" fill="none" stroke="#6B4528" stroke-width="3.5" stroke-linecap="round"/>'),
+    it('<circle cx="262" cy="160" r="20" fill="#8B5E3C"/><path d="M278 162 Q320 178 354 214" fill="none" stroke="#E8C07A" stroke-width="7" stroke-linecap="round"/><circle cx="266" cy="154" r="3.6" fill="#14284B"/>'),
+    it('<g transform="translate(64 232)"><circle r="28" fill="#7BBF4A" stroke="#14284B" stroke-width="3"/><circle r="19" fill="#C9E88F"/><g fill="#14284B"><circle cx="-8" cy="-6" r="2"/><circle cx="6" cy="-8" r="2"/><circle cx="9" cy="5" r="2"/><circle cx="-3" cy="9" r="2"/><circle cx="-11" cy="4" r="2"/></g><path d="M-34 -34 L34 34 M34 -34 L-34 34" stroke="#E63946" stroke-width="7" stroke-linecap="round"/></g>'),
+    it(ocPill(200, 56, 110, 'Kiwi', 26))
+  ]);
+}
+function aucklandArt() {
+  var bl = [[30, 160, 40], [76, 140, 36], [120, 176, 44], [268, 150, 40], [312, 170, 44], [358, 190, 34]], s = '';
+  bl.forEach(function (b, i) { s += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (232 - b[1]) + '" fill="' + ['#8FA7C2', '#6F8BB0', '#A5B8D0'][i % 3] + '" stroke="#14284B" stroke-width="3"/><rect x="' + (b[0] + 8) + '" y="' + (b[1] + 12) + '" width="8" height="12" fill="#FFF3C4"/><rect x="' + (b[0] + b[2] - 16) + '" y="' + (b[1] + 12) + '" width="8" height="12" fill="#FFF3C4"/>'; });
+  return scene('Auckland et sa grande tour', grad('#BFE3FF', '#F2F9FF'), [
+    cloud(50, 46, .8),
+    it(s),
+    it('<rect x="192" y="104" width="16" height="128" fill="#9AA9BD" stroke="#14284B" stroke-width="3"/><ellipse cx="200" cy="108" rx="28" ry="10" fill="#C7D3E3" stroke="#14284B" stroke-width="3"/><rect x="198" y="48" width="4" height="56" fill="#14284B"/>'),
+    it('<rect y="232" width="400" height="68" fill="#3E9BD8"/>' + waves(254, '#fff', .55) + waves(282, '#fff', .35)),
+    it(ocPill(200, 36, 140, 'Auckland', 22))
+  ]);
+}
+function pavlovaArt() {
+  return scene('Une pavlova', grad('#FFE0E8', '#FFF6DC'), [
+    it('<ellipse cx="200" cy="234" rx="150" ry="22" fill="#fff" stroke="#14284B" stroke-width="3"/>'),
+    it('<path d="M80 226 Q86 140 200 128 Q314 140 320 226Q200 250 80 226Z" fill="#FFF8EC" stroke="#14284B" stroke-width="3"/><path d="M110 200 Q120 160 150 150 M290 200 Q282 160 250 150" fill="none" stroke="#EAD9BD" stroke-width="4" stroke-linecap="round"/>'),
+    it('<circle cx="140" cy="154" r="13" fill="#fff" stroke="#EAD9BD" stroke-width="2"/><circle cx="170" cy="140" r="14" fill="#fff" stroke="#EAD9BD" stroke-width="2"/><circle cx="204" cy="134" r="14" fill="#fff" stroke="#EAD9BD" stroke-width="2"/><circle cx="238" cy="140" r="14" fill="#fff" stroke="#EAD9BD" stroke-width="2"/><circle cx="266" cy="154" r="13" fill="#fff" stroke="#EAD9BD" stroke-width="2"/>'),
+    it('<circle cx="156" cy="132" r="11" fill="#E63946"/><circle cx="222" cy="122" r="11" fill="#E63946"/><g stroke="#14284B" stroke-width="2"><circle cx="188" cy="124" r="12" fill="#9ED76A"/><circle cx="250" cy="128" r="12" fill="#9ED76A"/></g><circle cx="188" cy="124" r="5" fill="#D9F2B0"/><circle cx="250" cy="128" r="5" fill="#D9F2B0"/>'),
+    it(ocPill(200, 60, 140, 'Pavlova', 26))
+  ]);
+}
+function whaleSwimArt() {
+  return scene('Une baleine à bosse dans l’eau', grad(OCSEA[0], '#0B3A66'), [
+    it(waves(40, '#fff', .45)),
+    whale(60, 170, .95),
+    it('<g transform="translate(320 110)"><circle r="14" fill="#F2C9A0" stroke="#14284B" stroke-width="3"/><rect x="-14" y="-6" width="28" height="9" rx="4" fill="#4D96FF" stroke="#14284B" stroke-width="2"/><path d="M12 -2 L26 -22" stroke="#E63946" stroke-width="5" stroke-linecap="round"/><path d="M-12 14 L-30 46 M12 14 L30 46" stroke="#F2C9A0" stroke-width="7" stroke-linecap="round"/><path d="M-10 14 H10 V48 H-10Z" fill="#E63946"/></g>'),
+    bubbles([[280, 70, 7], [262, 48, 5], [348, 70, 6]]),
+    it(ocPill(300, 36, 100, 'Flouf !', 22))
+  ]);
+}
+function whaleSongArt() {
+  return scene('Une baleine à bosse qui chante', grad(OCSEA[0], '#0B3A66'), [
+    it(waves(40, '#fff', .45)),
+    whale(40, 170, .9, true),
+    it(note(250, 100, '#FFF3B0') + note(285, 70, '#FFC93C') + note(320, 105, '#fff') + note(355, 60, '#FF9FB5')),
+    bubbles([[250, 200, 7], [270, 222, 5], [336, 214, 6]])
+  ]);
+}
+function tuvaluArt() {
+  var out = '';
+  for (var i = 0; i < 9; i++) {
+    var x = 80 + (i % 3) * 120, y = 76 + Math.floor(i / 3) * 70;
+    out += '<ellipse cx="' + x + '" cy="' + (y + 22) + '" rx="34" ry="8" fill="#F2D08A" stroke="#C99A3A" stroke-width="2.5"/>' + starP(x, y - 2, 15, '#FFD100');
+  }
+  return scene('Neuf étoiles pour neuf îles', grad(OCSEA[0], OCSEA[1]), [it(waves(30, '#fff', .4) + waves(285, '#fff', .4)), it(out)]);
+}
+function archipelArt() {
+  var isl = [[70, 190, 1], [170, 220, .8], [262, 180, 1.1], [340, 230, .7], [130, 130, .6], [330, 140, .6], [226, 120, .5]], s = '';
+  isl.forEach(function (p) { s += '<ellipse cx="' + p[0] + '" cy="' + p[1] + '" rx="' + (44 * p[2]) + '" ry="' + (10 * p[2]) + '" fill="#F2D08A" stroke="#C99A3A" stroke-width="3"/>' + naPalm(p[0], p[1] - 2, p[2] * .9); });
+  return scene('Un archipel : plein d’îles', grad(OCSEA[0], OCSEA[1]), [it(waves(280, '#fff', .45)), it(s), it(ocPill(200, 54, 200, 'Ar-chi-pel', 28))]);
+}
+function rugbyDanceArt() {
+  function dancer(x, c) {
+    return '<g transform="translate(' + x + ' 236)"><path d="M-8 -48 L-30 -86 M8 -48 L30 -86" stroke="#E0B088" stroke-width="8" stroke-linecap="round"/><rect x="-16" y="-62" width="32" height="40" rx="10" fill="' + c + '"/><rect x="-14" y="-24" width="10" height="26" rx="4" fill="#14284B"/><rect x="4" y="-24" width="10" height="26" rx="4" fill="#14284B"/><circle cy="-78" r="13" fill="#E0B088"/><path d="M-6 -82 h3 M3 -82 h3" stroke="#14284B" stroke-width="2.5"/></g>';
+  }
+  return scene('Une équipe de rugby qui danse', grad('#BDE9B0', '#F0FADD'), [
+    it('<rect y="226" width="400" height="74" fill="#4E9E50"/><path d="M0 262 H400" stroke="#fff" stroke-width="3" stroke-dasharray="14 10"/>'),
+    it(dancer(90, '#fff') + dancer(200, '#14284B') + dancer(310, '#fff')),
+    it('<ellipse cx="350" cy="268" rx="22" ry="13" fill="#8B5A2B" stroke="#14284B" stroke-width="3"/><path d="M340 268 H360" stroke="#fff" stroke-width="2.5"/>'),
+    it(ocPill(200, 46, 150, 'Simbé !', 26))
+  ]);
+}
+function newGuineaArt() {
+  var d = 'M50 150 Q104 108 170 120 Q212 98 256 128 Q310 148 360 192 Q316 204 276 198 Q244 218 204 198 Q150 204 116 192 Q74 192 50 150Z';
+  return scene('La Nouvelle-Guinée : deux pays', grad(OCSEA[0], OCSEA[1]), [
+    it(waves(40, '#fff', .45) + waves(285, '#fff', .45)),
+    it('<defs><clipPath id="ngw"><rect width="200" height="300"/></clipPath><clipPath id="nge"><rect x="200" width="200" height="300"/></clipPath></defs><path d="' + d + '" fill="#F7B8A8" stroke="#14284B" stroke-width="3" clip-path="url(#ngw)"/><path d="' + d + '" fill="#F7D774" stroke="#14284B" stroke-width="3" clip-path="url(#nge)"/><path d="M200 100 V220" stroke="#14284B" stroke-width="4" stroke-dasharray="8 7"/>'),
+    it(label(120, 86, 'Indonésie', 22, '#fff') + label(290, 96, 'Papouasie-', 18, '#fff') + label(290, 116, 'Nouvelle-Guinée', 18, '#fff')),
+    it(label(120, 240, 'ouest', 20, '#fff') + label(290, 240, 'est', 20, '#fff'))
+  ]);
+}
+function butterflyArt() {
+  return scene('Le papillon de la reine Alexandra, le plus grand du monde', grad('#BDE9B0', '#F0FADD'), [
+    it('<path d="M0 252 Q120 232 240 254 T400 244 V300 H0Z" fill="#4E9E50"/>'),
+    it('<g transform="translate(200 150)"><path d="M0 -6 Q-90 -90 -150 -40 Q-130 10 -22 12Z" fill="#14284B" stroke="#14284B" stroke-width="3"/><path d="M0 -6 Q90 -90 150 -40 Q130 10 22 12Z" fill="#14284B" stroke="#14284B" stroke-width="3"/><path d="M0 14 Q-70 20 -100 76 Q-60 100 -16 40Z" fill="#14284B"/><path d="M0 14 Q70 20 100 76 Q60 100 16 40Z" fill="#14284B"/><path d="M-12 -4 Q-70 -62 -112 -36 Q-96 -6 -18 6Z" fill="#6DDB7A"/><path d="M12 -4 Q70 -62 112 -36 Q96 -6 18 6Z" fill="#6DDB7A"/><path d="M-10 22 Q-50 34 -74 66 Q-46 80 -14 44Z" fill="#FFD23F"/><path d="M10 22 Q50 34 74 66 Q46 80 14 44Z" fill="#FFD23F"/><ellipse cx="0" cy="14" rx="7" ry="42" fill="#3B2A1A"/><circle cy="-34" r="8" fill="#3B2A1A"/><path d="M-3 -40 Q-14 -64 -26 -66 M3 -40 Q14 -64 26 -66" stroke="#3B2A1A" stroke-width="3" fill="none" stroke-linecap="round"/></g>'),
+    it('<g stroke="#4E9E50" stroke-width="4" stroke-linecap="round"><path d="M44 262 V220 M356 262 V216"/></g><circle cx="44" cy="214" r="12" fill="#FF9FB5"/><circle cx="356" cy="210" r="12" fill="#FFC93C"/>')
+  ]);
+}
+function languesArt() {
+  var b = [[70, 80, '#fff'], [320, 76, '#FFE08A'], [56, 210, '#C7F0F5'], [336, 212, '#FFC2C2'], [200, 40, '#D6EFD6'], [200, 264, '#E3D6F8']], out = '';
+  b.forEach(function (p) { out += '<ellipse cx="' + p[0] + '" cy="' + p[1] + '" rx="46" ry="24" fill="' + p[2] + '" stroke="#14284B" stroke-width="3"/>' + label(p[0], p[1] + 8, '…', 26); });
+  return scene('850 langues en Papouasie-Nouvelle-Guinée', grad('#D9ECFB', '#FFF6DC'), [it(out), it('<circle cx="200" cy="152" r="62" fill="#FF6B4A" stroke="#14284B" stroke-width="4"/>' + label(200, 156, '850', 44, '#fff') + label(200, 182, 'langues', 20, '#fff'))]);
+}
+function nauruEquatorArt() {
+  return scene('Le drapeau de Nauru : une étoile au-dessous de l’équateur', grad('#D3E2F8', '#FFF6DC'), [
+    it(flagArt('nr', 40, 34, 270)),
+    it('<path d="M355 124 H320" stroke="#14284B" stroke-width="4" stroke-linecap="round"/><path d="M330 114 L318 124 L330 134" fill="none" stroke="#14284B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>' + label(362, 112, 'équateur', 15)),
+    it('<path d="M121 236 V204" stroke="#14284B" stroke-width="4" stroke-linecap="round"/><path d="M111 214 L121 202 L131 214" fill="none" stroke="#14284B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'),
+    it(ocPill(200, 262, 330, 'une étoile au-dessous de l’équateur', 19))
+  ]);
+}
+function vanuatuNearArt() {
+  return scene('Le Vanuatu, près de l’Australie, des îles Fidji et des îles Salomon', grad(OCSEA[0], OCSEA[1]), [
+    it(waves(30, '#fff', .4) + waves(285, '#fff', .4)),
+    it('<path d="M0 60 Q40 36 110 46 Q150 60 146 110 Q132 160 70 170 Q10 166 0 130Z" fill="#F4C76A" stroke="#C99A3A" stroke-width="3"/>' + label(64, 114, 'Australie', 20, '#7A4A12')),
+    it('<g fill="#F4C76A" stroke="#C99A3A" stroke-width="2.5"><ellipse cx="300" cy="62" rx="22" ry="8"/><ellipse cx="338" cy="80" rx="16" ry="6"/><ellipse cx="350" cy="206" rx="20" ry="7"/><ellipse cx="376" cy="226" rx="12" ry="5"/></g>'),
+    it(ocPill(310, 40, 128, 'Îles Salomon', 17) + ocPill(342, 250, 80, 'Fidji', 17)),
+    pinW(228, 176, 'Vanuatu', 228, 226, 104)
+  ]);
+}
+function coverOcArt() {
+  var cs = [['au', 30, 36, -8], ['nz', 150, 28, 5], ['fj', 270, 40, -5], ['to', 36, 150, 6], ['vu', 156, 160, -6], ['pg', 276, 148, 8]], g = '';
+  cs.forEach(function (c) { g += '<g transform="rotate(' + c[3] + ' ' + (c[1] + 50) + ' ' + (c[2] + 33) + ')">' + flagArt(c[0], c[1], c[2], 100) + '</g>'; });
+  return scene('Plein de drapeaux d’Océanie', grad('#38BDF8', '#0B6BA8'), [sparkle(20, 20, 3), sparkle(380, 270, 3), sparkle(350, 20, 2.5), it(g)]);
+}
+function finOcArt() {
+  var codes = ['au', 'nz', 'to', 'tv', 'fj', 'pg', 'nr', 'vu'], out = [], w = 70;
+  codes.forEach(function (c, i) {
+    var row = i < 4 ? 0 : 1, col = i % 4, x = 24 + col * 92, y = 120 + row * 82;
+    out.push(it('<rect x="' + (x + w / 2 - 2) + '" y="' + (y - 14) + '" width="4" height="14" fill="#8A6B4A"/>' + flagArt(c, x, y, w)));
+  });
+  return scene('Tous les drapeaux visités', grad('#FFE3B0', '#FFF5DC'), [it(label(200, 82, 'Fin', 64))].concat(out));
+}
+
+STORIES.splice(5, 0, {
+  title: 'Voyage en Océanie', coverArt: coverOcArt, mark: '?',
+  tiles: ['au', 'nz', 'to', 'tv', 'fj', 'pg', 'nr', 'vu'].map(flagTile),
+  scenes: [
+    { tile: -1, text: 'J’ai adoré l’Amérique du Sud ! C’est vrai, mais maintenant c’est l’Océanie !', art: oceaniaIntroArt },
+
+    { tile: 0, text: 'Bienvenue dans l’Australie. Capitale : Canberra. Langue principale : anglais.', art: flagScene('au', 'Australie', '#FFE9C7', '#FFF6E4') },
+    { tile: 0, text: 'L’Australie est le sixième pays le plus grand du monde après le Brésil, la Chine, les États-Unis, le Canada et la Russie.', art: auRankArt },
+    { tile: 0, text: 'Voici le parc d’Oulourou Catadjouta. Oh ! Voici l’immense rocher rouge s’appelant Oulourou. Direction la ville de Sydney !', art: uluruArt },
+    { tile: 0, text: 'Bienvenue dans la ville de Sydney. Je connais ce bâtiment ! C’est l’opéra de Sydney. Ça ressemble… aux voiles d’un bateau ! Direction : l’île australienne de la Tasmanie.', art: operaArt },
+    { tile: 0, text: 'Voici la Tasmanie. Voici la ville de Hobart. Direction : la Nouvelle-Zélande.', art: tasmaniaArt },
+
+    { tile: 1, text: 'Voici la Nouvelle-Zélande. Capitale : Wellington. Langues principales : anglais et maori.', art: flagSceneA('nz', 'Nouvelle-Zélande', '#D3E2F8', '#FBEDEE', 22) },
+    { tile: 1, text: 'La Nouvelle-Zélande est composée de deux îles : l’île du Nord, au nord et l’île du Sud, au sud.', art: nzMapArt },
+    { tile: 1, text: 'Les gens en Nouvelle-Zélande sont surnommés les kiwis, non ? Comme le fruit ? Incorrect. Les Néo-Zélandais sont surnommés « les kiwis » à cause d’un oiseau rare et unique, symbole du pays appelé le kiwi.', art: kiwiBirdArt },
+    { tile: 1, text: 'Voici la ville d’Auckland, sur l’île du Nord.', art: aucklandArt },
+    { tile: 1, text: 'Voici le dessert de la pavlova. Oh ! En plus, j’avais faim ! Miam ! Miam ! Trop bon ! Direction : les Tongas.', art: pavlovaArt },
+
+    { tile: 2, text: 'Voici les Tongas. Capitale : Nuku’alofa.', art: flagScene('to', 'Tonga', '#F8D5D5', '#FDF1F1') },
+    { tile: 2, text: 'Flouf ! Wah ! C’était quoi, dans l’eau ? C’était une baleine à bosse. On peut nager avec des baleines à bosses. On peut y aller ? Oui ! Plouf !', art: whaleSwimArt },
+    { tile: 2, text: 'Les baleines à bosses sont connues pour leur chant magique. Plouf ! Elles étaient proches ! Direction : les Tuvalu.', art: whaleSongArt },
+
+    { tile: 3, text: 'Bienvenue au Tuvalu. Capitale : Funafuti. Langue principale : anglais.', art: flagScene('tv', 'Tuvalu', '#CFE8FA', '#FFF6C9') },
+    { tile: 3, text: 'Les 9 étoiles du drapeau des Tuvalu symbolisent les 9 îles du pays. Allons aux îles Fidji.', art: tuvaluArt },
+
+    { tile: 4, text: 'Voici les îles Fidji. Capitale : Suva. Langues principales : fidjien (hindi des îles Fidji) et anglais.', art: flagScene('fj', 'Îles Fidji', '#CFE8FA', '#EAF4FB') },
+    { tile: 4, text: 'Les îles Fidji sont un archipel. Ar-chi-pel… J’adore ce mot !', art: archipelArt },
+    { tile: 4, text: 'Les Fidji sont forts au rugby. Euh… Ils ne jouent pas au rugby ! Ils dansent ! L’équipe de rugby des îles Fidji danse une danse de guerre appelée « simbé ». Direction : la Papouasie-Nouvelle-Guinée.', art: rugbyDanceArt },
+
+    { tile: 5, text: 'Bienvenue en Papouasie-Nouvelle-Guinée. Capitale : Port Moresby.', art: flagSceneA('pg', 'Papouasie-Nouvelle-Guinée', '#F8D5D5', '#FFF6C9', 17, 310) },
+    { tile: 5, text: 'La Papouasie-Nouvelle-Guinée est située sur l’île de la Nouvelle-Guinée. La Nouvelle-Guinée est faite de 2 pays : la Papouasie-Nouvelle-Guinée à l’est et l’Indonésie (qui est un pays asiatique) à l’ouest.', art: newGuineaArt },
+    { tile: 5, text: 'T’as vu la taille de ce papillon ? Il est é-norme ! C’est le papillon de la Reine Alexandra. L’espèce de papillon la plus grande au monde.', art: butterflyArt },
+    { tile: 5, text: 'La Papouasie-Nouvelle-Guinée est le pays avec le plus de langues : 850 langues ! Allons sur Nauru.', art: languesArt },
+
+    { tile: 6, text: 'Voici Nauru. Capitale : aucune. Plus grande ville : Yaren.', art: flagScene('nr', 'Nauru', '#CFE8FA', '#FFF6C9') },
+    { tile: 6, text: 'Donc, Nauru n’a pas de capitale ? Vrai. Le drapeau de Nauru montre la position de Nauru en mettant une étoile au-dessous de l’équateur. Direction suivante : Vanuatu.', art: nauruEquatorArt },
+
+    { tile: 7, text: 'Bienvenue en Vanuatu. Capitale : Port-Vila.', art: flagScene('vu', 'Vanuatu', '#D6EFD6', '#FFF6C9') },
+    { tile: 7, text: 'Les Vanuatu sont des îles près de l’Australie, des îles Fidji et les îles Salomon.', art: vanuatuNearArt },
+    { tile: 7, text: 'Fin', art: finOcArt }
+  ]
+});
+
 /* ---------- Étagère ---------- */
 var shelf = document.getElementById('shelf');
 STORIES.forEach(function (s, i) {
@@ -2026,6 +2263,8 @@ var PRONO = {
   'La Boca': 'La Boka', 'Sucre': 'Soucré', 'San José': 'San José', 'Kingston': 'Kinneugstonne', 'Nassau': 'Nasso',
   'New York': 'Niou Yorque', 'New Delhi': 'Niou Dèli', 'Sierra Leone': 'Siéra Léone', 'Tunis': 'Tunisse', 'Dubaï': 'Doubaille',
   'N’Djamena': 'Ndjaména', 'Niamey': 'Niamé', 'Abuja': 'Abouja', 'Mogadiscio': 'Mogadichio', 'Khartoum': 'Kartoum', 'Lagos': 'Lagosse', 'Accra': 'Akra',
+  'Canberra': 'Canbèra', 'Sydney': 'Sidnée', 'Hobart': 'Hobarte', 'Wellington': 'Ouélingtonne', 'Auckland': 'Okeulande', 'Nuku’alofa': 'Noukou alofa',
+  'Funafuti': 'Founafouti', 'Tuvalu': 'Touvalou', 'Suva': 'Souva', 'Port Moresby': 'Porte Morèzebi', 'Nauru': 'Naourou', 'Yaren': 'Yarène', 'Vanuatu': 'Vanouatou',
   'Let’s go': 'Lètse go !', 'fish and chips': 'fiche ènd tchipse', 'OK': 'Oké', 'Wow': 'Woo'
 };
 function spoken(text) {
