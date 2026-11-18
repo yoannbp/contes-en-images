@@ -55,7 +55,12 @@ STORIES.splice(3, 0, {
 - Amérique du Sud : Équateur « Monnaie : le peso » (inexact : l'Équateur utilise le dollar américain) ;
   « dans l’Équateur » (plutôt « en Équateur »).
 - Asie : Chypre, « ligne Verte » décrite comme une route (c'est une zone tampon de l'ONU).
-- Afrique : Afrique du Sud, « capitale : Pretoria » (3 capitales) ; détails de la Voie de Dégagement Nord à Dakar non vérifiés.
+- Afrique : Afrique du Sud, « capitale : Pretoria » (3 capitales) ;
+  « le Kilimandjaro, point culminant du Kenya » (inexact : il est en Tanzanie, scène du Kenya) ;
+  « le fleuve Niger commence au Mali » (inexact : il prend sa source en Guinée) ;
+  « le Nil, le plus grand fleuve du monde » (discuté : Nil ou Amazone) ;
+  « le Tchad a le même drapeau que la Roumanie » (presque : nuances de bleu et de rouge légèrement différentes) ;
+  graphie « Nigéria » (le français écrit plutôt « Nigeria »).
 - Hauteurs vérifiées en nov. 2026 : Mont-Blanc 4 807 m, tour Eiffel 330 m.
 
 ## Hébergement

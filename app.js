@@ -621,20 +621,29 @@ function crescent(cx, cy, R, d, r, fill) {
 }
 
 FL.tn = [90, 60, '<rect width="90" height="60" fill="#E70013"/><circle cx="45" cy="30" r="17" fill="#fff"/>' + crescent(43, 30, 11, 4, 9, '#E70013') + starP(48.5, 30, 6, '#E70013')];
-FL.dz = [90, 60, '<rect width="45" height="60" fill="#006233"/><rect x="45" width="45" height="60" fill="#fff"/>' + crescent(41, 30, 16, 5, 12.8, '#D21034') + starP(51, 30, 8, '#D21034')];
-FL.ly = [90, 60, '<rect width="90" height="15" fill="#E70013"/><rect y="15" width="90" height="30" fill="#000"/><rect y="45" width="90" height="15" fill="#239E46"/>' + crescent(42, 30, 9, 3, 7.4, '#fff') + starP(51, 30, 4.6, '#fff')];
-FL.lyOld = [90, 60, '<rect width="90" height="60" fill="#006233"/>'];
 FL.ma = [90, 60, '<rect width="90" height="60" fill="#C1272D"/>' + pentagram(45, 31, 15, '#006233', 2.6)];
 FL.eg = [90, 60, '<rect width="90" height="20" fill="#CE1126"/><rect y="20" width="90" height="20" fill="#fff"/><rect y="40" width="90" height="20" fill="#000"/>' +
   '<path d="M31 27 Q39 22 45 28 Q51 22 59 27 L57 33 Q51 29 45 34 Q39 29 33 33Z" fill="#C09300"/><rect x="41" y="28" width="8" height="10" rx="1.5" fill="#fff" stroke="#C09300" stroke-width="1.5"/><path d="M41 31 H49 M41 34 H49" stroke="#CE1126" stroke-width="1"/><path d="M42 40 H48" stroke="#C09300" stroke-width="2"/>'];
-FL.et = [90, 60, '<rect width="90" height="20" fill="#078930"/><rect y="20" width="90" height="20" fill="#FCDD09"/><rect y="40" width="90" height="20" fill="#DA121A"/><circle cx="45" cy="30" r="12" fill="#0F47AF"/>' + starP(45, 30, 9, '#FCDD09')];
-FL.gm = [90, 60, '<rect width="90" height="20" fill="#CE1126"/><rect y="20" width="90" height="20" fill="#fff"/><rect y="23.3" width="90" height="13.4" fill="#0C1C8C"/><rect y="40" width="90" height="20" fill="#3A7728"/>'];
 FL.sn = [90, 60, '<rect width="30" height="60" fill="#00853F"/><rect x="30" width="30" height="60" fill="#FDEF42"/><rect x="60" width="30" height="60" fill="#E31B23"/>' + starP(45, 31, 10, '#00853F')];
-FL.lr = [90, 60, (function () { var s = ''; for (var i = 0; i < 11; i++) s += '<rect y="' + (i * 60 / 11).toFixed(2) + '" width="90" height="' + (60 / 11 + .05).toFixed(2) + '" fill="' + (i % 2 ? '#fff' : '#BF0A30') + '"/>'; return s; })() + '<rect width="30" height="27.3" fill="#002868"/>' + starP(15, 14, 9, '#fff')];
-FL.bf = [90, 60, '<rect width="90" height="30" fill="#EF2B2D"/><rect y="30" width="90" height="30" fill="#009E49"/>' + starP(45, 31, 13, '#FCD116')];
 FL.za = [90, 60, '<rect width="90" height="30" fill="#E03C31"/><rect y="30" width="90" height="30" fill="#001489"/>' +
   '<path d="M0 0 L38 30 L0 60 M38 30 H90" fill="none" stroke="#fff" stroke-width="22"/><path d="M0 0 L38 30 L0 60 M38 30 H90" fill="none" stroke="#007749" stroke-width="12"/>' +
   '<path d="M0 0 L33 30 L0 60Z" fill="#FFB81C"/><path d="M0 7 L22 30 L0 53Z" fill="#000"/>'];
+
+FL.ml = [90, 60, '<rect width="30" height="60" fill="#14B53A"/><rect x="30" width="30" height="60" fill="#FCD116"/><rect x="60" width="30" height="60" fill="#CE1126"/>'];
+FL.ne = [90, 60, '<rect width="90" height="20" fill="#E05206"/><rect y="20" width="90" height="20" fill="#fff"/><rect y="40" width="90" height="20" fill="#0DB02B"/><circle cx="45" cy="30" r="6.5" fill="#E05206"/>'];
+FL.td = [90, 60, '<rect width="30" height="60" fill="#002664"/><rect x="30" width="30" height="60" fill="#FECB00"/><rect x="60" width="30" height="60" fill="#C60C30"/>'];
+FL.ro = [90, 60, '<rect width="30" height="60" fill="#002B7F"/><rect x="30" width="30" height="60" fill="#FCD116"/><rect x="60" width="30" height="60" fill="#CE1126"/>'];
+FL.dj = [90, 60, '<rect width="90" height="30" fill="#6AB2E7"/><rect y="30" width="90" height="30" fill="#12AD2B"/><path d="M0 0 L45 30 L0 60Z" fill="#fff"/>' + starP(13, 30, 7, '#D7141A')];
+FL.gh = [90, 60, '<rect width="90" height="20" fill="#CE1126"/><rect y="20" width="90" height="20" fill="#FCD116"/><rect y="40" width="90" height="20" fill="#006B3F"/>' + starP(45, 31, 9, '#000')];
+FL.ng = [90, 60, '<rect width="30" height="60" fill="#008751"/><rect x="30" width="30" height="60" fill="#fff"/><rect x="60" width="30" height="60" fill="#008751"/>'];
+FL.tz = [90, 60, '<rect width="90" height="60" fill="#1EB53A"/><path d="M90 0 V60 H0Z" fill="#00A3DD"/><path d="M0 60 L90 0" stroke="#FCD116" stroke-width="22"/><path d="M0 60 L90 0" stroke="#000" stroke-width="14"/>'];
+FL.ke = [90, 60, '<rect width="90" height="60" fill="#fff"/><rect width="90" height="17" fill="#000"/><rect y="21" width="90" height="18" fill="#BB0000"/><rect y="43" width="90" height="17" fill="#006600"/><ellipse cx="45" cy="30" rx="8" ry="15" fill="#BB0000" stroke="#fff" stroke-width="1.6"/><ellipse cx="45" cy="30" rx="3.2" ry="7" fill="#000"/>'];
+FL.cd = [90, 60, '<rect width="90" height="60" fill="#007FFF"/><path d="M0 60 L90 0" stroke="#F7D618" stroke-width="20"/><path d="M0 60 L90 0" stroke="#CE1021" stroke-width="14"/>' + starP(15, 13, 9, '#F7D618')];
+FL.cg = [90, 60, '<rect width="90" height="60" fill="#009543"/><path d="M90 0 V60 H0Z" fill="#DC241F"/><path d="M0 60 L90 0" stroke="#FBDE4A" stroke-width="22"/>'];
+FL.mg = [90, 60, '<rect width="90" height="60" fill="#fff"/><rect x="30" width="60" height="30" fill="#FC3D32"/><rect x="30" y="30" width="60" height="30" fill="#007E3A"/>'];
+FL.sc = [90, 60, '<path d="M0 60 L0 0 L30 0Z" fill="#003F87"/><path d="M0 60 L30 0 L60 0Z" fill="#FCD856"/><path d="M0 60 L60 0 L90 0 L90 20Z" fill="#D62828"/><path d="M0 60 L90 20 L90 40Z" fill="#fff"/><path d="M0 60 L90 40 L90 60Z" fill="#007A3D"/>'];
+FL.so = [90, 60, '<rect width="90" height="60" fill="#4189DD"/>' + starP(45, 31, 16, '#fff')];
+FL.sd = [90, 60, '<rect width="90" height="20" fill="#D21034"/><rect y="20" width="90" height="20" fill="#fff"/><rect y="40" width="90" height="20" fill="#000"/><path d="M0 0 L36 30 L0 60Z" fill="#007229"/>'];
 
 /* éléments Afrique */
 var AFR_D = 'M128 62 L170 52 L215 46 L252 62 L290 68 L320 74 L336 100 L350 128 L384 158 L362 182 L346 214 L322 250 L292 276 L262 288 L236 266 L226 232 L214 200 L198 176 L160 168 L122 156 L90 134 L76 104 L96 76Z';
@@ -655,25 +664,6 @@ function introArt() {
 function tunisiaMapArt() {
   return scene('Tunis, au nord de l’Afrique', grad('#5FB3E8', '#BFE3F7'), africaBase([pin(226, 58, 'Tunis', 300, 40)]));
 }
-function mosqueNightArt() {
-  var lit = ''; for (var i = 0; i < 6; i++) lit += '<rect x="' + (84 + i * 36) + '" y="236" width="12" height="22" rx="6" fill="#FFE08A"/>';
-  return scene('Une lune et une étoile au-dessus d’une mosquée', grad('#17284F', '#3B3F7E'), [
-    stars([[40, 40, 3], [120, 90, 2.5], [200, 30, 3], [60, 150, 2], [380, 150, 2.5]]),
-    it(crescent(300, 86, 40, 13, 33, '#FFF1B8')),
-    it(starP(362, 70, 16, '#FFF1B8')),
-    it('<rect x="50" y="130" width="22" height="140" fill="#0E1A33"/><path d="M46 132 Q61 96 76 132Z" fill="#0E1A33"/><rect x="58" y="86" width="6" height="14" fill="#0E1A33"/>' +
-      '<rect x="40" y="226" width="270" height="44" fill="#0E1A33"/><path d="M100 226 A50 50 0 0 1 200 226Z" fill="#0E1A33"/><rect x="146" y="164" width="8" height="14" fill="#0E1A33"/><path d="M110 226 A40 40 0 0 1 190 226" fill="none" stroke="#243A6B" stroke-width="3"/>' +
-      '<path d="M222 226 A24 24 0 0 1 270 226Z" fill="#0E1A33"/>'),
-    it(lit)
-  ]);
-}
-function libyaFlagsArt() {
-  return scene('Le drapeau libyen avant et maintenant', grad('#FFF1CC', '#FFFAEB'), [
-    it(flagArt('lyOld', 24, 62, 160)), it(label(104, 214, 'Avant', 30)),
-    it('<path d="M190 116 H212 M204 108 L212 116 L204 124" fill="none" stroke="#14284B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'),
-    it(flagArt('ly', 216, 62, 160)), it(label(296, 214, 'Maintenant', 30))
-  ]);
-}
 function camel(x, y, s) {
   return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-36 -46 Q-54 -42 -52 -22" fill="none" stroke="#B97F3C" stroke-width="5" stroke-linecap="round"/>' +
     '<rect x="-30" y="-30" width="8" height="30" rx="3" fill="#B97F3C"/><rect x="-12" y="-30" width="8" height="30" rx="3" fill="#C98D45"/><rect x="14" y="-30" width="8" height="30" rx="3" fill="#B97F3C"/><rect x="28" y="-30" width="8" height="30" rx="3" fill="#C98D45"/>' +
@@ -688,21 +678,6 @@ function penguin(x, y, s) {
 }
 function dunes() {
   return '<path d="M0 214 Q90 160 190 210 T400 190 V300 H0Z" fill="#F2B867"/><path d="M0 250 Q110 206 230 246 T400 232 V300 H0Z" fill="#E8A24F"/><path d="M0 282 Q130 256 250 280 T400 270 V300 H0Z" fill="#D98F3E"/>';
-}
-function saharaArt() {
-  return scene('Le désert du Sahara', grad('#FFD8A8', '#FFF0D2'), [
-    sun(320, 70, 30, '#FF9F1C'), it(label(120, 52, 'Sahara', 38, '#8A4B12')),
-    it(dunes()), camel(112, 252, 1.05), camel(250, 266, .8)
-  ]);
-}
-function podiumArt() {
-  return scene('Le Sahara est le plus grand désert chaud', grad('#BFE3F7', '#EAF6FB'), [
-    it('<rect x="20" y="110" width="110" height="150" rx="10" fill="#CFE8FA" stroke="#14284B" stroke-width="3"/>' + label(75, 190, '1', 64)),
-    it('<rect x="145" y="135" width="110" height="125" rx="10" fill="#E6F3FB" stroke="#14284B" stroke-width="3"/>' + label(200, 210, '2', 56)),
-    it('<rect x="270" y="160" width="110" height="100" rx="10" fill="#F2C27A" stroke="#14284B" stroke-width="3"/>' + label(325, 232, '3', 52)),
-    it(penguin(75, 112, 1)), it('<path d="M170 135 L200 92 L230 135Z" fill="#fff" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>'), it(camel(325, 162, .56)),
-    it(label(75, 288, 'Antarctique', 17)), it(label(200, 288, 'Arctique', 17)), it(label(325, 288, 'Sahara', 17))
-  ]);
 }
 function palm(x, y, s) {
   return it('<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M0 0 Q6 -40 -2 -80" fill="none" stroke="#8A5A2B" stroke-width="7" stroke-linecap="round"/><g transform="translate(-2 -80)" fill="#2F9E4F"><path d="M0 0 Q-30 -26 -54 -8 Q-28 -12 0 0Z"/><path d="M0 0 Q30 -26 54 -8 Q28 -12 0 0Z"/><path d="M0 0 Q-24 -40 -42 -34 Q-18 -28 0 0Z"/><path d="M0 0 Q24 -40 42 -34 Q18 -28 0 0Z"/><path d="M0 0 Q0 -36 6 -46 Q8 -22 0 0Z"/></g></g>');
@@ -750,98 +725,13 @@ function tombArt() {
     stars([[96, 60, 3], [310, 80, 3], [60, 130, 2.5]])
   ]);
 }
-function calendarArt() {
-  var cells = [], cols = ['#078930', '#FCDD09', '#DA121A'];
-  for (var i = 0; i < 13; i++) {
-    var row = i < 7 ? 0 : 1, col = i < 7 ? i : i - 7, x = 38 + col * 48, y = 100 + row * 80, c = i === 12 ? '#4D96FF' : cols[i % 3], tc = (c === '#FCDD09') ? '#14284B' : '#fff';
-    cells.push(it('<rect x="' + x + '" y="' + y + '" width="42" height="64" rx="9" fill="' + c + '" stroke="#14284B" stroke-width="2.5"/>' + label(x + 21, y + 42, String(i + 1), 26, tc)));
-  }
-  return scene('Treize mois dans le calendrier éthiopien', grad('#FFF1CC', '#FFFAEB'), [
-    it('<rect x="22" y="22" width="356" height="256" rx="22" fill="#fff" stroke="#14284B" stroke-width="3"/><rect x="22" y="22" width="356" height="56" rx="22" fill="#FCDD09" stroke="#14284B" stroke-width="3"/>' + label(200, 62, '13 mois', 32))
-  ].concat(cells));
-}
-function yearsArt() {
-  function card(x, code, name, year, sub) {
-    return it('<rect x="' + x + '" y="40" width="160" height="218" rx="20" fill="#fff" stroke="#14284B" stroke-width="3"/>' + flagArt(code, x + 34, 58, 84) + label(x + 80, 168, year, 54) + label(x + 80, 214, name, 26));
-  }
-  return scene('2026 en France, 2019 en Éthiopie', grad('#D9ECFA', '#F2F9FE'), [
-    card(24, 'fr', 'France', '2026', 'calendrier de chez nous'), card(216, 'et', 'Éthiopie', '2019', 'calendrier éthiopien'),
-    it('<path d="M188 150 H212" stroke="#14284B" stroke-width="5" stroke-linecap="round"/><path d="M188 138 H212" stroke="#14284B" stroke-width="5" stroke-linecap="round"/>')
-  ]);
-}
 function senegalLand() { return 'M96 60 Q200 36 330 66 Q392 140 352 232 Q222 262 112 242 Q76 152 96 60Z'; }
 function gambiaStrip() { return 'M88 150 Q130 138 172 152 T262 150 T346 156'; }
-function gambiaMapArt() {
-  return scene('La Gambie, un petit trait entouré par le Sénégal', grad('#5FB3E8', '#9FD4F2'), [
-    it(waves(40, '#fff', .5) + waves(270, '#fff', .5)),
-    it('<path d="' + senegalLand() + '" fill="#CBE79A" stroke="#6FA33A" stroke-width="4" stroke-linejoin="round"/>'),
-    it(label(220, 108, 'Sénégal', 30, '#3E6B1E') + label(220, 222, 'Sénégal', 30, '#3E6B1E')),
-    it('<path d="' + gambiaStrip() + '" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/><path d="' + gambiaStrip() + '" fill="none" stroke="#E63946" stroke-width="11" stroke-linecap="round"/>'),
-    it('<rect x="150" y="164" width="140" height="28" rx="14" fill="#E63946"/>' + label(220, 184, 'Gambie', 20, '#fff'))
-  ]);
-}
 function pirogue(x, y, s, c1, c2) {
   return it('<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-54 -10 Q0 20 54 -10 L48 -24 Q0 -2 -48 -24Z" fill="' + c1 + '" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M-46 -14 Q0 8 46 -14" fill="none" stroke="' + c2 + '" stroke-width="6"/><rect x="-1" y="-60" width="3" height="40" fill="#14284B"/><path d="M2 -60 l22 8 l-22 8Z" fill="' + c2 + '"/></g>');
 }
-function pirogueArt() {
-  return scene('Des pirogues colorées sur la mer', grad('#FFD8A8', '#FFF0D2'), [
-    sun(70, 70, 28, '#FF9F1C'),
-    it('<rect y="130" width="400" height="110" fill="#3E9BD8"/>' + waves(160, '#fff', .55) + waves(200, '#fff', .4)),
-    it('<path d="M0 232 Q120 214 240 234 T400 226 V300 H0Z" fill="#F2D08A"/>'),
-    pirogue(110, 238, 1, '#E63946', '#FFD23F'), pirogue(250, 258, 1.05, '#2A9D8F', '#FF9F1C'), pirogue(330, 196, .7, '#FFD23F', '#E63946'),
-    palm(372, 262, .85)
-  ]);
-}
-function dakarRoadArt() {
-  var hw = 'M104 146 Q150 108 212 122 Q270 136 306 166';
-  function city(x, y, name, tx, ty, anchor) { return it('<circle cx="' + x + '" cy="' + y + '" r="8" fill="#E63946" stroke="#fff" stroke-width="3"/><text x="' + tx + '" y="' + ty + '" text-anchor="' + (anchor || 'middle') + '" ' + FONT + ' font-size="17" fill="#14284B">' + name + '</text>'); }
-  return scene('Une autoroute entre Dakar, Pikine, Guédiawaye et Rufisque', grad('#5FB3E8', '#9FD4F2'), [
-    it(waves(40, '#fff', .45) + waves(280, '#fff', .45)),
-    it('<path d="M70 150 Q80 108 130 98 L400 76 V250 L140 220 Q80 204 70 150Z" fill="#CBE79A" stroke="#6FA33A" stroke-width="4" stroke-linejoin="round"/>'),
-    it('<path d="' + hw + '" fill="none" stroke="#5B6472" stroke-width="12" stroke-linecap="round"/><path d="' + hw + '" fill="none" stroke="#fff" stroke-width="2.5" stroke-dasharray="8 8"/>'),
-    city(104, 146, 'Dakar', 104, 182), city(172, 168, 'Pikine', 172, 202), city(208, 124, 'Guédiawaye', 208, 98), city(306, 166, 'Rufisque', 306, 200)
-  ]);
-}
-function dakarWestArt() {
-  return scene('Dakar, sur la côte du Sénégal, presque sur la mer', grad('#5FB3E8', '#9FD4F2'), [
-    it(waves(40, '#fff', .5) + waves(270, '#fff', .5)),
-    it('<path d="' + senegalLand() + '" fill="#CBE79A" stroke="#6FA33A" stroke-width="4" stroke-linejoin="round"/>'),
-    it(label(240, 150, 'Sénégal', 32, '#3E6B1E')),
-    pin(108, 136, 'Dakar', 176, 96),
-    it(label(46, 150, 'Mer', 20, '#fff'))
-  ]);
-}
-function capVertArt() {
-  var isl = [[60, 90, 18], [112, 124, 22], [170, 86, 14], [226, 140, 20], [280, 100, 16], [84, 196, 24], [160, 218, 18], [236, 230, 22], [310, 190, 16], [340, 262, 14]], g = '';
-  isl.forEach(function (o) { g += '<ellipse cx="' + o[0] + '" cy="' + o[1] + '" rx="' + o[2] + '" ry="' + (o[2] * .7).toFixed(1) + '" fill="#C99A5B" stroke="#8A6B3A" stroke-width="3"/><ellipse cx="' + o[0] + '" cy="' + (o[1] - 3) + '" rx="' + (o[2] * .6).toFixed(1) + '" ry="' + (o[2] * .35).toFixed(1) + '" fill="#6DBB5A"/>'; });
-  return scene('Les îles du Cap-Vert dans l’océan', grad('#35B0E6', '#0B6AA8'), [
-    it(waves(60, '#fff', .45) + waves(160, '#fff', .35) + waves(260, '#fff', .35)),
-    it(g), it(label(330, 52, 'Cap-Vert', 30, '#fff')),
-    it('<g transform="translate(300 142)"><path d="M-30 0 Q0 14 30 0 L24 -10 Q0 2 -24 -10Z" fill="#E63946"/><rect x="-1" y="-40" width="3" height="32" fill="#14284B"/><path d="M2 -40 l20 8 l-20 8Z" fill="#fff"/></g>')
-  ]);
-}
-function liberiaArt() {
-  function blob(x, y, w, h, c, name, fs) { return it('<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="26" fill="' + c + '" stroke="#14284B" stroke-width="3"/>' + label(x + w / 2, y + h / 2 + 7, name, fs || 20)); }
-  return scene('Le Libéria et ses voisins', grad('#5FB3E8', '#9FD4F2'), [
-    it(waves(268, '#fff', .5) + waves(40, '#fff', .35)),
-    blob(24, 52, 130, 90, '#F4A261', 'Sierra Leone', 19), blob(168, 24, 170, 86, '#9BD38A', 'Guinée', 24),
-    blob(284, 124, 112, 130, '#FFD23F', 'Côte d’Ivoire', 15),
-    it('<rect x="130" y="140" width="150" height="104" rx="26" fill="#fff" stroke="#BF0A30" stroke-width="5"/><rect x="146" y="156" width="118" height="12" rx="6" fill="#BF0A30"/><rect x="146" y="216" width="118" height="12" rx="6" fill="#BF0A30"/>' + label(205, 200, 'Libéria', 26, '#002868'))
-  ]);
-}
 function baobab(x, y, s) {
   return it('<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-30 0 Q-22 -50 -14 -88 L14 -88 Q22 -50 30 0Z" fill="#9A6B42"/><path d="M-12 -86 L-34 -112 M12 -86 L34 -112 M0 -88 V-118" stroke="#9A6B42" stroke-width="7" stroke-linecap="round"/><g fill="#4C9A3F"><circle cx="-36" cy="-118" r="17"/><circle cx="0" cy="-130" r="21"/><circle cx="36" cy="-118" r="17"/><circle cx="-14" cy="-110" r="14"/><circle cx="16" cy="-110" r="14"/></g></g>');
-}
-function burkinaArt() {
-  return scene('Burkina Faso, ou simplement Burkina', grad('#FFD8A8', '#FFF0D2'), [
-    sun(330, 62, 26, '#FF9F1C'),
-    it('<path d="M0 240 Q120 220 240 240 T400 232 V300 H0Z" fill="#E5B466"/>'),
-    baobab(72, 252, 1),
-    it('<rect x="214" y="124" width="12" height="140" rx="4" fill="#8A5A2B"/>'),
-    it('<rect x="150" y="96" width="196" height="40" rx="10" fill="#FFD23F" stroke="#14284B" stroke-width="3" transform="rotate(-3 248 116)"/><g transform="rotate(-3 248 116)">' + label(248, 124, 'Burkina Faso', 23) + '</g>'),
-    it('<rect x="160" y="150" width="150" height="40" rx="10" fill="#fff" stroke="#14284B" stroke-width="3" transform="rotate(3 235 170)"/><g transform="rotate(3 235 170)">' + label(235, 178, 'Burkina', 24) + '</g>'),
-    it(flagArt('bf', 262, 196, 70))
-  ]);
 }
 function acacia(x, y, s) {
   return it('<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M0 0 Q-4 -40 -16 -70 M-2 -36 Q10 -56 26 -76" fill="none" stroke="#6B4A2B" stroke-width="8" stroke-linecap="round"/><ellipse cx="4" cy="-84" rx="58" ry="18" fill="#3C9A4A"/><ellipse cx="24" cy="-98" rx="36" ry="14" fill="#4FB35A"/></g>');
@@ -877,76 +767,225 @@ function lionArt() {
     acacia(80, 244, 1), it(lion(236, 262, 1.4))
   ]);
 }
-function safariArt() {
-  return scene('Lions, buffles, éléphants et rhinocéros', grad('#FFD8A8', '#FFF0D2'), [
-    sun(344, 56, 24, '#FF9F1C'),
-    it('<path d="M0 214 Q120 196 240 216 T400 208 V300 H0Z" fill="#E5B466"/><path d="M0 258 Q140 240 260 258 T400 252 V300 H0Z" fill="#D49A48"/>'),
-    it(buffalo(150, 238, .66)), it(rhino(336, 242, .66)),
-    it(lion(72, 290, .8)), it(elephant(236, 292, .8))
+
+/* Afrique : nouveaux dessins */
+function pinW(x, y, txt, tx, ty, w) {
+  return it('<path d="M' + x + ' ' + y + ' q-12 -17 -12 -28 a12 12 0 1 1 24 0 q0 11 -12 28z" fill="#E63946" stroke="#fff" stroke-width="2.5"/><circle cx="' + x + '" cy="' + (y - 28) + '" r="4.6" fill="#fff"/>' +
+    '<rect x="' + (tx - w / 2) + '" y="' + (ty - 20) + '" width="' + w + '" height="28" rx="14" fill="#14284B"/>' + label(tx, ty, txt, 18, '#fff'));
+}
+function afLoc(aria, x, y, txt, tx, ty, w, extra) {
+  return function () { return scene(aria, grad('#5FB3E8', '#BFE3F7'), africaBase((extra || []).concat([pinW(x, y, txt, tx, ty, w)]))); };
+}
+var maliArt = afLoc('Le Mali, dans l’ouest de l’Afrique', 150, 116, 'Mali', 44, 64, 80);
+var senegalArt = afLoc('Le Sénégal, tout à l’ouest de l’Afrique', 90, 114, 'Sénégal', 46, 176, 92);
+var tanzaniaArt = afLoc('La Tanzanie, au sud-est de l’Afrique', 322, 204, 'Tanzanie', 346, 286, 104);
+var madagascarArt = afLoc('Madagascar, une île à l’est de l’Afrique', 372, 226, 'Madagascar', 340, 292, 112,
+  [it('<ellipse cx="372" cy="222" rx="10" ry="30" transform="rotate(12 372 222)" fill="#F4C76A" stroke="#C99A3A" stroke-width="4"/>')]);
+var djiboutiArt = afLoc('Djibouti, un tout petit pays', 342, 130, 'Djibouti', 346, 60, 100);
+var somaliaArt = afLoc('La Corne de l’Afrique, au nord-est de la Somalie', 374, 158, 'Somalie', 330, 52, 92);
+function orangeJuiceArt() {
+  function glass(x) {
+    return '<path d="M' + x + ' 150 H' + (x + 64) + ' L' + (x + 56) + ' 236 H' + (x + 8) + 'Z" fill="#E8F6FF" fill-opacity=".7" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>' +
+      '<path d="M' + (x + 3) + ' 168 H' + (x + 61) + ' L' + (x + 55) + ' 232 H' + (x + 9) + 'Z" fill="#FF9F1C"/><path d="M' + (x + 44) + ' 120 L' + (x + 36) + ' 190" stroke="#E63946" stroke-width="5" stroke-linecap="round"/>';
+  }
+  function orange(x, y) { return '<circle cx="' + x + '" cy="' + y + '" r="20" fill="#FF9F1C" stroke="#D97706" stroke-width="3"/><path d="M' + x + ' ' + (y - 20) + ' q10 -10 18 -4 q-8 10 -18 4Z" fill="#3C9A4A"/>'; }
+  return scene('Deux verres de jus d’orange', grad('#FFE0B0', '#FFF4DA'), [
+    sun(50, 52, 24, '#FFC93C'),
+    it('<rect y="236" width="400" height="64" fill="#C98A4B"/><rect y="236" width="400" height="8" fill="#A66A30"/>'),
+    it(glass(112) + glass(226)),
+    it(orange(66, 226) + orange(344, 222) + orange(36, 260) + orange(372, 262)),
+    it('<ellipse cx="200" cy="64" rx="104" ry="30" fill="#fff" stroke="#14284B" stroke-width="3"/><path d="M178 88 l-10 18 l26 -12Z" fill="#fff" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>' + label(200, 73, 'Assalamalékoum !', 24))
   ]);
 }
-function finAfArt() {
-  var codes = ['tn', 'dz', 'ly', 'ma', 'eg', 'et', 'gm', 'sn', 'lr', 'bf', 'za'], out = [];
-  codes.forEach(function (c, i) {
-    var row = i < 6 ? 0 : 1, col = i < 6 ? i : i - 6, w = 56;
-    var x = (row ? 44 : 12) + col * 64, y = row ? 196 : 112;
-    out.push(it('<rect x="' + (x + w / 2 - 2) + '" y="' + (y - 14) + '" width="4" height="14" fill="#8A6B4A"/>' + flagArt(c, x, y, w)));
+function nileMapArt() {
+  return scene('Le Nil se jette dans la mer Méditerranée', grad('#BFE3F7', '#F6E6B8'), [
+    it('<rect width="400" height="96" fill="#3E9BD8"/>' + waves(40, '#fff', .5) + waves(74, '#fff', .35)),
+    it('<path d="M0 96 Q100 84 200 100 T400 92 V300 H0Z" fill="#F2D08A"/>'),
+    it('<path d="M200 300 V190 Q196 150 200 126 M200 126 Q176 112 150 100 M200 126 V100 M200 126 Q224 112 250 100" fill="none" stroke="#3E9BD8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>'),
+    it('<g fill="#3C9A4A"><circle cx="186" cy="214" r="9"/><circle cx="214" cy="230" r="9"/><circle cx="188" cy="256" r="9"/><circle cx="212" cy="184" r="8"/></g>'),
+    it(label(200, 64, 'Méditerranée', 28, '#fff')),
+    it('<rect x="238" y="214" width="102" height="34" rx="17" fill="#14284B"/>' + label(289, 239, 'Le Nil', 24, '#fff')),
+    it(label(96, 190, 'Égypte', 30, '#7A4A12'))
+  ]);
+}
+function afRiver(aria, d, texts) {
+  return scene(aria, grad('#5FB3E8', '#BFE3F7'), africaBase([
+    it('<path d="' + d + '" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="' + d + '" fill="none" stroke="#2F7FD0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'),
+    it(texts.map(function (t) { return label(t[0], t[1], t[2], t[3], t[4] || '#14284B'); }).join(''))
+  ]));
+}
+function nigerRiverArt() {
+  return afRiver('Le fleuve Niger, du Mali à l’océan Atlantique', 'M118 150 Q150 100 190 112 Q232 126 214 164 Q208 176 200 180', [[112, 128, 'Mali', 22, '#7A4A12'], [236, 100, 'Niger', 22, '#7A4A12'], [252, 168, 'Nigéria', 20, '#7A4A12'], [110, 226, 'Océan Atlantique', 15, '#fff']]);
+}
+function congoRiverArt() {
+  return afRiver('Le fleuve Congo, entre la RDC et l’Angola', 'M286 216 Q276 176 244 168 Q216 168 222 192 L218 206', [[300, 160, 'RDC', 24, '#7A4A12'], [262, 248, 'Angola', 20, '#7A4A12'], [112, 226, 'Océan Atlantique', 15, '#fff']]);
+}
+function chadRomaniaArt() {
+  return scene('Les drapeaux du Tchad et de la Roumanie sont presque identiques', grad('#D9ECFB', '#FFF6DC'), [
+    it(flagArt('td', 22, 70, 150)), it(flagArt('ro', 232, 70, 150)),
+    it(label(200, 150, '=', 56)),
+    it(label(97, 212, 'Tchad', 26) + label(307, 212, 'Roumanie', 26)),
+    it(label(97, 250, 'Afrique', 20, '#47608A') + label(307, 250, 'Europe', 20, '#47608A'))
+  ]);
+}
+function afBlocks(aria, c1, c2, blocks) {
+  return scene(aria, grad(c1, c2), blocks.map(function (b) {
+    return it('<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + b[3] + '" rx="14" fill="' + b[4] + '" stroke="#14284B" stroke-width="3"/>' +
+      b[5].map(function (l) { return label(l[0], l[1], l[2], l[3]); }).join(''));
+  }));
+}
+function ghanaBordersArt() {
+  return afBlocks('Le Ghana et ses voisins : Côte d’Ivoire, Burkina Faso et Togo', '#BFE3F7', '#F2F9FF', [
+    [40, 80, 96, 150, '#FFB38A', [[88, 148, 'Côte', 20], [88, 172, 'd’Ivoire', 20]]],
+    [146, 80, 108, 150, '#FFD23F', [[200, 160, 'Ghana', 28]]],
+    [264, 80, 88, 150, '#9ED8A0', [[308, 160, 'Togo', 26]]],
+    [40, 18, 312, 54, '#F4A0A0', [[196, 54, 'Burkina Faso', 28]]],
+    [40, 238, 312, 46, '#6EC1F0', [[196, 270, 'Océan Atlantique', 20]]]
+  ]);
+}
+function congosArt() {
+  return afBlocks('La République du Congo, à l’ouest de la RDC', '#BFE3F7', '#F2F9FF', [
+    [30, 50, 130, 200, '#A8D8A0', [[95, 138, 'République', 20], [95, 162, 'du Congo', 20]]],
+    [170, 30, 200, 240, '#F7D774', [[270, 160, 'RDC', 44]]]
+  ]);
+}
+function sudanSplitArt() {
+  return scene('Avant, un seul grand Soudan ; aujourd’hui le Soudan et le Soudan du Sud', grad('#FFE9C7', '#FFF6E4'), [
+    it('<rect x="50" y="52" width="300" height="104" rx="16" fill="#F0A8A8" stroke="#14284B" stroke-width="3"/><rect x="50" y="156" width="300" height="104" rx="16" fill="#A8D8A0" stroke="#14284B" stroke-width="3"/>'),
+    it('<path d="M50 156 H350" stroke="#14284B" stroke-width="4" stroke-dasharray="10 8"/>'),
+    it(label(200, 114, 'Soudan', 40) + label(200, 218, 'Soudan du Sud', 34)),
+    it(label(200, 34, 'Avant : un seul grand pays', 24, '#47608A'))
+  ]);
+}
+function lagosArt() {
+  var bl = [[30, 120, 46], [82, 90, 40], [128, 140, 50], [186, 70, 44], [236, 110, 38], [280, 80, 50], [336, 130, 40]], s = '';
+  bl.forEach(function (b, i) {
+    s += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (236 - b[1]) + '" fill="' + ['#8FA7C2', '#6F8BB0', '#A5B8D0'][i % 3] + '" stroke="#14284B" stroke-width="3"/>';
+    for (var r = 0; r < 4; r++) s += '<rect x="' + (b[0] + 8) + '" y="' + (b[1] + 12 + r * 24) + '" width="9" height="12" fill="#FFF3C4"/><rect x="' + (b[0] + b[2] - 17) + '" y="' + (b[1] + 12 + r * 24) + '" width="9" height="12" fill="#FFF3C4"/>';
   });
-  return scene('Tous les drapeaux visités', grad('#FFE3B0', '#FFF5DC'), [it(label(200, 84, 'Fin', 64)), it('<path d="M0 98 H400 M0 182 H400" stroke="#14284B" stroke-width="3"/>')].concat(out));
+  return scene('Lagos, une grande ville au bord de l’océan', grad('#FFC38A', '#FFF1D6'), [
+    sun(350, 46, 24, '#FF8A3D'),
+    it(s),
+    it('<rect y="236" width="400" height="64" fill="#3E9BD8"/>' + waves(256, '#fff', .55) + waves(284, '#fff', .35)),
+    it('<path d="M70 262 h60 l-8 14 h-44Z" fill="#E63946"/><rect x="96" y="238" width="5" height="24" fill="#14284B"/><path d="M101 240 l22 12 h-22Z" fill="#fff"/>'),
+    it('<rect x="130" y="22" width="140" height="42" rx="21" fill="#14284B"/>' + label(200, 52, 'Lagos', 28, '#fff'))
+  ]);
+}
+function kiliArt() {
+  return scene('Le Kilimandjaro, 5 895 mètres', grad('#9ED8F5', '#FFF1D6'), [
+    cloud(30, 56, .8), cloud(290, 40, .7),
+    it('<path d="M20 232 L170 70 L220 70 L380 232Z" fill="#7B6A8A"/><path d="M148 96 L170 70 L220 70 L244 98 L222 88 L202 104 L184 88Z" fill="#fff"/><path d="M20 232 L100 150 L40 232Z" fill="#6A5A7A"/>'),
+    it('<path d="M0 232 Q120 214 240 236 T400 226 V300 H0Z" fill="#E5B466"/><path d="M0 270 Q140 252 260 270 T400 264 V300 H0Z" fill="#D49A48"/>'),
+    acacia(70, 268, .9),
+    it('<path d="M312 70 V96 M300 82 L312 68 L324 82" fill="none" stroke="#14284B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>' + label(312, 126, '5 895 m', 26))
+  ]);
+}
+function seychellesArt() {
+  function isle(x, y, s) { return '<ellipse cx="' + x + '" cy="' + y + '" rx="' + (62 * s) + '" ry="' + (13 * s) + '" fill="#F2D08A" stroke="#C99A3A" stroke-width="3"/>'; }
+  return scene('Les Seychelles, des îles dans l’océan Indien', grad('#7CD0F5', '#2F8FD0'), [
+    sun(330, 50, 22, '#FFD23F'),
+    it(waves(120, '#fff', .45) + waves(270, '#fff', .45)),
+    it(isle(110, 232, 1) + isle(290, 206, .9) + isle(210, 160, .6)),
+    it(naPalm(96, 228, 1) + naPalm(300, 202, .9) + naPalm(214, 156, .6)),
+    it('<rect x="100" y="26" width="200" height="40" rx="20" fill="#14284B"/>' + label(200, 54, 'Océan Indien', 24, '#fff'))
+  ]);
+}
+function leopard(x, y, s) {
+  var spots = '';
+  [[-26, -14], [-12, -18], [4, -14], [18, -18], [32, -12], [-18, -4], [8, -4], [26, -6]].forEach(function (p) { spots += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="3" fill="#6B3A12"/>'; });
+  return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-44 -18 Q-76 -30 -66 -58" fill="none" stroke="#F2B544" stroke-width="8" stroke-linecap="round"/>' +
+    '<rect x="-34" y="-8" width="9" height="22" rx="4" fill="#E0A238"/><rect x="26" y="-8" width="9" height="22" rx="4" fill="#E0A238"/>' +
+    '<ellipse cx="0" cy="-18" rx="46" ry="19" fill="#F2B544"/>' + spots +
+    '<circle cx="54" cy="-26" r="15" fill="#F2B544"/><path d="M46 -38 L50 -52 L58 -40Z M60 -38 L68 -50 L70 -36Z" fill="#F2B544"/><circle cx="58" cy="-28" r="2.6" fill="#14284B"/><circle cx="68" cy="-22" r="3" fill="#14284B"/></g>';
+}
+function safariArt() {
+  return scene('Lions, buffles, léopards, rhinocéros et éléphants', grad('#FFD8A8', '#FFF0D2'), [
+    sun(344, 56, 24, '#FF9F1C'),
+    it('<path d="M0 214 Q120 196 240 216 T400 208 V300 H0Z" fill="#E5B466"/><path d="M0 258 Q140 240 260 258 T400 252 V300 H0Z" fill="#D49A48"/>'),
+    it(buffalo(130, 236, .62)), it(rhino(336, 238, .62)),
+    it(lion(66, 292, .75)), it(elephant(214, 292, .75)), it(leopard(352, 292, .8))
+  ]);
 }
 function coverAfArt() {
-  var cs = [['tn', 30, 36, -8], ['eg', 150, 28, 5], ['za', 270, 40, -5], ['ma', 36, 150, 6], ['sn', 156, 160, -6], ['et', 276, 148, 8]], g = '';
+  var cs = [['tn', 30, 36, -8], ['eg', 150, 28, 5], ['za', 270, 40, -5], ['ma', 36, 150, 6], ['sn', 156, 160, -6], ['ke', 276, 148, 8]], g = '';
   cs.forEach(function (c) { g += '<g transform="rotate(' + c[3] + ' ' + (c[1] + 50) + ' ' + (c[2] + 33) + ')">' + flagArt(c[0], c[1], c[2], 100) + '</g>'; });
   return scene('Plein de drapeaux d’Afrique', grad('#FF9F1C', '#E8590C'), [sparkle(20, 20, 3), sparkle(380, 270, 3), sparkle(350, 20, 2.5), it(g)]);
+}
+function finAfArt() {
+  var codes = ['tn', 'ma', 'eg', 'ml', 'ne', 'td', 'dj', 'gh', 'ng', 'tz', 'ke', 'cd', 'cg', 'sn', 'za', 'mg', 'sc', 'so', 'sd'], out = [], w = 48;
+  codes.forEach(function (c, i) {
+    var row = i < 7 ? 0 : i < 13 ? 1 : 2, col = row === 0 ? i : row === 1 ? i - 7 : i - 13, n = row === 0 ? 7 : 6;
+    var x = (400 - n * 54 + 6) / 2 + col * 54, y = 104 + row * 62;
+    out.push(it('<rect x="' + (x + w / 2 - 2) + '" y="' + (y - 14) + '" width="4" height="14" fill="#8A6B4A"/>' + flagArt(c, x, y, w)));
+  });
+  return scene('Tous les drapeaux visités', grad('#FFE3B0', '#FFF5DC'), [it(label(200, 62, 'Fin', 52))].concat(out));
 }
 
 STORIES.splice(1, 0, {
   title: 'Voyage en Afrique', coverArt: coverAfArt, mark: '?',
-  tiles: ['tn', 'dz', 'ly', 'ma', 'eg', 'et', 'gm', 'sn', 'lr', 'bf', 'za'].map(flagTile),
+  tiles: ['tn', 'ma', 'eg', 'ml', 'ne', 'td', 'dj', 'gh', 'ng', 'tz', 'ke', 'cd', 'cg', 'sn', 'za', 'mg', 'sc', 'so', 'sd'].map(flagTile),
   scenes: [
-    { tile: -1, text: 'C’était bien, l’Europe, hein ? Oh oui, mais maintenant, c’est l’Afrique !!!', art: introArt },
+    { tile: -1, text: 'J’ai adoré l’Europe ! Maintenant, c’est l’Afrique !', art: introArt },
 
-    { tile: 0, text: 'Bienvenue en Tunisie. Capitale : Tunis.', art: flagScene('tn', 'Tunisie', '#F8D5D5', '#FDF1F1') },
-    { tile: 0, text: 'Tunis, la capitale, est située au nord de la Tunisie, ce petit pays en Afrique. Prochain pays : l’Algérie.', art: tunisiaMapArt },
+    { tile: 0, text: 'Voici la Tunisie. Capitale : Tunis.', art: flagScene('tn', 'Tunisie', '#F8D5D5', '#FDF1F1') },
+    { tile: 0, text: 'La Tunisie est un petit pays se situant au nord de l’Afrique. Direction suivante : le Maroc.', art: tunisiaMapArt },
 
-    { tile: 1, text: 'Voici l’Algérie. Capitale : Alger.', art: flagScene('dz', 'Algérie', '#D6EFD6', '#F4FBF4') },
-    { tile: 1, text: 'L’Algérie a un drapeau avec une lune et une étoile, qui sont les symboles de l’islam. Prochain pays : la Libye.', art: mosqueNightArt },
+    { tile: 1, text: 'Bienvenue au Maroc. Capitale : Rabat. Langue principale : arabe.', art: flagScene('ma', 'Maroc', '#F8D5D5', '#FDF1F1') },
+    { tile: 1, text: 'Oh ! Du jus d’orange ! J’en prendrais bien un peu. Assalamalékoum veut dire bonjour en arabe. D’accord ! Assalamalékoum. Deux jus d’orange, s’il vous plaît. Direction suivante : l’Égypte, de l’autre côté de l’Afrique du Nord.', art: orangeJuiceArt },
 
-    { tile: 2, text: 'Ici la Libye. Capitale : Tripoli.', art: flagScene('ly', 'Libye', '#E3E3E8', '#F6F6F9') },
-    { tile: 2, text: 'À l’origine, le drapeau libyen était rempli de vert, mais maintenant, il a changé. Prochaine destination : le Maroc.', art: libyaFlagsArt },
+    { tile: 2, text: 'Voici l’Égypte. Capitale : Le Caire. Langue principale : arabe.', art: flagScene('eg', 'Égypte', '#FFE9C7', '#FFF6E4') },
+    { tile: 2, text: 'Voici le fleuve du Nil, le plus grand fleuve du monde. Il se jette dans le nord de l’Égypte, dans la mer Méditerranée.', art: nileMapArt },
+    { tile: 2, text: 'Regarde ! Les pyramides d’Égypte ! Les pyramides servaient à enterrer les pharaons, qui sont les rois d’Égypte. Allons au Mali.', art: pyramidsArt },
 
-    { tile: 3, text: 'Bienvenue au Maroc. Capitale : Rabat.', art: flagScene('ma', 'Maroc', '#F8D5D5', '#FDF1F1') },
-    { tile: 3, text: 'On file au Sahara occidental ? D’accord. Regarde ! C’est le désert du Sahara.', art: saharaArt },
-    { tile: 3, text: 'Le Sahara est le plus grand désert chaud du monde. Seuls les déserts glacés, l’Antarctique et l’Arctique, sont plus grands. Prochain pays : l’Égypte.', art: podiumArt },
+    { tile: 3, text: 'Bienvenue au Mali. Capitale : Bamako.', art: flagScene('ml', 'Mali', '#D6EFD6', '#FFF6C9') },
+    { tile: 3, text: 'Le Mali est un pays se situant dans l’ouest de l’Afrique. Direction : le Niger.', art: maliArt },
 
-    { tile: 4, text: 'Nous voici en Égypte. Capitale : Le Caire.', art: flagScene('eg', 'Égypte', '#FFE9C7', '#FFF6E4') },
-    { tile: 4, text: 'En suivant le Nil, il y a Gizeh. Trop cool ! On va regarder les pyramides de Gizeh, l’une des 7 merveilles du monde.', art: pyramidsArt },
-    { tile: 4, text: 'Dans le Nil, on trouve certains crocodiles. Ah… J’ai trop peur…', art: nileCrocArt },
-    { tile: 4, text: 'Wow ! Elles servaient à quoi ? À enterrer les pharaons, ou rois d’Égypte, morts. Prochain pays : l’Éthiopie.', art: tombArt },
+    { tile: 4, text: 'Voici le pays du Niger. Capitale : Niamey.', art: flagScene('ne', 'Niger', '#FFE4CC', '#EAF8E4') },
+    { tile: 4, text: 'Oh ! Le fleuve du Niger commence au Mali et traverse le Mali, le Niger et le Nigéria. Le Niger se jette dans l’Océan Atlantique au Nigéria. Allons au Tchad.', art: nigerRiverArt },
 
-    { tile: 5, text: 'Voici l’Éthiopie. Capitale : Addis-Abeba.', art: flagScene('et', 'Éthiopie', '#E3F2D3', '#FFF9D6') },
-    { tile: 5, text: 'L’Éthiopie a treize mois dans son calendrier.', art: calendarArt },
-    { tile: 5, text: 'Ça veut dire que si en France on est en l’année 2026, en Éthiopie il y a environ 7 ans de retard et on est en l’année 2019. Prochain pays : la Gambie.', art: yearsArt },
+    { tile: 5, text: 'Voici le Tchad. Capitale : N’Djamena.', art: flagScene('td', 'Tchad', '#D3E2F8', '#FBEDEE') },
+    { tile: 5, text: 'C’est joli, le Tchad. Et le Tchad a le même drapeau que la Roumanie, qui est un pays d’Europe. Direction : Djibouti.', art: chadRomaniaArt },
 
-    { tile: 6, text: 'Ici la Gambie. Capitale : Banjul.', art: flagScene('gm', 'Gambie', '#F8D5D5', '#E4F5E0') },
-    { tile: 6, text: 'La Gambie est un petit pays en forme de trait. Ce petit trait est entouré par le Sénégal.', art: gambiaMapArt },
-    { tile: 6, text: 'Mais la Gambie touche la mer. Et si on allait… au Sénégal !', art: pirogueArt },
+    { tile: 6, text: 'Bienvenue à Djibouti. Capitale : Djibouti.', art: flagScene('dj', 'Djibouti', '#CFE8FA', '#E4F5E0') },
+    { tile: 6, text: 'C’est petit vraiment, Djibouti. C’est vrai. Direction : le Ghana.', art: djiboutiArt },
 
-    { tile: 7, text: 'Voici le Sénégal. Capitale : Dakar.', art: flagScene('sn', 'Sénégal', '#D6EFD6', '#FFF6C9') },
-    { tile: 7, text: 'Au nord de Dakar, une autoroute appelée Voie de Dégagement Nord prend la sortie de Dakar vers Pikine et Guédiawaye. Elle se termine à Rufisque.', art: dakarRoadArt },
-    { tile: 7, text: 'Dakar est située à l’ouest du Sénégal, presque sur la mer.', art: dakarWestArt },
-    { tile: 7, text: 'En mer, 10 îles forment le Cap-Vert. On va au Libéria ? Let’s go !', art: capVertArt },
+    { tile: 7, text: 'Voici le Ghana. Capitale : Accra.', art: flagScene('gh', 'Ghana', '#F8D5D5', '#E4F5E0') },
+    { tile: 7, text: 'Le Ghana est un pays frontalier avec le Togo, le Burkina Faso et la Côte d’Ivoire. Direction : le Nigéria.', art: ghanaBordersArt },
 
-    { tile: 8, text: 'Ici le Libéria. Capitale : Monrovia.', art: flagScene('lr', 'Libéria', '#D3E2F8', '#FBEDEE') },
-    { tile: 8, text: 'Le Libéria est à côté de la Sierra Leone, de la Guinée et de la Côte d’Ivoire. Prochain pays : le Burkina Faso.', art: liberiaArt },
+    { tile: 8, text: 'Bienvenue au Nigéria. Capitale : Abuja.', art: flagScene('ng', 'Nigéria', '#D6EFD6', '#F4FBF4') },
+    { tile: 8, text: 'Voici Lagos. C’est au Nigéria que se jette le Niger, le fleuve qui traverse le Mali, le Niger et le Nigéria. Direction : la Tanzanie.', art: lagosArt },
 
-    { tile: 9, text: 'Voici le Burkina Faso. Capitale : Ouagadougou.', art: flagScene('bf', 'Burkina Faso', '#F8D5D5', '#D6EFD6') },
-    { tile: 9, text: 'Le Burkina Faso est aussi connu sous le nom de Burkina. Prochain pays : l’Afrique du Sud.', art: burkinaArt },
+    { tile: 9, text: 'Voici la Tanzanie. Capitale : Dodoma.', art: flagScene('tz', 'Tanzanie', '#D6EFD6', '#CFE8FA') },
+    { tile: 9, text: 'La Tanzanie est un pays au sud-est de l’Afrique. Direction suivante : le Kenya. Youpi ! On va voir le Kilimandjaro !', art: tanzaniaArt },
 
-    { tile: 10, text: 'Voici l’Afrique du Sud. Capitale : Pretoria.', art: flagScene('za', 'Afrique du Sud', '#FFE9C7', '#D6EFD6') },
-    { tile: 10, text: 'Eh ! Des lions !', art: lionArt },
-    { tile: 10, text: 'Lions, buffles, éléphants et rhinocéros y vivent.', art: safariArt },
-    { tile: 10, text: 'Fin', art: finAfArt }
+    { tile: 10, text: 'Bienvenue au Kenya. Capitale : Nairobi.', art: flagScene('ke', 'Kenya', '#E4F5E0', '#FBEDEE') },
+    { tile: 10, text: 'C’est le Kilimandjaro. Avec 5 895 mètres de haut, c’est le point culminant du Kenya et de l’Afrique. Direction : la République Démocratique du Congo.', art: kiliArt },
+
+    { tile: 11, text: 'Voici la République Démocratique du Congo, ou RDC. Capitale : Kinshasa.', art: flagScene('cd', 'RDC', '#CFE8FA', '#FFF6C9') },
+    { tile: 11, text: 'Voici le Congo. C’est le fleuve le plus profond du monde. Il commence en RDC, traverse la RDC et forme une limite entre la République du Congo et la RDC. Il se jette entre la RDC et l’Angola, dans l’Océan Atlantique. Direction : la République du Congo.', art: congoRiverArt },
+
+    { tile: 12, text: 'Bienvenue en République du Congo. Capitale : Brazzaville.', art: flagScene('cg', 'Rép. du Congo', '#D6EFD6', '#FFF6C9') },
+    { tile: 12, text: 'C’était pas loin. La République du Congo est située à l’ouest de la RDC. Direction suivante : le Sénégal.', art: congosArt },
+
+    { tile: 13, text: 'Voici le Sénégal. Capitale : Dakar.', art: flagScene('sn', 'Sénégal', '#D6EFD6', '#FFF6C9') },
+    { tile: 13, text: 'Le Sénégal est un pays tout à l’ouest de l’Afrique. Direction : l’Afrique du Sud.', art: senegalArt },
+
+    { tile: 14, text: 'Bienvenue en Afrique du Sud. Capitale : Pretoria.', art: flagScene('za', 'Afrique du Sud', '#FFE9C7', '#D6EFD6') },
+    { tile: 14, text: 'Des lions !', art: lionArt },
+    { tile: 14, text: 'Lions, buffles, léopards, rhinocéros et éléphants y vivent. Direction suivante : la grande île de Madagascar.', art: safariArt },
+
+    { tile: 15, text: 'Voici l’île de Madagascar. Capitale : Antananarivo.', art: flagScene('mg', 'Madagascar', '#FFE4E4', '#E4F5E0') },
+    { tile: 15, text: 'Madagascar est une île se trouvant à l’est de l’Afrique. Direction : les Seychelles.', art: madagascarArt },
+
+    { tile: 16, text: 'Bienvenue aux Seychelles. Capitale : Victoria.', art: flagScene('sc', 'Seychelles', '#CFE8FA', '#FFF6C9') },
+    { tile: 16, text: 'Les Seychelles sont des îles entourées par l’Océan Indien. Direction : la Somalie.', art: seychellesArt },
+
+    { tile: 17, text: 'Voici la Somalie. Capitale : Mogadiscio.', art: flagScene('so', 'Somalie', '#CFE8FA', '#EAF4FB') },
+    { tile: 17, text: 'Dans le nord-est de la Somalie se trouve la Corne de l’Afrique. Direction : le Soudan.', art: somaliaArt },
+
+    { tile: 18, text: 'Bienvenue dans le Soudan. Capitale : Khartoum.', art: flagScene('sd', 'Soudan', '#F8D5D5', '#E4F5E0') },
+    { tile: 18, text: 'Avant, le Soudan engloutissait le Soudan actuel et le Soudan du Sud.', art: sudanSplitArt },
+    { tile: 18, text: 'Fin', art: finAfArt }
   ]
 });
 
@@ -1986,6 +2025,7 @@ var PRONO = {
   'Buenos Aires': 'Bouénoce Aéiresse', 'Rio de Janeiro': 'Rio de Janéiro', 'Brasilia': 'Brazilia', 'Montevideo': 'Montévidéo',
   'La Boca': 'La Boka', 'Sucre': 'Soucré', 'San José': 'San José', 'Kingston': 'Kinneugstonne', 'Nassau': 'Nasso',
   'New York': 'Niou Yorque', 'New Delhi': 'Niou Dèli', 'Sierra Leone': 'Siéra Léone', 'Tunis': 'Tunisse', 'Dubaï': 'Doubaille',
+  'N’Djamena': 'Ndjaména', 'Niamey': 'Niamé', 'Abuja': 'Abouja', 'Mogadiscio': 'Mogadichio', 'Khartoum': 'Kartoum', 'Lagos': 'Lagosse', 'Accra': 'Akra',
   'Let’s go': 'Lètse go !', 'fish and chips': 'fiche ènd tchipse', 'OK': 'Oké', 'Wow': 'Woo'
 };
 function spoken(text) {
