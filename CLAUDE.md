@@ -50,8 +50,8 @@ STORIES.splice(3, 0, {
 - Syntaxe seule : `node --check app.js`.
 
 ## Points de fait connus (à vérifier / corriger si Paul le demande)
-- Amérique du Nord : « Mexico est la plus grande ville du monde » (inexact : l'une des plus grandes) ;
-  « un jaguar » en Jamaïque (il n'y en a pas ; plutôt Costa Rica / Panama).
+- Amérique du Nord : « Mexico est la plus grande ville du monde » (inexact : l'une des plus grandes).
+  (Le jaguar est désormais au Costa Rica ; la Jamaïque a des crocodiles.)
 - Amérique du Sud : Équateur « Monnaie : le peso » (inexact : l'Équateur utilise le dollar américain) ;
   « dans l’Équateur » (plutôt « en Équateur »).
 - Asie : Chypre, « ligne Verte » décrite comme une route (c'est une zone tampon de l'ONU).

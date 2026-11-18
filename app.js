@@ -1539,10 +1539,19 @@ function naShortcutArt() {
   ]);
 }
 function naForestArt() {
-  return scene('Une forêt en Jamaïque', grad('#BDE9B0', '#F0FADD'), [
+  return scene('Une forêt au Costa Rica', grad('#BDE9B0', '#F0FADD'), [
     jungleBg(),
     it(naPalm(90, 230, 1.2) + naPalm(310, 236, 1.4)),
     it('<g transform="translate(200 60)"><ellipse cx="0" cy="0" rx="26" ry="20" fill="#fff" stroke="#14284B" stroke-width="3"/></g>' + label(200, 70, '?', 30, '#14284B'))
+  ]);
+}
+function naCrocArt() {
+  return scene('Un crocodile dans les eaux de la Jamaïque', grad('#BFE8F7', '#FFF6C9'), [
+    sun(330, 50, 22, '#FFD23F'),
+    it('<rect y="130" width="400" height="170" fill="#35B0E6"/>' + waves(160, '#fff', .5) + waves(285, '#fff', .3)),
+    it('<ellipse cx="48" cy="154" rx="46" ry="9" fill="#F2D08A"/><ellipse cx="356" cy="160" rx="50" ry="9" fill="#F2D08A"/>' + naPalm(48, 150, 1.1) + naPalm(356, 156, 1.2)),
+    croc(200, 226, 1.25),
+    it('<rect x="132" y="24" width="136" height="42" rx="21" fill="#fff" stroke="#14284B" stroke-width="3"/>' + label(200, 54, 'Croc !', 26))
   ]);
 }
 function naJaguarArt() {
@@ -1628,9 +1637,8 @@ STORIES.splice(3, 0, {
     { tile: 3, text: 'Regarde ! C’est le canal de Panama.', art: naCanalArt },
     { tile: 3, text: 'Avant, les bateaux devaient faire un tour par le sud de l’Amérique du Sud, ce qui était long. Après l’ouverture du canal de Panama, le canal ouvre ses grandes portes pour laisser passer les bateaux. Direction suivante : la Jamaïque.', art: naShortcutArt },
 
-    { tile: 4, text: 'Bienvenue en Jamaïque. Capitale : Kingston.', art: flagSceneA('jm', 'Jamaïque', '#D6EFD6', '#FFF6C9') },
-    { tile: 4, text: 'Voici une forêt. C’est quoi, ce qu’on entend ?', art: naForestArt },
-    { tile: 4, text: 'C’est… C’est un jaguar. Au secours !!! Direction : Cuba. On va où tu veux, du moment qu’on quitte cet endroit !', art: naJaguarArt },
+    { tile: 4, text: 'Voici la Jamaïque. Capitale : Kingston.', art: flagSceneA('jm', 'Jamaïque', '#D6EFD6', '#FFF6C9') },
+    { tile: 4, text: 'Dans les eaux de la Jamaïque, il y a des crocodiles. D’accord… On va maintenant sur Cuba.', art: naCrocArt },
 
     { tile: 5, text: 'Voici Cuba. Capitale : La Havane.', art: flagSceneA('cu', 'Cuba', '#D3E2F8', '#FBEDEE') },
     { tile: 5, text: 'C’est tellement, tellement beau, Cuba ! Direction suivante : les Bahamas.', art: naCubaArt },
@@ -1643,6 +1651,8 @@ STORIES.splice(3, 0, {
 
     { tile: 8, text: 'Bienvenue au Costa Rica. Capitale : San José.', art: flagSceneA('cr', 'Costa Rica', '#D3E2F8', '#FBEDEE') },
     { tile: 8, text: 'Regarde ! Une forêt. C’est une forêt. C’est ce que je viens de dire !', art: naToucanArt },
+    { tile: 8, text: 'C’est quoi, ce qu’on entend ?', art: naForestArt },
+    { tile: 8, text: 'C’est… C’est un jaguar. Au secours !', art: naJaguarArt },
     { tile: 8, text: 'Fin', art: naFinArt }
   ]
 });
