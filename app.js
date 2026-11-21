@@ -188,15 +188,6 @@ function bigBenArt() {
     it('<g fill="none" stroke="#14284B" stroke-width="4" stroke-linecap="round"><path d="M244 112 q14 20 0 40"/><path d="M258 100 q26 32 0 64"/><path d="M156 112 q-14 20 0 40"/><path d="M142 100 q-26 32 0 64"/></g>' + label(320, 140, '6 km', 30))
   ]);
 }
-function thamesArt() {
-  return scene('La Tamise et un grand pont', grad('#BFE0F7', '#F3F8FB'), [
-    cloud(300, 50, .8),
-    it('<rect x="0" y="212" width="400" height="88" fill="#4FA3D6"/>' + waves(232, '#fff', .6) + waves(262, '#fff', .4)),
-    it('<rect x="106" y="86" width="44" height="130" fill="#8FA3B8"/><path d="M104 88 L128 52 L152 88Z" fill="#5F7A8A"/><rect x="250" y="86" width="44" height="130" fill="#8FA3B8"/><path d="M248 88 L272 52 L296 88Z" fill="#5F7A8A"/><rect x="150" y="118" width="100" height="12" fill="#4D6E96"/><rect x="0" y="186" width="400" height="14" fill="#4D6E96"/><rect x="118" y="106" width="8" height="14" fill="#FFE08A"/><rect x="132" y="106" width="8" height="14" fill="#FFE08A"/><rect x="262" y="106" width="8" height="14" fill="#FFE08A"/><rect x="276" y="106" width="8" height="14" fill="#FFE08A"/><path d="M106 150 Q60 186 0 186 M294 150 Q340 186 400 186" fill="none" stroke="#4D6E96" stroke-width="4"/>'),
-    it('<path d="M170 240 h70 l-10 18 h-50Z" fill="#E63946"/><rect x="198" y="216" width="6" height="24" fill="#14284B"/><path d="M204 218 l24 14 h-24Z" fill="#fff"/>'),
-    it(label(200, 291, 'La Tamise', 22, '#fff'))
-  ]);
-}
 function nationsArt() {
   function card(x, y, name, icon) { return it('<rect x="' + x + '" y="' + y + '" width="160" height="112" rx="18" fill="#fff" stroke="#14284B" stroke-width="3"/><g transform="translate(' + (x + 80) + ' ' + (y + 46) + ')">' + icon + '</g>' + label(x + 80, y + 100, name, 18)); }
   var rose = '<circle r="26" fill="#E63946"/><circle r="17" fill="none" stroke="#9E1B25" stroke-width="3"/><circle r="8" fill="none" stroke="#9E1B25" stroke-width="3"/>';
@@ -206,15 +197,6 @@ function nationsArt() {
   var clover = '<circle cx="-10" cy="-6" r="11" fill="#2FA84F"/><circle cx="10" cy="-6" r="11" fill="#2FA84F"/><circle cx="0" cy="-18" r="11" fill="#2FA84F"/><path d="M0 -4 Q4 14 12 22" fill="none" stroke="#2FA84F" stroke-width="5" stroke-linecap="round"/>';
   return scene('Les 4 pays du Royaume-Uni', grad('#CFE8FF', '#EAF5FF'), [
     card(30, 24, 'Angleterre', rose), card(210, 24, 'Écosse', thistle), card(30, 156, 'Pays de Galles', daff), card(210, 156, 'Irlande du Nord', clover)
-  ]);
-}
-function palaceArt() {
-  var win = ''; for (var r = 0; r < 2; r++) for (var i = 0; i < 9; i++) win += '<rect x="' + (62 + i * 30) + '" y="' + (150 + r * 42) + '" width="14" height="24" rx="2" fill="#7A8CA8"/>';
-  return scene('Buckingham Palace', grad('#BFE0F7', '#F3F8FB'), [
-    cloud(40, 60, .8), cloud(300, 50, .7),
-    it('<rect y="262" width="400" height="38" fill="#7CC36A"/><rect x="40" y="130" width="320" height="132" fill="#E9DCC0"/>' + win + '<rect x="160" y="110" width="80" height="152" fill="#F2E8D0"/><path d="M152 112 L200 78 L248 112Z" fill="#D8C9A6"/><rect x="176" y="150" width="48" height="30" rx="2" fill="#C9B88F"/><rect x="170" y="190" width="60" height="8" fill="#C9B88F"/><path d="M178 262 V214 a22 22 0 0 1 44 0 V262Z" fill="#7A8CA8"/>'),
-    it('<g transform="translate(200 44)"><path d="M-22 18 L-26 -8 L-12 4 L0 -14 L12 4 L26 -8 L22 18Z" fill="#FFC93C" stroke="#C9971A" stroke-width="2.5" stroke-linejoin="round"/><rect x="-22" y="18" width="44" height="8" rx="3" fill="#E63946"/></g>'),
-    it('<g transform="translate(335 270)"><rect x="-13" y="-62" width="26" height="46" rx="6" fill="#D62828"/><rect x="-11" y="-16" width="9" height="16" fill="#14284B"/><rect x="2" y="-16" width="9" height="16" fill="#14284B"/><circle cx="0" cy="-74" r="11" fill="#F2C9A0"/><path d="M-13 -78 Q-13 -102 0 -102 Q13 -102 13 -78Z" fill="#222"/></g>')
   ]);
 }
 function fishChipsArt() {
@@ -228,14 +210,6 @@ function fishChipsArt() {
   ]);
 }
 /* Irlande */
-function irelandArt() {
-  return scene('L’Irlande, à l’ouest de la Grande-Bretagne', grad('#7CC4F0', '#CDEBFA'), [
-    it('<path d="M270 36 C300 46 312 90 296 120 C322 142 332 182 302 216 C282 250 240 262 214 246 C236 226 226 206 242 186 C226 160 246 140 250 120 C244 90 250 52 270 36Z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="3"/>' + waves(280, '#fff', .5)),
-    it('<path d="M118 100 C150 94 172 122 166 154 C172 186 152 216 120 224 C88 228 72 196 78 166 C66 134 92 106 118 100Z" fill="#4FA848" stroke="#2F7A32" stroke-width="3"/><g transform="translate(122 164) scale(.9)"><circle cx="-10" cy="-6" r="11" fill="#fff"/><circle cx="10" cy="-6" r="11" fill="#fff"/><circle cx="0" cy="-18" r="11" fill="#fff"/><path d="M0 -4 Q4 14 12 22" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></g>'),
-    it('<path d="M246 64 H168" stroke="#14284B" stroke-width="5" stroke-linecap="round"/><path d="M180 52 L166 64 L180 76" fill="none" stroke="#14284B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' + label(206, 46, 'Ouest', 22)),
-    it(label(122, 252, 'Irlande', 20) + label(276, 288, 'Grande-Bretagne', 18))
-  ]);
-}
 /* Islande */
 function icelandArt() {
   var fl = [[40, 40, 3], [100, 100, 2.5], [330, 30, 3], [370, 110, 2.5], [260, 150, 2], [60, 170, 2.5], [300, 200, 2]];
@@ -280,51 +254,8 @@ function cyclistsArt() {
     it(bike(80, 262, 1, '#E63946')), it(bike(200, 270, 1.05, '#4D96FF')), it(bike(320, 258, .95, '#FFC93C'))
   ]);
 }
-function copenhagenArt() {
-  return scene('Copenhague sur une petite île', grad('#7CC4F0', '#BFE3F7'), [
-    it(waves(60, '#fff', .5) + waves(270, '#fff', .5)),
-    it('<path d="M100 160 C110 108 200 86 270 106 C330 126 322 196 280 226 C228 256 124 246 100 196Z" fill="#E9D8A6" stroke="#B89B5E" stroke-width="3"/>'),
-    it(house(130, 170, 36, 34, '#E63946') + house(176, 160, 40, 44, '#FFD23F') + house(226, 168, 36, 36, '#4D96FF') + house(268, 176, 30, 28, '#2A9D8F')),
-    it('<path d="M200 118 V150 M196 134 L200 106 L204 134" stroke="#5F7A8A" stroke-width="4" fill="none"/>' + fir(150, 150, .45, '#2F7A32') + fir(260, 150, .45, '#2F7A32')),
-    it('<path d="M320 70 h50 l-8 14 h-34Z" fill="#E63946"/><rect x="343" y="46" width="5" height="24" fill="#14284B"/><path d="M348 48 l20 10 h-20Z" fill="#fff"/>'),
-    it(label(200, 288, 'Copenhague', 22))
-  ]);
-}
 /* Suède */
-function balticArt() {
-  return scene('De la Suède à la mer Baltique', grad('#5FB3E8', '#BFE3F7'), [
-    it('<path d="M30 10 C80 0 120 30 130 70 C140 110 120 140 130 180 C140 215 120 240 90 262 C60 270 40 230 50 190 C40 150 20 120 30 80Z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="3"/>'),
-    it('<path d="M262 220 C280 205 320 208 340 225 C350 245 320 265 290 262 C265 258 252 240 262 220Z" fill="#E9D8A6" stroke="#B89B5E" stroke-width="3"/>' + flagArt('dk', 280, 226, 40)),
-    it(flagArt('se', 40, 26, 64)),
-    it(waves(130, '#fff', .55) + label(260, 120, 'Mer Baltique', 22, '#fff')),
-    it('<path d="M140 190 Q200 180 252 226" fill="none" stroke="#14284B" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round"/><path d="M180 176 h50 l-8 14 h-34Z" fill="#E63946"/><rect x="202" y="152" width="5" height="24" fill="#14284B"/><path d="M207 154 l22 12 h-22Z" fill="#fff"/>'),
-    it('<path d="M360 100 V50" stroke="#14284B" stroke-width="5" stroke-linecap="round"/><path d="M348 62 L360 46 L372 62" fill="none" stroke="#14284B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' + label(360, 124, 'Nord', 20))
-  ]);
-}
 /* Finlande */
-function laplandArt() {
-  var tr = fir(40, 262, 1.1, '#1F6B4A') + fir(96, 270, .9, '#2A7F58') + fir(350, 266, 1.2, '#1F6B4A') + fir(310, 274, .8, '#2A7F58');
-  return scene('Le père Noël en Laponie', grad('#16284F', '#3B3F7E'), [
-    it('<path d="M0 90 Q90 30 190 80" fill="none" stroke="#6EE7B7" stroke-width="12" stroke-opacity=".55" stroke-linecap="round"/><path d="M180 50 Q290 0 400 70" fill="none" stroke="#C4A8FF" stroke-width="12" stroke-opacity=".5" stroke-linecap="round"/>'),
-    stars([[60, 130, 2.5], [150, 40, 3], [330, 120, 2.5], [380, 40, 3], [250, 110, 2]]),
-    it('<path d="M0 252 Q130 226 240 250 T400 240 V300 H0Z" fill="#fff"/>'),
-    it(tr),
-    it('<rect x="96" y="196" width="76" height="56" fill="#9A5B34"/><path d="M88 198 L134 160 L180 198Z" fill="#fff" stroke="#DDE8F2" stroke-width="3"/><rect x="108" y="212" width="20" height="20" fill="#FFD23F"/><rect x="144" y="222" width="16" height="30" fill="#5A3B2E"/>'),
-    it('<g transform="translate(262 252)"><rect x="-26" y="-16" width="52" height="18" rx="6" fill="#14284B"/><ellipse cx="0" cy="-48" rx="26" ry="34" fill="#D62828"/><rect x="-26" y="-34" width="52" height="7" fill="#14284B"/><circle cx="0" cy="-92" r="15" fill="#F2C9A0"/><path d="M-17 -88 Q0 -62 17 -88 L17 -78 Q0 -50 -17 -78Z" fill="#fff"/><path d="M-17 -98 Q-14 -126 6 -118 L20 -98Z" fill="#D62828"/><circle cx="8" cy="-120" r="5" fill="#fff"/><circle cx="-5" cy="-94" r="2" fill="#14284B"/><circle cx="6" cy="-94" r="2" fill="#14284B"/><rect x="-44" y="-52" width="20" height="26" rx="5" fill="#FFC93C"/></g>')
-  ]);
-}
-function tampereArt() {
-  var win = ''; for (var r = 0; r < 3; r++) for (var i = 0; i < 6; i++) win += '<rect x="' + (50 + i * 34) + '" y="' + (150 + r * 30) + '" width="16" height="20" fill="#FFF3C4"/>';
-  return scene('La ville de Tampere et son lac', grad('#BFE3FF', '#F6FBFF'), [
-    cloud(290, 46, .8),
-    it('<rect x="40" y="130" width="220" height="104" fill="#B5523B"/><rect x="40" y="124" width="220" height="10" fill="#8F3C2B"/>' + win),
-    it('<rect x="290" y="60" width="26" height="176" fill="#A2472F"/><rect x="286" y="54" width="34" height="10" fill="#8F3C2B"/><rect x="332" y="100" width="22" height="136" fill="#A2472F"/><rect x="328" y="94" width="30" height="10" fill="#8F3C2B"/>'),
-    it('<rect y="234" width="400" height="66" fill="#4FA3D6"/>' + waves(254, '#fff', .6) + waves(280, '#fff', .4)),
-    it(fir(18, 236, .6, '#2F7A32') + fir(268, 236, .6, '#2F7A32')),
-    it('<path d="M120 262 h60 l-8 14 h-44Z" fill="#E63946"/><rect x="146" y="240" width="5" height="22" fill="#14284B"/><path d="M151 242 l20 11 h-20Z" fill="#fff"/>'),
-    it(label(330, 284, 'Tampere', 22, '#fff'))
-  ]);
-}
 /* Allemagne */
 function coasterArt() {
   var path = 'M0 230 C60 120 100 120 140 230 S220 60 260 200 S340 100 400 180';
@@ -348,26 +279,7 @@ function blackForestArt() {
   ]);
 }
 /* Suisse */
-function lemanArt() {
-  return scene('Le lac Léman et les Alpes', grad('#BFE3FF', '#F2F9FF'), [
-    sun(60, 50, 20, '#FFD23F'),
-    it('<path d="M0 170 L70 70 L110 120 L180 40 L250 130 L300 80 L400 170Z" fill="#8FA7C2"/><path d="M70 70 L88 96 L72 92 L58 98Z M180 40 L204 78 L186 72 L172 82 L158 70Z M300 80 L316 100 L300 96 L288 102Z" fill="#fff"/>'),
-    it('<rect y="170" width="400" height="130" fill="#3E9BD8"/>' + waves(205, '#fff', .55) + waves(240, '#fff', .4)),
-    it(house(250, 150, 24, 20, '#F4A261') + house(280, 146, 26, 24, '#E63946') + house(312, 152, 22, 18, '#FFD23F') + '<rect x="212" y="120" width="14" height="50" fill="#B5A58A"/><path d="M210 122 L219 100 L228 122Z" fill="#5F7A8A"/>'),
-    it('<path d="M110 250 h90 l-14 20 h-62Z" fill="#fff" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><rect x="154" y="190" width="5" height="60" fill="#14284B"/><path d="M158 192 L196 244 H158Z" fill="#FF6B6B"/><path d="M154 200 L120 244 H154Z" fill="#fff" stroke="#14284B" stroke-width="2"/>'),
-    it(label(300, 288, 'Lac Léman', 22, '#fff'))
-  ]);
-}
 /* France */
-function chamonixArt() {
-  return scene('Chamonix et sa télécabine', grad('#BFE3FF', '#F2F9FF'), [
-    sun(340, 50, 20, '#FFD23F'),
-    it('<path d="M0 230 L90 90 L140 150 L210 60 L290 170 L340 120 L400 230Z" fill="#8FA7C2"/><path d="M90 90 L110 122 L92 116 L76 124Z M210 60 L234 100 L214 94 L196 104Z" fill="#fff"/>'),
-    it('<path d="M0 232 Q120 208 240 230 T400 222 V300 H0Z" fill="#6FB25F"/>'),
-    it('<path d="M0 50 L400 150" stroke="#14284B" stroke-width="3"/><path d="M200 100 V116" stroke="#14284B" stroke-width="3"/><rect x="180" y="116" width="40" height="30" rx="6" fill="#E63946" stroke="#14284B" stroke-width="3"/><rect x="186" y="122" width="12" height="14" fill="#FFF3C4"/><rect x="202" y="122" width="12" height="14" fill="#FFF3C4"/>'),
-    it(fir(40, 262, 1.1, '#1F6B4A') + fir(90, 270, .9, '#2A7F58') + fir(330, 266, 1.2, '#1F6B4A') + fir(372, 274, .9, '#2A7F58'))
-  ]);
-}
 function montBlancArt() {
   return scene('Le Mont Blanc', grad('#9CC7EE', '#EAF4FB'), [
     sun(70, 56, 22, '#FFD23F'), cloud(280, 40, .6),
@@ -546,6 +458,95 @@ function parthenonArt() {
   ]);
 }
 
+function thamesArt() {
+  return scene('La Tamise et un grand pont', grad('#BFE0F7', '#F3F8FB'), [
+    cloud(300, 50, .8),
+    it('<rect x="0" y="212" width="400" height="88" fill="#4FA3D6"/>' + waves(232, '#fff', .6) + waves(262, '#fff', .4)),
+    it('<rect x="106" y="86" width="44" height="130" fill="#8FA3B8"/><path d="M104 88 L128 52 L152 88Z" fill="#5F7A8A"/><rect x="250" y="86" width="44" height="130" fill="#8FA3B8"/><path d="M248 88 L272 52 L296 88Z" fill="#5F7A8A"/><rect x="150" y="118" width="100" height="12" fill="#4D6E96"/><rect x="0" y="186" width="400" height="14" fill="#4D6E96"/><rect x="118" y="106" width="8" height="14" fill="#FFE08A"/><rect x="132" y="106" width="8" height="14" fill="#FFE08A"/><rect x="262" y="106" width="8" height="14" fill="#FFE08A"/><rect x="276" y="106" width="8" height="14" fill="#FFE08A"/><path d="M106 150 Q60 186 0 186 M294 150 Q340 186 400 186" fill="none" stroke="#4D6E96" stroke-width="4"/>'),
+    it('<path d="M170 240 h70 l-10 18 h-50Z" fill="#E63946"/><rect x="198" y="216" width="6" height="24" fill="#14284B"/><path d="M204 218 l24 14 h-24Z" fill="#fff"/>'),
+    it(label(200, 291, 'La Tamise', 22, '#fff'))
+  ]);
+}
+function palaceArt() {
+  var win = ''; for (var r = 0; r < 2; r++) for (var i = 0; i < 9; i++) win += '<rect x="' + (62 + i * 30) + '" y="' + (150 + r * 42) + '" width="14" height="24" rx="2" fill="#7A8CA8"/>';
+  return scene('Buckingham Palace', grad('#BFE0F7', '#F3F8FB'), [
+    cloud(40, 60, .8), cloud(300, 50, .7),
+    it('<rect y="262" width="400" height="38" fill="#7CC36A"/><rect x="40" y="130" width="320" height="132" fill="#E9DCC0"/>' + win + '<rect x="160" y="110" width="80" height="152" fill="#F2E8D0"/><path d="M152 112 L200 78 L248 112Z" fill="#D8C9A6"/><rect x="176" y="150" width="48" height="30" rx="2" fill="#C9B88F"/><rect x="170" y="190" width="60" height="8" fill="#C9B88F"/><path d="M178 262 V214 a22 22 0 0 1 44 0 V262Z" fill="#7A8CA8"/>'),
+    it('<g transform="translate(200 44)"><path d="M-22 18 L-26 -8 L-12 4 L0 -14 L12 4 L26 -8 L22 18Z" fill="#FFC93C" stroke="#C9971A" stroke-width="2.5" stroke-linejoin="round"/><rect x="-22" y="18" width="44" height="8" rx="3" fill="#E63946"/></g>'),
+    it('<g transform="translate(335 270)"><rect x="-13" y="-62" width="26" height="46" rx="6" fill="#D62828"/><rect x="-11" y="-16" width="9" height="16" fill="#14284B"/><rect x="2" y="-16" width="9" height="16" fill="#14284B"/><circle cx="0" cy="-74" r="11" fill="#F2C9A0"/><path d="M-13 -78 Q-13 -102 0 -102 Q13 -102 13 -78Z" fill="#222"/></g>')
+  ]);
+}
+function irelandArt() {
+  return scene('L’Irlande, à l’ouest de la Grande-Bretagne', grad('#7CC4F0', '#CDEBFA'), [
+    it('<path d="M270 36 C300 46 312 90 296 120 C322 142 332 182 302 216 C282 250 240 262 214 246 C236 226 226 206 242 186 C226 160 246 140 250 120 C244 90 250 52 270 36Z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="3"/>' + waves(280, '#fff', .5)),
+    it('<path d="M118 100 C150 94 172 122 166 154 C172 186 152 216 120 224 C88 228 72 196 78 166 C66 134 92 106 118 100Z" fill="#4FA848" stroke="#2F7A32" stroke-width="3"/><g transform="translate(122 164) scale(.9)"><circle cx="-10" cy="-6" r="11" fill="#fff"/><circle cx="10" cy="-6" r="11" fill="#fff"/><circle cx="0" cy="-18" r="11" fill="#fff"/><path d="M0 -4 Q4 14 12 22" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></g>'),
+    it('<path d="M246 64 H168" stroke="#14284B" stroke-width="5" stroke-linecap="round"/><path d="M180 52 L166 64 L180 76" fill="none" stroke="#14284B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' + label(206, 46, 'Ouest', 22)),
+    it(label(122, 252, 'Irlande', 20) + label(276, 288, 'Grande-Bretagne', 18))
+  ]);
+}
+function copenhagenArt() {
+  return scene('Copenhague sur une petite île', grad('#7CC4F0', '#BFE3F7'), [
+    it(waves(60, '#fff', .5) + waves(270, '#fff', .5)),
+    it('<path d="M100 160 C110 108 200 86 270 106 C330 126 322 196 280 226 C228 256 124 246 100 196Z" fill="#E9D8A6" stroke="#B89B5E" stroke-width="3"/>'),
+    it(house(130, 170, 36, 34, '#E63946') + house(176, 160, 40, 44, '#FFD23F') + house(226, 168, 36, 36, '#4D96FF') + house(268, 176, 30, 28, '#2A9D8F')),
+    it('<path d="M200 118 V150 M196 134 L200 106 L204 134" stroke="#5F7A8A" stroke-width="4" fill="none"/>' + fir(150, 150, .45, '#2F7A32') + fir(260, 150, .45, '#2F7A32')),
+    it('<path d="M320 70 h50 l-8 14 h-34Z" fill="#E63946"/><rect x="343" y="46" width="5" height="24" fill="#14284B"/><path d="M348 48 l20 10 h-20Z" fill="#fff"/>'),
+    it(label(200, 288, 'Copenhague', 22))
+  ]);
+}
+function balticArt() {
+  return scene('De la Suède à la mer Baltique', grad('#5FB3E8', '#BFE3F7'), [
+    it('<path d="M30 10 C80 0 120 30 130 70 C140 110 120 140 130 180 C140 215 120 240 90 262 C60 270 40 230 50 190 C40 150 20 120 30 80Z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="3"/>'),
+    it('<path d="M262 220 C280 205 320 208 340 225 C350 245 320 265 290 262 C265 258 252 240 262 220Z" fill="#E9D8A6" stroke="#B89B5E" stroke-width="3"/>' + flagArt('dk', 280, 226, 40)),
+    it(flagArt('se', 40, 26, 64)),
+    it(waves(130, '#fff', .55) + label(260, 120, 'Mer Baltique', 22, '#fff')),
+    it('<path d="M140 190 Q200 180 252 226" fill="none" stroke="#14284B" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round"/><path d="M180 176 h50 l-8 14 h-34Z" fill="#E63946"/><rect x="202" y="152" width="5" height="24" fill="#14284B"/><path d="M207 154 l22 12 h-22Z" fill="#fff"/>'),
+    it('<path d="M360 100 V50" stroke="#14284B" stroke-width="5" stroke-linecap="round"/><path d="M348 62 L360 46 L372 62" fill="none" stroke="#14284B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' + label(360, 124, 'Nord', 20))
+  ]);
+}
+function laplandArt() {
+  var tr = fir(40, 262, 1.1, '#1F6B4A') + fir(96, 270, .9, '#2A7F58') + fir(350, 266, 1.2, '#1F6B4A') + fir(310, 274, .8, '#2A7F58');
+  return scene('Le père Noël en Laponie', grad('#16284F', '#3B3F7E'), [
+    it('<path d="M0 90 Q90 30 190 80" fill="none" stroke="#6EE7B7" stroke-width="12" stroke-opacity=".55" stroke-linecap="round"/><path d="M180 50 Q290 0 400 70" fill="none" stroke="#C4A8FF" stroke-width="12" stroke-opacity=".5" stroke-linecap="round"/>'),
+    stars([[60, 130, 2.5], [150, 40, 3], [330, 120, 2.5], [380, 40, 3], [250, 110, 2]]),
+    it('<path d="M0 252 Q130 226 240 250 T400 240 V300 H0Z" fill="#fff"/>'),
+    it(tr),
+    it('<rect x="96" y="196" width="76" height="56" fill="#9A5B34"/><path d="M88 198 L134 160 L180 198Z" fill="#fff" stroke="#DDE8F2" stroke-width="3"/><rect x="108" y="212" width="20" height="20" fill="#FFD23F"/><rect x="144" y="222" width="16" height="30" fill="#5A3B2E"/>'),
+    it('<g transform="translate(262 252)"><rect x="-26" y="-16" width="52" height="18" rx="6" fill="#14284B"/><ellipse cx="0" cy="-48" rx="26" ry="34" fill="#D62828"/><rect x="-26" y="-34" width="52" height="7" fill="#14284B"/><circle cx="0" cy="-92" r="15" fill="#F2C9A0"/><path d="M-17 -88 Q0 -62 17 -88 L17 -78 Q0 -50 -17 -78Z" fill="#fff"/><path d="M-17 -98 Q-14 -126 6 -118 L20 -98Z" fill="#D62828"/><circle cx="8" cy="-120" r="5" fill="#fff"/><circle cx="-5" cy="-94" r="2" fill="#14284B"/><circle cx="6" cy="-94" r="2" fill="#14284B"/><rect x="-44" y="-52" width="20" height="26" rx="5" fill="#FFC93C"/></g>')
+  ]);
+}
+function tampereArt() {
+  var win = ''; for (var r = 0; r < 3; r++) for (var i = 0; i < 6; i++) win += '<rect x="' + (50 + i * 34) + '" y="' + (150 + r * 30) + '" width="16" height="20" fill="#FFF3C4"/>';
+  return scene('La ville de Tampere et son lac', grad('#BFE3FF', '#F6FBFF'), [
+    cloud(290, 46, .8),
+    it('<rect x="40" y="130" width="220" height="104" fill="#B5523B"/><rect x="40" y="124" width="220" height="10" fill="#8F3C2B"/>' + win),
+    it('<rect x="290" y="60" width="26" height="176" fill="#A2472F"/><rect x="286" y="54" width="34" height="10" fill="#8F3C2B"/><rect x="332" y="100" width="22" height="136" fill="#A2472F"/><rect x="328" y="94" width="30" height="10" fill="#8F3C2B"/>'),
+    it('<rect y="234" width="400" height="66" fill="#4FA3D6"/>' + waves(254, '#fff', .6) + waves(280, '#fff', .4)),
+    it(fir(18, 236, .6, '#2F7A32') + fir(268, 236, .6, '#2F7A32')),
+    it('<path d="M120 262 h60 l-8 14 h-44Z" fill="#E63946"/><rect x="146" y="240" width="5" height="22" fill="#14284B"/><path d="M151 242 l20 11 h-20Z" fill="#fff"/>'),
+    it(label(330, 284, 'Tampere', 22, '#fff'))
+  ]);
+}
+function lemanArt() {
+  return scene('Le lac Léman et les Alpes', grad('#BFE3FF', '#F2F9FF'), [
+    sun(60, 50, 20, '#FFD23F'),
+    it('<path d="M0 170 L70 70 L110 120 L180 40 L250 130 L300 80 L400 170Z" fill="#8FA7C2"/><path d="M70 70 L88 96 L72 92 L58 98Z M180 40 L204 78 L186 72 L172 82 L158 70Z M300 80 L316 100 L300 96 L288 102Z" fill="#fff"/>'),
+    it('<rect y="170" width="400" height="130" fill="#3E9BD8"/>' + waves(205, '#fff', .55) + waves(240, '#fff', .4)),
+    it(house(250, 150, 24, 20, '#F4A261') + house(280, 146, 26, 24, '#E63946') + house(312, 152, 22, 18, '#FFD23F') + '<rect x="212" y="120" width="14" height="50" fill="#B5A58A"/><path d="M210 122 L219 100 L228 122Z" fill="#5F7A8A"/>'),
+    it('<path d="M110 250 h90 l-14 20 h-62Z" fill="#fff" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><rect x="154" y="190" width="5" height="60" fill="#14284B"/><path d="M158 192 L196 244 H158Z" fill="#FF6B6B"/><path d="M154 200 L120 244 H154Z" fill="#fff" stroke="#14284B" stroke-width="2"/>'),
+    it(label(300, 288, 'Lac Léman', 22, '#fff'))
+  ]);
+}
+function chamonixArt() {
+  return scene('Chamonix et sa télécabine', grad('#BFE3FF', '#F2F9FF'), [
+    sun(340, 50, 20, '#FFD23F'),
+    it('<path d="M0 230 L90 90 L140 150 L210 60 L290 170 L340 120 L400 230Z" fill="#8FA7C2"/><path d="M90 90 L110 122 L92 116 L76 124Z M210 60 L234 100 L214 94 L196 104Z" fill="#fff"/>'),
+    it('<path d="M0 232 Q120 208 240 230 T400 222 V300 H0Z" fill="#6FB25F"/>'),
+    it('<path d="M0 50 L400 150" stroke="#14284B" stroke-width="3"/><path d="M200 100 V116" stroke="#14284B" stroke-width="3"/><rect x="180" y="116" width="40" height="30" rx="6" fill="#E63946" stroke="#14284B" stroke-width="3"/><rect x="186" y="122" width="12" height="14" fill="#FFF3C4"/><rect x="202" y="122" width="12" height="14" fill="#FFF3C4"/>'),
+    it(fir(40, 262, 1.1, '#1F6B4A') + fir(90, 270, .9, '#2A7F58') + fir(330, 266, 1.2, '#1F6B4A') + fir(372, 274, .9, '#2A7F58'))
+  ]);
+}
+
 STORIES.unshift({
   title: 'Voyage en Europe', coverArt: coverArt, mark: '?',
   tiles: ['uk', 'is', 'dk', 'no', 'pl', 'de', 'be', 'fr', 'es', 'it', 'gr'].map(flagTile),
@@ -664,20 +665,10 @@ function introArt() {
 function tunisiaMapArt() {
   return scene('Tunis, au nord de l’Afrique', grad('#5FB3E8', '#BFE3F7'), africaBase([pin(226, 58, 'Tunis', 300, 40)]));
 }
-function camel(x, y, s) {
-  return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-36 -46 Q-54 -42 -52 -22" fill="none" stroke="#B97F3C" stroke-width="5" stroke-linecap="round"/>' +
-    '<rect x="-30" y="-30" width="8" height="30" rx="3" fill="#B97F3C"/><rect x="-12" y="-30" width="8" height="30" rx="3" fill="#C98D45"/><rect x="14" y="-30" width="8" height="30" rx="3" fill="#B97F3C"/><rect x="28" y="-30" width="8" height="30" rx="3" fill="#C98D45"/>' +
-    '<ellipse cx="0" cy="-46" rx="40" ry="19" fill="#D9A25B"/><path d="M-16 -58 Q-6 -88 10 -58Z" fill="#D9A25B"/>' +
-    '<path d="M30 -52 Q44 -66 46 -88" fill="none" stroke="#D9A25B" stroke-width="12" stroke-linecap="round"/>' +
-    '<ellipse cx="53" cy="-92" rx="15" ry="8.5" fill="#D9A25B" transform="rotate(-8 53 -92)"/><circle cx="50" cy="-96" r="2.6" fill="#14284B"/><path d="M60 -88 q4 2 8 -1" fill="none" stroke="#7A4A12" stroke-width="2" stroke-linecap="round"/><ellipse cx="42" cy="-100" rx="3" ry="5" fill="#B97F3C"/></g>';
-}
 function penguin(x, y, s) {
   return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><ellipse cx="-9" cy="-1" rx="8" ry="3.5" fill="#FF9F1C"/><ellipse cx="9" cy="-1" rx="8" ry="3.5" fill="#FF9F1C"/>' +
     '<ellipse cx="0" cy="-26" rx="17" ry="26" fill="#14284B"/><ellipse cx="0" cy="-22" rx="10.5" ry="19" fill="#fff"/><path d="M-17 -30 Q-26 -20 -20 -10Z M17 -30 Q26 -20 20 -10Z" fill="#14284B"/>' +
     '<circle cx="-5.5" cy="-42" r="3.4" fill="#fff"/><circle cx="5.5" cy="-42" r="3.4" fill="#fff"/><circle cx="-5" cy="-42" r="1.6" fill="#14284B"/><circle cx="6" cy="-42" r="1.6" fill="#14284B"/><path d="M-4 -37 L4 -37 L0 -31Z" fill="#FF9F1C"/></g>';
-}
-function dunes() {
-  return '<path d="M0 214 Q90 160 190 210 T400 190 V300 H0Z" fill="#F2B867"/><path d="M0 250 Q110 206 230 246 T400 232 V300 H0Z" fill="#E8A24F"/><path d="M0 282 Q130 256 250 280 T400 270 V300 H0Z" fill="#D98F3E"/>';
 }
 function palm(x, y, s) {
   return it('<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M0 0 Q6 -40 -2 -80" fill="none" stroke="#8A5A2B" stroke-width="7" stroke-linecap="round"/><g transform="translate(-2 -80)" fill="#2F9E4F"><path d="M0 0 Q-30 -26 -54 -8 Q-28 -12 0 0Z"/><path d="M0 0 Q30 -26 54 -8 Q28 -12 0 0Z"/><path d="M0 0 Q-24 -40 -42 -34 Q-18 -28 0 0Z"/><path d="M0 0 Q24 -40 42 -34 Q18 -28 0 0Z"/><path d="M0 0 Q0 -36 6 -46 Q8 -22 0 0Z"/></g></g>');
@@ -705,33 +696,6 @@ function croc(x, y, s) {
   return it('<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-100 6 Q-70 -20 -40 -14 L-40 6Z" fill="#5E9B3A"/><ellipse cx="-8" cy="-8" rx="58" ry="17" fill="#5E9B3A"/>' + bumps +
     '<path d="M36 -16 L118 -12 Q124 -6 118 -2 L40 -2Z" fill="#6DAE45"/><path d="M40 4 L116 8 Q122 14 116 20 L42 16Z" fill="#6DAE45"/><path d="M42 -2 L118 -2 L116 8 L40 4Z" fill="#B3242C"/>' + teeth +
     '<circle cx="48" cy="-22" r="7" fill="#fff"/><circle cx="50" cy="-22" r="3" fill="#14284B"/></g>');
-}
-function nileCrocArt() {
-  return scene('Un crocodile dans le Nil', grad('#BFE3F7', '#F3F9E2'), [
-    sun(330, 50, 22, '#FFD23F'),
-    it('<rect y="120" width="400" height="180" fill="#3E9BD8"/>' + waves(150, '#fff', .5) + waves(290, '#fff', .3)),
-    it('<path d="M30 180 V110 M44 182 V92 M58 180 V118 M352 190 V116 M366 192 V98" stroke="#5D8F44" stroke-width="6" stroke-linecap="round"/>'),
-    croc(190, 220, 1.25),
-    it('<ellipse cx="86" cy="62" rx="52" ry="24" fill="#fff" stroke="#14284B" stroke-width="3"/><path d="M110 82 l10 14 l-2 -18Z" fill="#fff" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>' + label(86, 70, 'Aaah !', 24))
-  ]);
-}
-function tombArt() {
-  return scene('À l’intérieur d’une pyramide', grad('#9ED8F5', '#FFE9C7'), [
-    it('<rect y="262" width="400" height="38" fill="#F2D08A"/>'),
-    it('<path d="M200 28 L48 262 L352 262Z" fill="#EBC477" stroke="#B88A3C" stroke-width="4" stroke-linejoin="round"/><path d="M200 28 L248 262 L352 262Z" fill="#C99A47" opacity=".55"/>'),
-    it('<rect x="132" y="170" width="136" height="72" rx="14" fill="#3B2A1A"/>'),
-    it('<g transform="translate(200 206)"><rect x="-44" y="-18" width="88" height="34" rx="14" fill="#FFC93C" stroke="#C9971A" stroke-width="3"/><path d="M-30 -18 V16 M-14 -18 V16 M2 -18 V16 M18 -18 V16" stroke="#2E5EAA" stroke-width="4"/><circle cx="-30" cy="-2" r="12" fill="#FFD966" stroke="#C9971A" stroke-width="3"/><circle cx="-33" cy="-5" r="2" fill="#14284B"/><circle cx="-27" cy="-5" r="2" fill="#14284B"/></g>'),
-    it(label(200, 142, 'Pharaon', 26, '#14284B')),
-    stars([[96, 60, 3], [310, 80, 3], [60, 130, 2.5]])
-  ]);
-}
-function senegalLand() { return 'M96 60 Q200 36 330 66 Q392 140 352 232 Q222 262 112 242 Q76 152 96 60Z'; }
-function gambiaStrip() { return 'M88 150 Q130 138 172 152 T262 150 T346 156'; }
-function pirogue(x, y, s, c1, c2) {
-  return it('<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-54 -10 Q0 20 54 -10 L48 -24 Q0 -2 -48 -24Z" fill="' + c1 + '" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M-46 -14 Q0 8 46 -14" fill="none" stroke="' + c2 + '" stroke-width="6"/><rect x="-1" y="-60" width="3" height="40" fill="#14284B"/><path d="M2 -60 l22 8 l-22 8Z" fill="' + c2 + '"/></g>');
-}
-function baobab(x, y, s) {
-  return it('<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-30 0 Q-22 -50 -14 -88 L14 -88 Q22 -50 30 0Z" fill="#9A6B42"/><path d="M-12 -86 L-34 -112 M12 -86 L34 -112 M0 -88 V-118" stroke="#9A6B42" stroke-width="7" stroke-linecap="round"/><g fill="#4C9A3F"><circle cx="-36" cy="-118" r="17"/><circle cx="0" cy="-130" r="21"/><circle cx="36" cy="-118" r="17"/><circle cx="-14" cy="-110" r="14"/><circle cx="16" cy="-110" r="14"/></g></g>');
 }
 function acacia(x, y, s) {
   return it('<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M0 0 Q-4 -40 -16 -70 M-2 -36 Q10 -56 26 -76" fill="none" stroke="#6B4A2B" stroke-width="8" stroke-linecap="round"/><ellipse cx="4" cy="-84" rx="58" ry="18" fill="#3C9A4A"/><ellipse cx="24" cy="-98" rx="36" ry="14" fill="#4FB35A"/></g>');
@@ -1004,12 +968,6 @@ function branchLeaves(x0, y0, cx, cy, x1, y1, n, color, rx, ry) {
   }
   return s;
 }
-var CY_ISLAND = 'M18 34 Q20 26 30 24 Q40 20 48 22 Q57 25 63 22 L72 14 L76 16 L70 25 Q67 31 59 33 Q51 37 42 41 Q32 46 24 43 Q17 41 18 34Z';
-function cyBranches() {
-  return '<path d="M24 42 Q32 54 46 54" fill="none" stroke="#4E5B31" stroke-width="1.5" stroke-linecap="round"/><path d="M66 42 Q58 54 44 54" fill="none" stroke="#4E5B31" stroke-width="1.5" stroke-linecap="round"/>' +
-    branchLeaves(24, 42, 32, 54, 46, 54, 7, '#4E5B31', 2.6, 1.1) + branchLeaves(66, 42, 58, 54, 44, 54, 7, '#4E5B31', 2.6, 1.1);
-}
-FL.cy = [90, 60, '<rect width="90" height="60" fill="#fff"/><path d="' + CY_ISLAND + '" fill="#D57800"/>' + cyBranches()];
 FL.tr = [90, 60, '<rect width="90" height="60" fill="#E30A17"/>' + crescent(34, 30, 15, 5, 12, '#fff') + starP(53, 30, 7.5, '#fff')];
 FL.ae = [90, 60, '<rect width="90" height="20" fill="#00732F"/><rect y="20" width="90" height="20" fill="#fff"/><rect y="40" width="90" height="20" fill="#000"/><rect width="22" height="60" fill="#FF0000"/>'];
 FL['in'] = [90, 60, '<rect width="90" height="20" fill="#FF9933"/><rect y="20" width="90" height="20" fill="#fff"/><rect y="40" width="90" height="20" fill="#138808"/><g stroke="#000080" stroke-width=".9">' +
@@ -1020,9 +978,7 @@ FL.cn = [90, 60, '<rect width="90" height="60" fill="#DE2910"/>' + starP(15, 15,
   [[30, 6], [36, 12], [36, 21], [30, 27]].map(function (p) { return starRot(p[0], p[1], 3, '#FFDE00', Math.atan2(15 - p[1], 15 - p[0]) * 180 / Math.PI + 90); }).join('')];
 FL.jp = [90, 60, '<rect width="90" height="60" fill="#fff"/><circle cx="45" cy="30" r="18" fill="#BC002D"/>'];
 FL.mn = [90, 60, '<rect width="30" height="60" fill="#C4272F"/><rect x="30" width="30" height="60" fill="#015197"/><rect x="60" width="30" height="60" fill="#C4272F"/><g fill="#F9CF02"><path d="M15 6 q-4 5 0 9 q4 -4 0 -9z"/><circle cx="15" cy="20" r="2.6"/><path d="M10.5 26 L19.5 26 L15 34Z"/><path d="M10.5 38 L19.5 38 L15 30Z"/><circle cx="15" cy="45" r="4"/><rect x="5.5" y="8" width="2.4" height="44"/><rect x="22.1" y="8" width="2.4" height="44"/></g>'];
-FL.th = [90, 60, '<rect width="90" height="60" fill="#A51931"/><rect y="10" width="90" height="40" fill="#F4F5F8"/><rect y="20" width="90" height="20" fill="#2D2A4A"/>'];
 FL.id = [90, 60, '<rect width="90" height="30" fill="#CE1126"/><rect y="30" width="90" height="30" fill="#fff"/>'];
-FL.eu = [90, 60, '<rect width="90" height="60" fill="#003399"/>' + (function () { var s = ''; for (var i = 0; i < 12; i++) { var a = i * Math.PI / 6; s += starP(45 + 19 * Math.sin(a), 30 - 19 * Math.cos(a), 3.4, '#FFCC00'); } return s; })()];
 
 /* le drapeau du Népal n'est ni carré ni rectangulaire */
 var _flagArtBase = flagArt;
@@ -1063,22 +1019,6 @@ function asiaBase(extra) {
 function asiaIntroArt() {
   return scene('Après l’Afrique, l’Asie', grad('#5FB3E8', '#BFE3F7'), asiaBase([it(label(222, 118, 'Asie', 46, '#fff')), stars([[330, 20, 3], [60, 150, 2.5], [150, 276, 2.5], [380, 200, 3]]).replace(/#FFF3B0/g, '#fff')]));
 }
-function cyprusMapArt() {
-  return scene('L’île de Chypre, couleur cuivre, au-dessus de branches d’olivier', grad('#CFEAF7', '#F4FAFD'), [
-    it('<g transform="translate(-24 -14) scale(4.2)"><path d="' + CY_ISLAND + '" fill="#D57800"/></g>'),
-    it('<g transform="translate(-24 6) scale(4.2)">' + cyBranches() + '</g>'),
-    it('<circle cx="262" cy="196" r="9" fill="#2F3B1C"/><circle cx="296" cy="214" r="9" fill="#2F3B1C"/><circle cx="104" cy="214" r="9" fill="#2F3B1C"/>'),
-    it(waves(26, '#fff', .8) + waves(282, '#fff', .8))
-  ]);
-}
-function nicosiaArt() {
-  return scene('Nicosie, entre l’Europe et l’Asie, séparée par la ligne Verte', grad('#8EC5F0', '#F4C76A'), [
-    it('<rect width="190" height="300" fill="#8EC5F0"/><rect x="210" width="190" height="300" fill="#F4C76A"/><rect x="190" width="20" height="300" fill="#3FA34D"/><path d="M200 0 V300" stroke="#fff" stroke-width="3" stroke-dasharray="14 12"/>'),
-    it(label(95, 170, 'Europe', 34) + label(305, 170, 'Asie', 34)),
-    it('<g transform="rotate(-90 200 236)">' + label(200, 241, 'ligne Verte', 15, '#fff') + '</g>'),
-    pin(200, 122, 'Nicosie', 200, 150)
-  ]);
-}
 function chimney(x, y, w, h, c, d) {
   return '<path d="M' + (x - w / 2) + ' ' + y + ' L' + (x - w * .16) + ' ' + (y - h) + ' Q' + x + ' ' + (y - h - 10) + ' ' + (x + w * .16) + ' ' + (y - h) + ' L' + (x + w / 2) + ' ' + y + 'Z" fill="' + c + '"/><path d="M' + (x - w * .16) + ' ' + (y - h) + ' Q' + x + ' ' + (y - h - 10) + ' ' + (x + w * .16) + ' ' + (y - h) + ' L' + (x + w * .1) + ' ' + (y - h + 12) + ' L' + (x - w * .1) + ' ' + (y - h + 12) + 'Z" fill="' + d + '"/>';
 }
@@ -1112,14 +1052,6 @@ function kebabArt() {
     it(sparkle(60, 60, 4).replace('#FFF3B0', '#FFC93C') + sparkle(360, 40, 3).replace('#FFF3B0', '#FFC93C'))
   ]);
 }
-function fullPlateArt() {
-  return scene('Une assiette vide et un visage content', grad('#FFE9C7', '#FFF6E4'), [
-    it('<rect y="262" width="400" height="38" fill="#E8C898"/>'),
-    it('<ellipse cx="120" cy="226" rx="86" ry="26" fill="#fff" stroke="#14284B" stroke-width="3"/><ellipse cx="120" cy="226" rx="56" ry="14" fill="#EEE8DA"/><circle cx="96" cy="224" r="3" fill="#C99A47"/><circle cx="130" cy="230" r="3" fill="#C99A47"/><circle cx="148" cy="222" r="2.5" fill="#8A4B2A"/>'),
-    it('<circle cx="272" cy="150" r="76" fill="#FFD23F" stroke="#14284B" stroke-width="3.5"/><path d="M236 138 Q246 124 258 138 M286 138 Q298 124 308 138" fill="none" stroke="#14284B" stroke-width="5" stroke-linecap="round"/><path d="M236 170 Q272 212 308 170Z" fill="#14284B"/><path d="M252 188 Q272 204 292 188 Q272 180 252 188Z" fill="#FF8FA3"/><circle cx="228" cy="164" r="12" fill="#FF8FA3" opacity=".6"/><circle cx="316" cy="164" r="12" fill="#FF8FA3" opacity=".6"/>'),
-    it('<ellipse cx="116" cy="70" rx="64" ry="26" fill="#fff" stroke="#14284B" stroke-width="3"/><path d="M146 90 l10 14 l-2 -18Z" fill="#fff" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>' + label(116, 79, 'Miam !', 26))
-  ]);
-}
 function burjArt() {
   var win = '';
   for (var i = 0; i < 9; i++) { var x = 14 + i * 28, h = 40 + (i * 37) % 70; win += '<rect x="' + x + '" y="' + (268 - h) + '" width="22" height="' + h + '" fill="' + (i % 2 ? '#A9BED2' : '#8FA7C2') + '"/>'; }
@@ -1131,33 +1063,7 @@ function burjArt() {
     it('<rect y="268" width="400" height="32" fill="#E9CF94"/>')
   ]);
 }
-function elevatorArt(num, up) {
-  var arrow = up ? 'M200 118 L224 148 H176Z' : 'M200 148 L224 118 H176Z';
-  return scene('Un ascenseur : étage ' + num, grad('#D9ECFA', '#F2F9FE'), [
-    it('<rect x="96" y="20" width="208" height="262" rx="20" fill="#C8CED6" stroke="#14284B" stroke-width="4"/><rect x="136" y="40" width="128" height="64" rx="10" fill="#14284B"/>' + label(200, 90, num, 48, '#FFD23F')),
-    it('<path d="' + arrow + '" fill="#E63946" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>'),
-    it('<rect x="122" y="162" width="72" height="104" fill="#EEF1F5" stroke="#14284B" stroke-width="3"/><rect x="206" y="162" width="72" height="104" fill="#EEF1F5" stroke="#14284B" stroke-width="3"/>'),
-    it(label(330, 140, 'Dong !', 26).replace('text-anchor="middle"', 'text-anchor="middle" transform="rotate(8 330 140)"'))
-  ]);
-}
-function skyViewArt() {
-  var b = '', cs = ['#8FA7C2', '#6F86A8', '#A9BED2'], hs = [120, 80, 150, 100, 70, 140, 90, 110, 60, 130];
-  for (var i = 0; i < 10; i++) { var x = 8 + i * 39, h = hs[i]; b += '<rect x="' + x + '" y="' + (290 - h) + '" width="34" height="' + h + '" fill="' + cs[i % 3] + '"/><path d="M' + (x + 8) + ' ' + (290 - h + 8) + ' V288 M' + (x + 18) + ' ' + (290 - h + 8) + ' V288 M' + (x + 28) + ' ' + (290 - h + 8) + ' V288" stroke="#fff" stroke-opacity=".35" stroke-width="3" stroke-dasharray="4 6"/>'; }
-  return scene('Vue sur les gratte-ciel de Dubaï', grad('#7CC4F0', '#FFE9C7'), [
-    sun(330, 60, 26, '#FFE08A'), cloud(40, 70, 1), cloud(200, 110, .8),
-    it(b),
-    it('<path d="M0 262 Q100 236 200 262 T400 256 V300 H0Z" fill="#fff" opacity=".8"/>'),
-    it('<rect x="8" y="8" width="384" height="284" rx="26" fill="none" stroke="#3B4252" stroke-width="16"/><path d="M200 8 V292" stroke="#3B4252" stroke-width="8"/>')
-  ]);
-}
 function person(x, y, c, sk) { return '<circle cx="' + x + '" cy="' + y + '" r="5" fill="' + sk + '"/><rect x="' + (x - 6) + '" y="' + (y + 7) + '" width="12" height="16" rx="5" fill="' + c + '"/>'; }
-function crowdArt() {
-  var cols = ['#E63946', '#4D96FF', '#FFC93C', '#2A9D8F', '#FF9F1C', '#9B5DE5'], sks = ['#F2C9A0', '#C98B5B', '#9A6B42'], g = '';
-  for (var j = 0; j < 5; j++) for (var i = 0; i < 9; i++) g += person(40 + i * 40 + (j % 2) * 10, 30 + j * 36, cols[(i + j * 2) % 6], sks[(i * 2 + j) % 3]);
-  return scene('Une foule immense : 1,4 milliard d’habitants', grad('#FFE3B0', '#FFF5DC'), [
-    it(g), it('<rect x="80" y="226" width="240" height="56" rx="28" fill="#14284B"/>' + label(200, 266, '1,4 milliard', 34, '#fff'))
-  ]);
-}
 function dancer(x, y, s, c1, c2) {
   return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-6 -30 L-9 0 M6 -30 L9 0" stroke="#7A4A12" stroke-width="5" stroke-linecap="round"/>' +
     '<path d="M-24 -24 Q0 -40 24 -24 L32 -4 Q0 8 -32 -4Z" fill="' + c1 + '"/><rect x="-10" y="-64" width="20" height="40" rx="8" fill="' + c2 + '"/>' +
@@ -1203,60 +1109,6 @@ function himalayaArt() {
     it(prayerFlags(40, 30))
   ]);
 }
-function tenPeaksArt() {
-  var g = '', hs = [150, 142, 134, 128, 122, 114, 108, 102, 96, 90];
-  for (var i = 0; i < 10; i++) {
-    var x0 = 20 + i * 36, h = hs[i], c = (i === 1 || i === 8) ? '#9AA5B1' : '#DC143C';
-    g += it('<path d="M' + x0 + ' 236 L' + (x0 + 18) + ' ' + (236 - h) + ' L' + (x0 + 36) + ' 236Z" fill="' + c + '" stroke="#14284B" stroke-width="2.5" stroke-linejoin="round"/><path d="M' + (x0 + 18) + ' ' + (236 - h) + ' L' + (x0 + 26) + ' ' + (236 - h + 22) + ' L' + (x0 + 10) + ' ' + (236 - h + 22) + 'Z" fill="#fff"/>');
-  }
-  return scene('Dix sommets, huit au Népal', grad('#D9ECFA', '#F2F9FE'), [
-    it('<rect y="236" width="400" height="64" fill="#E3EAF1"/>'), g,
-    it('<rect x="70" y="252" width="260" height="38" rx="19" fill="#14284B"/>' + label(200, 279, '8 sur 10 au Népal', 22, '#fff'))
-  ]);
-}
-function notRectArt() {
-  function card(x, shape, name, ok) {
-    var mark = ok ? '<path d="M-14 0 L-4 10 L16 -12" fill="none" stroke="#2FA84F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>' : '<path d="M-12 -12 L12 12 M12 -12 L-12 12" fill="none" stroke="#E63946" stroke-width="8" stroke-linecap="round"/>';
-    return it('<rect x="' + x + '" y="30" width="112" height="240" rx="18" fill="#fff" stroke="#14284B" stroke-width="3"/>' + shape + label(x + 56, 168, name, 19) + '<g transform="translate(' + (x + 56) + ' 222)">' + mark + '</g>');
-  }
-  return scene('Le drapeau du Népal n’est ni carré ni rectangle', grad('#D9ECFA', '#F2F9FE'), [
-    card(14, '<rect x="42" y="62" width="56" height="56" fill="#C9D3DE" stroke="#14284B" stroke-width="3"/>', 'carré', false),
-    card(144, '<rect x="30" y="72" width="80" height="48" fill="#C9D3DE" stroke="#14284B" stroke-width="3"/>', 'rectangle', false),
-    card(274, flagArt('np', 24, 50, 44).replace('<g transform="translate(24 50)">', '<g transform="translate(' + (274 + 34) + ' 50)">'), 'Népal', true)
-  ]);
-}
-function climbArt() {
-  function climber(x, y, c) { return '<circle cx="' + x + '" cy="' + (y - 14) + '" r="6" fill="#F2C9A0"/><rect x="' + (x - 7) + '" y="' + (y - 8) + '" width="14" height="18" rx="5" fill="' + c + '"/><path d="M' + (x + 9) + ' ' + (y - 6) + ' L' + (x + 14) + ' ' + (y + 14) + '" stroke="#5A3B1E" stroke-width="3" stroke-linecap="round"/>'; }
-  return scene('Des alpinistes montent vers le sommet', grad('#9CC7EE', '#EAF4FB'), [
-    cloud(40, 60, .8), cloud(300, 90, .7),
-    it('<path d="M10 280 L200 36 L390 280Z" fill="#8FA7C2"/><path d="M200 36 L240 96 L218 90 L200 110 L182 90 L160 96Z" fill="#fff"/>'),
-    it('<path d="M70 268 L160 222 L112 198 L196 156 L162 132 L198 100" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="3 9" stroke-linecap="round"/>'),
-    it(climber(112, 198, '#E63946') + climber(162, 132, '#FFC93C'))
-  ]);
-}
-function summitArt() {
-  return scene('Au sommet du monde', grad('#7CC4F0', '#EAF4FB'), [
-    sun(70, 70, 30, '#FFE08A'),
-    it('<path d="M40 300 L200 134 L360 300Z" fill="#8FA7C2"/><path d="M200 134 L238 178 L216 172 L200 190 L180 172 L162 178Z" fill="#fff"/>'),
-    it('<rect x="198" y="58" width="4" height="82" fill="#8A6B4A"/>' + flagArt('np', 204, 58, 40)),
-    it('<g transform="translate(160 140)"><circle cx="0" cy="-16" r="6" fill="#F2C9A0"/><rect x="-7" y="-10" width="14" height="18" rx="5" fill="#E63946"/><path d="M-6 -6 L-14 -22 M6 -6 L14 -22" stroke="#E63946" stroke-width="4" stroke-linecap="round"/></g>'),
-    cloud(20, 230, 1.1), cloud(280, 250, 1),
-    stars([[330, 60, 3], [110, 130, 2.5], [350, 160, 2]])
-  ]);
-}
-function populationArt() {
-  function bar(x, h, code, name) { return it('<rect x="' + x + '" y="' + (250 - h) + '" width="100" height="' + h + '" rx="12" fill="#FFC93C" stroke="#14284B" stroke-width="3"/>' + flagArt(code, x + 16, 250 - h - 56, 68) + label(x + 50, 280, name, 22)); }
-  return scene('L’Inde a une légère avance sur la Chine', grad('#FFE9C7', '#FFF6E4'), [
-    it('<rect y="252" width="400" height="48" fill="#EEDCB6"/>'),
-    bar(80, 150, 'in', 'Inde'), bar(220, 142, 'cn', 'Chine'),
-    it('<g transform="translate(200 150)"><path d="M-14 -6 H14 M-14 6 H14" stroke="#14284B" stroke-width="5" stroke-linecap="round"/></g>')
-  ]);
-}
-function asiaPeopleArt() {
-  var dots = '', pts = [[170, 90], [210, 80], [250, 84], [290, 100], [200, 120], [240, 126], [280, 134], [160, 130], [230, 160], [260, 170], [200, 64], [300, 70]], cols = ['#E63946', '#4D96FF', '#FFC93C', '#2A9D8F', '#9B5DE5', '#fff'];
-  pts.forEach(function (p, i) { dots += person(p[0], p[1], cols[i % 6], '#F2C9A0'); });
-  return scene('L’Asie, le continent le plus peuplé', grad('#5FB3E8', '#BFE3F7'), asiaBase([it(dots), it('<rect x="116" y="256" width="236" height="34" rx="17" fill="#14284B"/>' + label(234, 280, 'Le plus peuplé', 20, '#fff'))]));
-}
 function greatWallArt() {
   var d = 'M-10 262 Q40 214 84 222 T164 178 T244 156 T324 116 T410 92';
   function tower(x, y) { return '<rect x="' + (x - 11) + '" y="' + (y - 34) + '" width="22" height="34" fill="#B98A5B" stroke="#14284B" stroke-width="2"/><path d="M' + (x - 15) + ' ' + (y - 34) + ' L' + x + ' ' + (y - 50) + ' L' + (x + 15) + ' ' + (y - 34) + 'Z" fill="#B5523B" stroke="#14284B" stroke-width="2" stroke-linejoin="round"/><rect x="' + (x - 4) + '" y="' + (y - 26) + '" width="8" height="10" fill="#5A3B1E"/>'; }
@@ -1266,29 +1118,6 @@ function greatWallArt() {
     it('<path d="' + d + '" fill="none" stroke="#14284B" stroke-width="18" stroke-linecap="round"/><path d="' + d + '" fill="none" stroke="#C9A06B" stroke-width="14" stroke-linecap="round"/><path d="' + d + '" fill="none" stroke="#8A6A3E" stroke-width="3" stroke-dasharray="7 7"/>'),
     it(tower(84, 222) + tower(164, 178) + tower(244, 156) + tower(324, 116)),
     it('<rect x="112" y="252" width="176" height="38" rx="19" fill="#14284B"/>' + label(200, 279, '2 000 ans', 24, '#fff'))
-  ]);
-}
-function rabbit(x, y, s) {
-  return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><circle cx="-18" cy="-12" r="7" fill="#fff"/><ellipse cx="0" cy="-16" rx="22" ry="15" fill="#fff" stroke="#C9D3DE" stroke-width="2"/><circle cx="20" cy="-26" r="12" fill="#fff" stroke="#C9D3DE" stroke-width="2"/>' +
-    '<ellipse cx="17" cy="-48" rx="4.5" ry="14" fill="#fff" stroke="#C9D3DE" stroke-width="2"/><ellipse cx="27" cy="-47" rx="4.5" ry="14" fill="#fff" stroke="#C9D3DE" stroke-width="2" transform="rotate(10 27 -47)"/><ellipse cx="17" cy="-47" rx="2" ry="9" fill="#FFB8C8"/>' +
-    '<circle cx="25" cy="-28" r="2.2" fill="#14284B"/><circle cx="31" cy="-23" r="2" fill="#FF8FA3"/></g>';
-}
-function okunoshimaArt() {
-  return scene('Une île pleine de lapins', grad('#5FB3E8', '#BFE3F7'), [
-    it(waves(40, '#fff', .5) + waves(276, '#fff', .5)),
-    it('<ellipse cx="200" cy="200" rx="170" ry="70" fill="#E9CF94"/><ellipse cx="200" cy="190" rx="150" ry="56" fill="#7CC36A"/>'),
-    it(rabbit(80, 200, 1.1)), it(rabbit(160, 226, 1)), it(rabbit(250, 206, 1.2)), it(rabbit(320, 232, .9)), it(rabbit(200, 170, .8)), it(rabbit(120, 160, .8)),
-    it('<rect x="104" y="14" width="192" height="40" rx="20" fill="#14284B"/>' + label(200, 42, 'Okunoshima', 24, '#fff'))
-  ]);
-}
-function quakeArt() {
-  return scene('Un tremblement de terre', grad('#BFE3FF', '#F2F9FF'), [
-    cloud(40, 54, .8),
-    it('<path d="M0 220 H400 V300 H0Z" fill="#9A7B52"/><path d="M0 220 H400" stroke="#6F5A3A" stroke-width="5"/><path d="M180 220 L196 244 L176 262 L200 284 L188 300" fill="none" stroke="#14284B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'),
-    it('<g transform="rotate(-9 130 222)"><rect x="80" y="150" width="100" height="72" fill="#F2D49B" stroke="#14284B" stroke-width="3"/><path d="M68 152 L130 100 L192 152Z" fill="#B5523B" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><rect x="118" y="178" width="26" height="44" fill="#5A3B1E"/></g>'),
-    it('<g fill="none" stroke="#14284B" stroke-width="4" stroke-linecap="round"><path d="M40 170 q-10 20 0 40"/><path d="M24 160 q-20 30 0 60"/><path d="M220 170 q10 20 0 40"/><path d="M236 160 q20 30 0 60"/></g>'),
-    it(rabbit(300, 218, 1.1)),
-    it('<rect x="124" y="16" width="190" height="44" rx="22" fill="#E63946"/>' + label(219, 46, 'Boum !', 28, '#fff'))
   ]);
 }
 function sakura(x, y, s) {
@@ -1312,16 +1141,6 @@ function sushiArt() {
     sparkle(40, 50, 4).replace('#FFF3B0', '#FFC93C')
   ]);
 }
-function wasabiArt() {
-  return scene('Du wasabi très épicé', grad('#FFE9C7', '#FFF6E4'), [
-    it('<circle cx="220" cy="150" r="90" fill="#F4B183" stroke="#14284B" stroke-width="3.5"/><circle cx="168" cy="178" r="16" fill="#FF6B6B" opacity=".6"/><circle cx="272" cy="178" r="16" fill="#FF6B6B" opacity=".6"/>'),
-    it('<path d="M176 118 L200 130 L176 142 M264 118 L240 130 L264 142" fill="none" stroke="#14284B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>'),
-    it('<ellipse cx="220" cy="188" rx="30" ry="24" fill="#14284B"/><path d="M200 196 Q220 218 240 196Z" fill="#FF6B8A"/><path d="M178 132 q-6 22 0 40 M262 132 q6 22 0 40" fill="none" stroke="#4D96FF" stroke-width="5" stroke-linecap="round"/>'),
-    it('<path d="M166 214 Q148 244 168 262 Q160 232 186 222Z M274 214 Q292 244 272 262 Q280 232 254 222Z" fill="#FF6B35"/><path d="M200 232 Q196 262 210 276 Q206 252 224 240Z M244 232 Q250 258 238 274 Q240 252 224 240Z" fill="#FF9F1C"/>'),
-    it('<ellipse cx="62" cy="214" rx="46" ry="30" fill="#7CC36A" stroke="#4E9A43" stroke-width="3"/><path d="M30 190 L96 90 M44 196 L108 100" stroke="#8A5A2B" stroke-width="5" stroke-linecap="round"/>'),
-    it('<ellipse cx="116" cy="70" rx="64" ry="26" fill="#fff" stroke="#14284B" stroke-width="3"/>' + label(116, 79, 'Aïe !', 26))
-  ]);
-}
 function yurt(x, y, s) {
   return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><rect x="-46" y="-40" width="92" height="40" fill="#F4EFE0" stroke="#14284B" stroke-width="3"/><path d="M-56 -40 L0 -90 L56 -40Z" fill="#fff" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M-46 -40 H46" stroke="#E63946" stroke-width="6"/><rect x="-12" y="-30" width="24" height="30" rx="3" fill="#C2410C" stroke="#14284B" stroke-width="2.5"/><circle cx="0" cy="-88" r="5" fill="#14284B"/></g>';
 }
@@ -1334,41 +1153,9 @@ function yurtArt() {
     it(yurt(110, 250, 1.3)), it(yurt(290, 262, 1.1)), it(sheep(210, 276, 1)), it(sheep(350, 288, .9)), it(sheep(40, 288, .9))
   ]);
 }
-function tukTuk(x, y, s) {
-  return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-50 -30 H20 L40 -10 V6 H-50Z" fill="#2A9D8F" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M-46 -30 L-40 -62 H18 L22 -30" fill="#FFD23F" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><rect x="-30" y="-52" width="34" height="18" fill="#BFE3F7" stroke="#14284B" stroke-width="2"/><circle cx="-34" cy="8" r="10" fill="#14284B"/><circle cx="-34" cy="8" r="4" fill="#C9D3DE"/><circle cx="30" cy="8" r="10" fill="#14284B"/><circle cx="30" cy="8" r="4" fill="#C9D3DE"/></g>';
-}
-function bangkokArt() {
-  return scene('Un temple et un tuk-tuk à Bangkok', grad('#FFD8A8', '#FFF0D2'), [
-    sun(330, 60, 24, '#FF9F1C'),
-    it('<rect y="262" width="400" height="38" fill="#E8C898"/>'),
-    it('<rect x="100" y="224" width="140" height="40" fill="#F2D49B" stroke="#14284B" stroke-width="3"/><path d="M110 224 L170 168 L230 224Z" fill="#E63946" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M128 168 L170 120 L212 168Z" fill="#FFC93C" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M146 120 L170 78 L194 120Z" fill="#2A9D8F" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M170 78 V40" stroke="#C9971A" stroke-width="5"/><circle cx="170" cy="38" r="5" fill="#C9971A"/><rect x="156" y="238" width="28" height="26" rx="4" fill="#5A3B1E"/>'),
-    it(tukTuk(320, 262, 1.4)),
-    it('<rect x="86" y="276" width="168" height="1" fill="none"/>')
-  ]);
-}
-function islandsArt() {
-  return scene('Sumatra, Bornéo, Java : les îles d’Indonésie', grad('#35B0E6', '#0B6AA8'), [
-    it(waves(30, '#fff', .4) + waves(280, '#fff', .4)),
-    it('<path d="M20 120 L150 170 L140 190 L10 140Z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="3" stroke-linejoin="round"/>' + label(70, 208, 'Sumatra', 17, '#fff') + '<path d="M80 224 L250 218 L254 236 L84 242Z" fill="#6DBB5A" stroke="#3E8E3E" stroke-width="3" stroke-linejoin="round"/>' + label(168, 236, 'Java', 17, '#fff')),
-    it('<path d="M231 118 L262 128 L305 120 L345 112 L335 165 L300 190 L260 185 L235 150Z" fill="#E63946"/><path d="M250 70 L290 60 L330 80 L345 112 L305 120 L262 128 L231 118 L230 105Z" fill="#4D96FF"/><circle cx="278" cy="96" r="8" fill="#FFD23F"/><path d="M230 105 L250 70 L290 60 L330 80 L345 112 L335 165 L300 190 L260 185 L235 150 L231 118Z" fill="none" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>'),
-    it(label(288, 218, 'Bornéo', 20, '#fff')),
-    it('<g transform="translate(24 278)"><rect width="12" height="12" fill="#E63946"/><text x="18" y="11" ' + FONT + ' font-size="13" fill="#fff">Indonésie</text></g><g transform="translate(130 278)"><rect width="12" height="12" fill="#4D96FF"/><text x="148" y="11" ' + FONT + ' font-size="1" fill="none"></text><text x="18" y="11" ' + FONT + ' font-size="13" fill="#fff">Malaisie</text></g><g transform="translate(236 278)"><rect width="12" height="12" fill="#FFD23F"/><text x="18" y="11" ' + FONT + ' font-size="13" fill="#fff">Brunei</text></g>')
-  ]);
-}
-function tiger(x, y, s) {
-  return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-44 -34 Q-70 -40 -64 -10" fill="none" stroke="#F28C28" stroke-width="7" stroke-linecap="round"/><path d="M-60 -22 l8 -3 M-64 -12 l8 -2" stroke="#14284B" stroke-width="3"/>' +
-    '<rect x="-32" y="-26" width="11" height="26" rx="4" fill="#F28C28"/><rect x="-12" y="-26" width="11" height="26" rx="4" fill="#E07A18"/><rect x="14" y="-26" width="11" height="26" rx="4" fill="#F28C28"/><rect x="30" y="-26" width="11" height="26" rx="4" fill="#E07A18"/>' +
-    '<ellipse cx="-2" cy="-38" rx="42" ry="22" fill="#F28C28"/><path d="M-26 -58 l6 18 M-10 -60 l4 20 M6 -60 l2 20 M22 -56 l-2 18" stroke="#14284B" stroke-width="4" stroke-linecap="round"/>' +
-    '<circle cx="42" cy="-50" r="19" fill="#F28C28"/><path d="M30 -66 L28 -80 L40 -70Z M54 -66 L60 -80 L62 -64Z" fill="#F28C28"/><ellipse cx="46" cy="-42" rx="11" ry="8" fill="#FFF3DC"/><circle cx="36" cy="-54" r="2.8" fill="#14284B"/><circle cx="50" cy="-54" r="2.8" fill="#14284B"/><path d="M42 -46 h8 l-4 4Z" fill="#14284B"/><path d="M28 -50 l7 2 M60 -50 l-7 2" stroke="#14284B" stroke-width="3" stroke-linecap="round"/></g>';
-}
 function jungleBg() {
   return it('<path d="M0 224 Q120 206 240 226 T400 216 V300 H0Z" fill="#2F8F46"/><path d="M0 266 Q140 250 260 266 T400 258 V300 H0Z" fill="#1F7A3A"/>') +
     it('<g fill="#1F7A3A"><ellipse cx="30" cy="190" rx="34" ry="14" transform="rotate(-30 30 190)"/><ellipse cx="60" cy="204" rx="30" ry="12" transform="rotate(20 60 204)"/><ellipse cx="370" cy="186" rx="34" ry="14" transform="rotate(30 370 186)"/><ellipse cx="344" cy="206" rx="30" ry="12" transform="rotate(-20 344 206)"/></g>');
-}
-function wildlifeArt() {
-  return scene('Éléphants, rhinocéros et tigres dans la forêt tropicale', grad('#BDE9B0', '#F0FADD'), [
-    jungleBg(), it(rhino(78, 262, .72)), it(tiger(332, 260, .9)), it(elephant(206, 276, .78))
-  ]);
 }
 function mango(x, y, s) { return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><ellipse rx="22" ry="17" fill="#FFB703" transform="rotate(-20)"/><path d="M-8 -16 Q14 -20 20 0 Q14 -6 -8 -16Z" fill="#EF476F" opacity=".7"/><path d="M-4 -18 Q4 -30 14 -24 Q8 -16 -4 -18Z" fill="#3C9A4A"/></g>'; }
 function mangoArt() {
@@ -1395,80 +1182,161 @@ function orangutanArt() {
     it(orangutan(180, 190, 1.6)), it(sparkle(330, 90, 4).replace('#FFF3B0', '#FFC93C') + sparkle(60, 80, 3).replace('#FFF3B0', '#FFC93C'))
   ]);
 }
-function finAsiaArt() {
-  var codes = ['cy', 'tr', 'ae', 'in', 'np', 'cn', 'jp', 'mn', 'th', 'id'], out = [];
-  codes.forEach(function (c, i) {
-    var row = i < 5 ? 0 : 1, col = i % 5, w = c === 'np' ? 30 : 56, x = 32 + col * 70 + (c === 'np' ? 13 : 0), y = row ? 196 : 112;
-    out.push(it('<rect x="' + (x + w / 2 - 2) + '" y="' + (y - 14) + '" width="4" height="14" fill="#8A6B4A"/>' + flagArt(c, x, y, w)));
+
+/* Asie : nouveaux drapeaux et dessins */
+FL.am = [90, 60, '<rect width="90" height="20" fill="#D90012"/><rect y="20" width="90" height="20" fill="#0033A0"/><rect y="40" width="90" height="20" fill="#F2A800"/>'];
+FL.sy = [90, 60, '<rect width="90" height="20" fill="#CE1126"/><rect y="20" width="90" height="20" fill="#fff"/><rect y="40" width="90" height="20" fill="#000"/>' + starP(30, 30, 6.5, '#007A3D') + starP(60, 30, 6.5, '#007A3D')];
+FL.il = [90, 60, '<rect width="90" height="60" fill="#fff"/><rect y="6" width="90" height="8" fill="#0038B8"/><rect y="46" width="90" height="8" fill="#0038B8"/><polygon points="45,17 55,34.5 35,34.5" fill="none" stroke="#0038B8" stroke-width="2.4"/><polygon points="45,43 55,25.5 35,25.5" fill="none" stroke="#0038B8" stroke-width="2.4"/>'];
+FL.sa = [90, 60, '<rect width="90" height="60" fill="#006C35"/><path d="M18 22 q6 -9 12 0 t12 0 t12 0 t12 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M28 31 q6 -7 12 0 t12 0 t12 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M22 43 H68 M62 39 L68 43 L62 47" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>'];
+FL.ir = [90, 60, '<rect width="90" height="20" fill="#239F40"/><rect y="20" width="90" height="20" fill="#fff"/><rect y="40" width="90" height="20" fill="#DA0000"/><circle cx="45" cy="30" r="5.5" fill="none" stroke="#DA0000" stroke-width="2"/><path d="M45 23.5 v13 M38.5 30 h13" stroke="#DA0000" stroke-width="1.6"/>'];
+FL.kz = [90, 60, '<rect width="90" height="60" fill="#00AFCA"/><circle cx="45" cy="24" r="8" fill="#FEC50C"/>' + (function () { var s = ''; for (var i = 0; i < 16; i++) { var a = i * Math.PI / 8; s += '<path d="M' + (45 + 10 * Math.cos(a)).toFixed(1) + ' ' + (24 + 10 * Math.sin(a)).toFixed(1) + ' L' + (45 + 15 * Math.cos(a)).toFixed(1) + ' ' + (24 + 15 * Math.sin(a)).toFixed(1) + '" stroke="#FEC50C" stroke-width="1.8"/>'; } return s; })() + '<path d="M20 44 Q45 54 70 44 Q45 48 20 44Z" fill="#FEC50C"/><path d="M14 8 v44" stroke="#FEC50C" stroke-width="2" opacity=".0"/>'];
+
+function rankArt(aria, rows) {
+  var out = '';
+  rows.forEach(function (r, i) {
+    var y = 40 + i * 52;
+    out += '<rect x="24" y="' + y + '" width="' + r[2] + '" height="42" rx="21" fill="' + (r[3] ? '#FF6B4A' : '#fff') + '" stroke="#14284B" stroke-width="3"/>' +
+      '<text x="46" y="' + (y + 29) + '" ' + FONT + ' font-size="22" fill="#14284B">' + r[0] + '. ' + r[1] + '</text>';
   });
-  return scene('Tous les drapeaux visités', grad('#FFD6E8', '#FFF1F7'), [it(label(200, 84, 'Fin', 64)), it('<path d="M0 98 H400 M0 182 H400" stroke="#14284B" stroke-width="3"/>')].concat(out));
+  return scene(aria, grad('#FFE9C7', '#FFF6E4'), [it(out)]);
+}
+function armeniaBordersArt() {
+  return afBlocks('L’Arménie et ses voisins : la Géorgie, l’Azerbaïdjan et la Turquie', '#FFE9C7', '#FFF6E4', [
+    [110, 18, 200, 50, '#F4A0A0', [[210, 52, 'Géorgie', 26]]],
+    [24, 80, 110, 160, '#FFB38A', [[79, 168, 'Turquie', 24]]],
+    [144, 80, 112, 160, '#F2A800', [[200, 168, 'Arménie', 26]]],
+    [266, 80, 110, 160, '#9ED8A0', [[321, 168, 'Azerbaïdjan', 17]]]
+  ]);
+}
+function baklavaArt() {
+  function piece(x, y) {
+    return '<g transform="translate(' + x + ' ' + y + ')"><path d="M0 -34 L58 0 L0 34 L-58 0Z" fill="#E8A93A" stroke="#B9791C" stroke-width="3" stroke-linejoin="round"/><path d="M0 -34 L0 34 M-29 -17 L29 17 M29 -17 L-29 17" stroke="#C98A28" stroke-width="2.5"/><path d="M-58 0 L0 34 L58 0 L58 12 L0 46 L-58 12Z" fill="#C98A28" stroke="#B9791C" stroke-width="3" stroke-linejoin="round"/>' +
+      '<g fill="#8FC24A"><circle cx="-8" cy="-4" r="4"/><circle cx="12" cy="4" r="4"/><circle cx="0" cy="12" r="3.4"/><circle cx="-18" cy="6" r="3.4"/><circle cx="20" cy="-8" r="3.4"/></g></g>';
+  }
+  return scene('Du baklava, une pâtisserie aux noix, au sirop et aux pistaches', grad('#FFE0B0', '#FFF4DA'), [
+    it('<ellipse cx="200" cy="224" rx="160" ry="30" fill="#fff" stroke="#14284B" stroke-width="3"/>'),
+    it(piece(130, 188) + piece(270, 188) + piece(200, 160)),
+    it('<g fill="#8FC24A"><circle cx="64" cy="244" r="4"/><circle cx="338" cy="246" r="4"/><circle cx="96" cy="252" r="3.4"/></g>'),
+    it(ocPill(200, 62, 150, 'Baklava', 26))
+  ]);
+}
+function eblaArt() {
+  var tabs = '';
+  [[84, 232, -6], [150, 238, 4], [216, 230, -3], [282, 238, 7], [118, 262, 3], [188, 266, -5], [256, 264, 4]].forEach(function (t) {
+    tabs += '<g transform="translate(' + t[0] + ' ' + t[1] + ') rotate(' + t[2] + ')"><rect x="-30" y="-22" width="60" height="44" rx="9" fill="#C98A5A" stroke="#8F5A30" stroke-width="3"/><path d="M-18 -10 l5 5 l-5 5 M-6 -10 l5 5 l-5 5 M6 -10 l5 5 l-5 5 M-18 6 l5 5 M-6 6 l5 5 M6 6 l5 5" fill="none" stroke="#6B3F1C" stroke-width="2.5" stroke-linecap="round"/></g>';
+  });
+  return scene('Les ruines d’Ebla et ses tablettes d’argile', grad('#FFD8A8', '#FFF0D2'), [
+    sun(334, 54, 24, '#FF9F1C'),
+    it('<path d="M0 150 L40 150 L40 110 L70 110 L70 150 L130 150 L130 124 L168 124 L168 150 L400 150 V300 H0Z" fill="#D9B27A" stroke="#A67C3D" stroke-width="3" stroke-linejoin="round"/><path d="M20 190 H380 M60 170 H340" stroke="#A67C3D" stroke-width="3" opacity=".5"/>'),
+    it('<rect y="210" width="400" height="90" fill="#E5B466"/>'),
+    it(tabs),
+    it(ocPill(200, 60, 230, '1 800 tablettes', 26))
+  ]);
+}
+function damascusMosqueArt() {
+  return scene('La grande mosquée des Omeyyades à Damas', grad('#BFE3FF', '#F2F9FF'), [
+    cloud(40, 50, .8), cloud(300, 40, .7),
+    it('<rect x="48" y="92" width="34" height="140" fill="#E9DCC0" stroke="#8A6B4A" stroke-width="3"/><path d="M44 94 L65 60 L86 94Z" fill="#7A8CA8" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><rect x="318" y="92" width="34" height="140" fill="#E9DCC0" stroke="#8A6B4A" stroke-width="3"/><path d="M314 94 L335 60 L356 94Z" fill="#7A8CA8" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>'),
+    it('<rect x="110" y="140" width="180" height="92" fill="#F2E8D0" stroke="#8A6B4A" stroke-width="3"/><path d="M130 140 a70 70 0 0 1 140 0Z" fill="#9FB4C8" stroke="#14284B" stroke-width="3"/><rect x="197" y="62" width="6" height="22" fill="#14284B"/><circle cx="200" cy="58" r="6" fill="#FFC93C"/>'),
+    it('<path d="M124 232 V186 a14 14 0 0 1 28 0 V232 M186 232 V186 a14 14 0 0 1 28 0 V232 M248 232 V186 a14 14 0 0 1 28 0 V232" fill="#7A8CA8" stroke="#14284B" stroke-width="2.5"/>'),
+    it('<rect y="232" width="400" height="68" fill="#E5D3AE"/><path d="M0 264 H400" stroke="#C9B88F" stroke-width="3"/>')
+  ]);
+}
+function israelStarArt() {
+  return scene('Une étoile de David', grad('#CFE3FA', '#F4F9FF'), [
+    it('<rect x="40" y="34" width="320" height="16" fill="#0038B8"/><rect x="40" y="250" width="320" height="16" fill="#0038B8"/>'),
+    it('<polygon points="200,76 262,184 138,184" fill="none" stroke="#0038B8" stroke-width="12" stroke-linejoin="miter"/><polygon points="200,224 262,116 138,116" fill="none" stroke="#0038B8" stroke-width="12" stroke-linejoin="miter"/>')
+  ]);
+}
+function kaabaArt() {
+  var crowd = '';
+  for (var i = 0; i < 28; i++) { var a = i * Math.PI * 2 / 28, x = 200 + 150 * Math.cos(a), y = 214 + 40 * Math.sin(a); crowd += '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="4.4" fill="' + (i % 3 ? '#fff' : '#F4F1E6') + '" stroke="#8A8A8A" stroke-width="1"/>'; }
+  return scene('La Kaaba, le grand bâtiment noir de La Mecque', grad('#FFD8A8', '#FFF0D2'), [
+    sun(340, 50, 22, '#FF9F1C'),
+    it('<ellipse cx="200" cy="214" rx="176" ry="48" fill="#EFE3C8" stroke="#C9B88F" stroke-width="3"/>'),
+    it('<g transform="translate(200 150)"><path d="M-54 -50 L54 -50 L54 40 L-54 40Z" fill="#1E1E24" stroke="#000" stroke-width="3"/><path d="M-54 -26 H54" stroke="#E5B33A" stroke-width="9"/><rect x="-14" y="-4" width="28" height="44" rx="4" fill="#E5B33A"/></g>'),
+    it(crowd)
+  ]);
+}
+function kazakhArt() {
+  return scene('La grande steppe du Kazakhstan, avec un aigle', grad('#BFE8FF', '#EAF8D7'), [
+    sun(320, 56, 26, '#FFD23F'),
+    it('<path d="M0 170 L70 110 L120 150 L190 96 L260 160 L330 120 L400 168V300H0Z" fill="#9FB4C8" stroke="#6F8BB0" stroke-width="3" stroke-linejoin="round"/><path d="M70 110 L84 124 L70 120 L58 126Z M190 96 L206 114 L190 108 L176 116Z" fill="#fff"/>'),
+    it('<path d="M0 196 Q120 176 240 198 T400 190 V300 H0Z" fill="#9ED76A"/><path d="M0 250 Q140 232 260 250 T400 244 V300 H0Z" fill="#6DBB5A"/>'),
+    it('<g transform="translate(150 70)"><path d="M-70 -6 Q-36 -34 0 -2 Q36 -34 70 -6 Q36 -8 12 16 L0 34 L-12 16 Q-36 -8 -70 -6Z" fill="#E5B33A" stroke="#8F6A12" stroke-width="3" stroke-linejoin="round"/><circle cx="0" cy="-2" r="8" fill="#E5B33A" stroke="#8F6A12" stroke-width="3"/><path d="M6 -2 L16 2 L6 4Z" fill="#14284B"/></g>')
+  ]);
 }
 function coverAsiaArt() {
-  var cs = [['jp', 30, 36, -8], ['in', 150, 28, 5], ['cn', 270, 40, -5], ['tr', 36, 150, 6], ['th', 156, 160, -6], ['id', 276, 148, 8]], g = '';
+  var cs = [['jp', 30, 36, -8], ['in', 150, 28, 5], ['cn', 270, 40, -5], ['tr', 36, 150, 6], ['ae', 156, 160, -6], ['id', 276, 148, 8]], g = '';
   cs.forEach(function (c) { g += '<g transform="rotate(' + c[3] + ' ' + (c[1] + 50) + ' ' + (c[2] + 33) + ')">' + flagArt(c[0], c[1], c[2], 100) + '</g>'; });
   return scene('Plein de drapeaux d’Asie', grad('#FF5D8F', '#B0124F'), [sparkle(20, 20, 3), sparkle(380, 270, 3), sparkle(350, 20, 2.5), it(g)]);
+}
+function finAsiaArt() {
+  var codes = ['am', 'tr', 'sy', 'il', 'sa', 'ae', 'ir', 'kz', 'in', 'np', 'cn', 'jp', 'mn', 'id'], out = [];
+  codes.forEach(function (c, i) {
+    var row = i < 5 ? 0 : i < 10 ? 1 : 2, col = row === 0 ? i : row === 1 ? i - 5 : i - 10, n = row === 2 ? 4 : 5, w = c === 'np' ? 26 : 48;
+    var x = (400 - n * 70) / 2 + 11 + col * 70 + (c === 'np' ? 11 : 0), y = 104 + row * 62;
+    out.push(it('<rect x="' + (x + w / 2 - 2) + '" y="' + (y - 14) + '" width="4" height="14" fill="#8A6B4A"/>' + flagArt(c, x, y, w)));
+  });
+  return scene('Tous les drapeaux visités', grad('#FFD6E8', '#FFF1F7'), [it(label(200, 62, 'Fin', 52))].concat(out));
 }
 
 STORIES.splice(2, 0, {
   title: 'Voyage en Asie', coverArt: coverAsiaArt, mark: '?',
-  tiles: ['cy', 'tr', 'ae', 'in', 'np', 'cn', 'jp', 'mn', 'th', 'id'].map(flagTileA),
+  tiles: ['am', 'tr', 'sy', 'il', 'sa', 'ae', 'ir', 'kz', 'in', 'np', 'cn', 'jp', 'mn', 'id'].map(flagTileA),
   scenes: [
-    { tile: -1, text: 'C’était super, l’Afrique ! Oui, mais c’est l’Asie maintenant !', art: asiaIntroArt },
+    { tile: -1, text: 'J’ai adoré l’Afrique ! Maintenant c’est l’Asie !', art: asiaIntroArt },
 
-    { tile: 0, text: 'Bienvenue en Chypre. Capitale : Nicosie. Langues principales : grec et turc.', art: flagSceneA('cy', 'Chypre', '#FFF1D6', '#FFFAEF', 26, 200) },
-    { tile: 0, text: 'Wow ! Le drapeau de Chypre est la carte du pays, couleur cuivrée, au-dessus de branches d’olivier.', art: cyprusMapArt },
-    { tile: 0, text: 'Chypre est un pays européen et asiatique. La capitale, Nicosie, est située entre l’Europe et l’Asie, avec une route séparant l’Asie et l’Europe, appelée la ligne Verte.', art: nicosiaArt },
-    { tile: 0, text: 'Chypre fait même partie de l’Union européenne. Prochain pays : la Turquie.', art: flagSceneA('eu', 'Union européenne', '#D6E4F8', '#F1F6FD', 20, 260) },
+    { tile: 0, text: 'Bienvenue en Arménie. Capitale : Erevan.', art: flagSceneA('am', 'Arménie', '#FFE9C7', '#FFF6E4') },
+    { tile: 0, text: 'L’Arménie est frontalière avec la Géorgie, l’Azerbaïdjan et la Turquie. Allons dans la Turquie.', art: armeniaBordersArt },
 
-    { tile: 1, text: 'Voici la Turquie. Capitale : Ankara. Langue principale : le turc.', art: flagSceneA('tr', 'Turquie', '#F8D5D5', '#FDF1F1') },
-    { tile: 1, text: 'Hé ! Il y a une montgolfière ! Pourquoi il y a des montgolfières partout ?', art: cappadociaArt },
-    { tile: 1, text: 'On est dans une région de Turquie appelée la Cappadoce. Les touristes adorent y faire des tours de montgolfière pour admirer les vues superbes.', art: balloonBigArt },
-    { tile: 1, text: 'Hé ! J’ai faim ! Le kebab est une nourriture turque très bonne, qui signifie viande grillée. On y va ! Mmmmmmm ! Miam ! Miam !', art: kebabArt },
-    { tile: 1, text: 'Ah, c’était trop bon ! On va aux Émirats arabes unis.', art: fullPlateArt },
+    { tile: 1, text: 'Voici la Turquie. Capitale : Ankara. Langue principale : turc.', art: flagSceneA('tr', 'Turquie', '#F8D5D5', '#FDF1F1') },
+    { tile: 1, text: 'Oh ! Il y a une montgolfière ! Et une autre ! Encore une autre ! Pourquoi il y a des montgolfières partout ?', art: cappadociaArt },
+    { tile: 1, text: 'On est dans une région de Turquie appelée la Cappadoce. Les touristes adorent y faire des tours en montgolfières pour admirer les paysages magnifiques.', art: balloonBigArt },
+    { tile: 1, text: 'Le kebab est une nourriture turque très bonne signifiant viande grillée.', art: kebabArt },
+    { tile: 1, text: 'Le baklava est une pâtisserie turque très bonne. C’est une viennoiserie faite de pâte très fine avec des noix à l’intérieur et recouverte de sirop sucré et de pistaches écrasées. Miam ! Miam ! Miam ! Direction : la Syrie.', art: baklavaArt },
 
-    { tile: 2, text: 'Bienvenue aux Émirats arabes unis. Capitale : Abou Dhabi.', art: flagSceneA('ae', 'Émirats arabes unis', '#D6EFD6', '#F4FBF4', 19, 270) },
-    { tile: 2, text: 'Voici Dubaï. Regarde, c’est le Burj Khalifa. Le Burj Khalifa est la plus haute tour du monde, avec ses 828 mètres de haut.', art: burjArt },
-    { tile: 2, text: 'On peut aller au cent-quarante-huitième étage avec l’ascenseur. On y va ! Dong !', art: function () { return elevatorArt('148', true); } },
-    { tile: 2, text: 'Wah, on a une superbe vue ! Il y a tellement de gratte-ciel à Dubaï !', art: skyViewArt },
-    { tile: 2, text: 'On redescend ? D’accord ! Dong ! Direction : l’Inde.', art: function () { return elevatorArt('0', false); } },
+    { tile: 2, text: 'Bienvenue en Syrie. Capitale : Damas.', art: flagSceneA('sy', 'Syrie', '#F8D5D5', '#E4F5E0') },
+    { tile: 2, text: 'Voici la vieille ville d’Ebla. C’est ici qu’on a trouvé 1 800 tablettes en argile. Les tablettes sont des sortes de livres en argile.', art: eblaArt },
+    { tile: 2, text: 'Allons faire un tour à Damas, une très vieille ville. Voici Damas. C’est quoi, ce grand bâtiment ? Voici la grande mosquée des Omeyyades. C’est quoi, une mosquée ? Une mosquée est un lieu de prière et de rassemblement pour les musulmans. Direction : Israël.', art: damascusMosqueArt },
 
-    { tile: 3, text: 'Voici l’Inde. Population : 1,4 milliard d’habitants. Capitale : New Delhi. Langues principales : hindi et anglais. Monnaie : la roupie.', art: flagSceneA('in', 'Inde', '#FFE9C7', '#E4F5E0') },
-    { tile: 3, text: 'Attends… Tu as bien dit 1,4 milliard ? Correct. L’Inde est le pays le plus peuplé au monde.', art: crowdArt },
-    { tile: 3, text: 'Il y a des gens qui dansent là-bas ! Voici Mumbai. Ce que vous voyez, c’est Bollywood.', art: bollywoodArt },
-    { tile: 3, text: 'On va voir le Taj Mahal ? Correct. Le Taj Mahal est l’une des 7 merveilles du monde.', art: function () { return tajArt(false); } },
-    { tile: 3, text: 'Voici le Taj Mahal, construit par l’empereur Shah Jahan en souvenir de son épouse, Mumtaz Mahal. Direction le Népal, pour voir l’Everest.', art: function () { return tajArt(true); } },
+    { tile: 3, text: 'Voici Israël. Capitale : Jérusalem.', art: flagSceneA('il', 'Israël', '#CFE3FA', '#F4F9FF') },
+    { tile: 3, text: 'Israël est le seul État juif au monde. Direction : l’Arabie Saoudite.', art: israelStarArt },
 
-    { tile: 4, text: 'Bienvenue au Népal. Capitale : Katmandou.', art: flagSceneA('np', 'Népal', '#D3E2F8', '#FBEDEE', 26, 200) },
-    { tile: 4, text: 'Voici les montagnes de l’Himalaya.', art: himalayaArt },
-    { tile: 4, text: 'Parmi les 10 montagnes les plus hautes du monde, c’est-à-dire celles qui dépassent les 8 000 mètres d’altitude, 8 se trouvent au Népal.', art: tenPeaksArt },
-    { tile: 4, text: 'Il faut aussi savoir que le Népal est le seul pays au monde à posséder un drapeau ni carré, ni rectangle.', art: notRectArt },
-    { tile: 4, text: 'On va au sommet ? Oui !', art: climbArt },
-    { tile: 4, text: 'Nous voici au sommet du monde, à 8 849 mètres d’altitude. On redescend. On va en Chine.', art: summitArt },
+    { tile: 4, text: 'Voici l’Arabie Saoudite. Capitale : Ryad. Langue principale : arabe.', art: flagSceneA('sa', 'Arabie Saoudite', '#D6EFD6', '#F4FBF4') },
+    { tile: 4, text: 'Voici La Mecque. Cette ville est le lieu de naissance du prophète Mohammad, fondateur de l’islam. Ils font un pèlerinage. Voici le grand bâtiment noir de la Kaaba. Direction : les Émirats Arabes Unis.', art: kaabaArt },
 
-    { tile: 5, text: 'Bienvenue en Chine. Population : 1,4 milliard d’habitants. Capitale : Pékin. Langue principale : mandarin.', art: flagSceneA('cn', 'Chine', '#F8D5D5', '#FFF6C9') },
-    { tile: 5, text: 'Encore 1,4 milliard ! Comme l’Inde ! Correct. L’Inde et la Chine ont des populations similaires, mais l’Inde a une légère avance sur la Chine.', art: populationArt },
-    { tile: 5, text: 'C’est pour ça que l’Asie est le continent le plus peuplé au monde.', art: asiaPeopleArt },
-    { tile: 5, text: 'OK, on va voir la Grande Muraille de Chine ? Oui. Wow ! C’est ça ? Correct. Il a fallu 2 000 ans pour construire tout le mur. Prochain pays : le Japon.', art: greatWallArt },
+    { tile: 5, text: 'Bienvenue aux Émirats Arabes Unis. Capitale : Abou Dhabi.', art: flagSceneA('ae', 'Émirats arabes unis', '#D6EFD6', '#F4FBF4', 19, 270) },
+    { tile: 5, text: 'Voici le Burj Khalifa. Mesurant 828 mètres de haut, c’est la plus grande construction du monde. C’est méga gigantesque ! Direction : l’Iran.', art: burjArt },
 
-    { tile: 6, text: 'Voici le Japon. Capitale : Tokyo. Langue principale : le japonais. Monnaie : le yen.', art: flagSceneA('jp', 'Japon', '#F8D5E0', '#FDF1F5') },
-    { tile: 6, text: 'On est où exactement au Japon ? Au-dessus de l’île d’Okunoshima, une île pleine de 1 000 lapins. Hihi !', art: okunoshimaArt },
-    { tile: 6, text: 'Oh ! Le sol vient juste de… bouger ? Correct. Il y a environ 1 500 tremblements de terre ressentis chaque année au Japon, soit quelques-uns par jour, parce que le pays est situé sur la ceinture de feu du Pacifique.', art: quakeArt },
-    { tile: 6, text: 'On va à Tokyo ? Oui ! Regarde ! C’est le mont Fuji.', art: fujiArt },
-    { tile: 6, text: 'Mmmm ! Des sushis ! Je vais commencer par des boulettes de riz…', art: sushiArt },
-    { tile: 6, text: 'C’est quoi ce truc vert ? Je vais goûter. Euh… Oh, oh, pétard ! C’est du wasabi, une sorte de moutarde japonaise très épicée. Direction : la Mongolie.', art: wasabiArt },
+    { tile: 6, text: 'Voici l’Iran. Capitale : Téhéran.', art: flagSceneA('ir', 'Iran', '#E4F5E0', '#FBEDEE') },
+    { tile: 6, text: 'L’Iran est grand ! L’Iran est le deuxième plus grand pays du Moyen-Orient après l’Arabie Saoudite. Direction : le Kazakhstan.', art: function () { return rankArt('Le classement des plus grands pays du Moyen-Orient : l’Iran est deuxième', [['1', 'Arabie saoudite', 340], ['2', 'Iran', 280, true]]); } },
 
-    { tile: 7, text: 'Bienvenue en Mongolie. Capitale : Oulan-Bator.', art: flagSceneA('mn', 'Mongolie', '#F8D5D5', '#D3E2F8') },
-    { tile: 7, text: 'Oh, regarde ! C’est quoi, ces maisons ? C’est la yourte mongole, faite avec de la laine. On va maintenant en Thaïlande.', art: yurtArt },
+    { tile: 7, text: 'Bienvenue au Kazakhstan. Capitale : Astana.', art: flagSceneA('kz', 'Kazakhstan', '#CFEFFB', '#FFF6C9') },
+    { tile: 7, text: 'Le Kazakhstan est un grand pays. Direction : l’Inde.', art: kazakhArt },
 
-    { tile: 8, text: 'Voici la Thaïlande. Capitale : Bangkok.', art: flagSceneA('th', 'Thaïlande', '#F8D5D5', '#D3E2F8') },
-    { tile: 8, text: 'Regarde ! Il s’agit de la capitale : Bangkok. Destination : l’Indonésie.', art: bangkokArt },
+    { tile: 8, text: 'Voici l’Inde. 1,4 milliard d’habitants. Capitale : New Delhi. Langues principales : hindi et anglais. Monnaie : la roupie.', art: flagSceneA('in', 'Inde', '#FFE9C7', '#E4F5E0') },
+    { tile: 8, text: 'Bienvenue à la ville de Mumbai. Voici Bollywood. Bollywood est un mélange des mots Bombay, l’ancien nom de Mumbai et Hollywood. En plus d’être un quartier de Los Angeles, Hollywood est le nom que l’on donne généralement au cinéma des États-Unis.', art: bollywoodArt },
+    { tile: 8, text: 'Allons au Taj Mahal ! Correct. Le Taj Mahal est l’une des 7 merveilles modernes du monde. C’est trop beau ! Direction suivante : le Népal.', art: function () { return tajArt(false); } },
 
-    { tile: 9, text: 'Voici l’Indonésie. Capitale : Jakarta. Langue nationale : l’indonésien.', art: flagSceneA('id', 'Indonésie', '#F8D5D5', '#FDF1F1') },
-    { tile: 9, text: 'Il y a des orangs-outans sur les îles de Sumatra et de Bornéo. Bornéo est une île où se trouvent l’Indonésie, la Malaisie et tout le pays de Brunei.', art: islandsArt },
-    { tile: 9, text: 'Dans la forêt tropicale, on voit aussi des éléphants, des rhinocéros et des tigres.', art: wildlifeArt },
-    { tile: 9, text: 'Voici des mangues pour attirer les orangs-outans. Miam !', art: mangoArt },
-    { tile: 9, text: 'En voilà un ! Il est trop beau !', art: orangutanArt },
-    { tile: 9, text: 'Fin', art: finAsiaArt }
+    { tile: 9, text: 'Bienvenue au Népal. Capitale : Katmandou.', art: flagSceneA('np', 'Népal', '#D3E2F8', '#FBEDEE', 26, 200) },
+    { tile: 9, text: 'Voici l’Everest. Se trouvant dans la chaîne de montagnes de l’Himalaya, il mesure 8 849 mètres de haut. C’est le point le plus haut de la Terre. Direction : la Chine.', art: himalayaArt },
+
+    { tile: 10, text: 'Voici la Chine. Capitale : Pékin. Langue principale : mandarin.', art: flagSceneA('cn', 'Chine', '#F8D5D5', '#FFF6C9') },
+    { tile: 10, text: 'La Chine est le quatrième pays le plus grand au monde après les États-Unis, le Canada et la Russie.', art: function () { return rankArt('Le classement des plus grands pays : la Chine est quatrième', [['1', 'Russie', 340], ['2', 'Canada', 300], ['3', 'États-Unis', 260], ['4', 'Chine', 220, true]]); } },
+    { tile: 10, text: 'Allons voir… la Grande Muraille de Chine. Il a fallu 2 000 ans pour construire tout le mur. Direction : le Japon.', art: greatWallArt },
+
+    { tile: 11, text: 'Bienvenue au Japon. Capitale : Tokyo. Langue principale : japonais. Monnaie : le yen.', art: flagSceneA('jp', 'Japon', '#F8D5E0', '#FDF1F5') },
+    { tile: 11, text: 'Regarde ! Voici le mont Fuji, un volcan de 3 kilomètres de haut.', art: fujiArt },
+    { tile: 11, text: 'Miam ! Des sushis ! Direction : la Mongolie.', art: sushiArt },
+
+    { tile: 12, text: 'Voici la Mongolie. Capitale : Oulan-Bator.', art: flagSceneA('mn', 'Mongolie', '#F8D5D5', '#D3E2F8') },
+    { tile: 12, text: 'Voici la yourte mongole faite en laine. Direction : l’Indonésie.', art: yurtArt },
+
+    { tile: 13, text: 'Bienvenue en Indonésie. Capitale : Jakarta. Langue principale : indonésien.', art: flagSceneA('id', 'Indonésie', '#F8D5D5', '#FDF1F1') },
+    { tile: 13, text: 'Voici des mangues.', art: mangoArt },
+    { tile: 13, text: 'Des orangs-outans ! Il est trop beau !', art: orangutanArt },
+    { tile: 13, text: 'Fin', art: finAsiaArt }
   ]
 });
 
@@ -2263,6 +2131,7 @@ var PRONO = {
   'La Boca': 'La Boka', 'Sucre': 'Soucré', 'San José': 'San José', 'Kingston': 'Kinneugstonne', 'Nassau': 'Nasso',
   'New York': 'Niou Yorque', 'New Delhi': 'Niou Dèli', 'Sierra Leone': 'Siéra Léone', 'Tunis': 'Tunisse', 'Dubaï': 'Doubaille',
   'N’Djamena': 'Ndjaména', 'Niamey': 'Niamé', 'Abuja': 'Abouja', 'Mogadiscio': 'Mogadichio', 'Khartoum': 'Kartoum', 'Lagos': 'Lagosse', 'Accra': 'Akra',
+  'Erevan': 'Érévane', 'Ebla': 'Ébla', 'Omeyyades': 'Omèyades', 'Ryad': 'Riade', 'Mohammad': 'Mohamade',
   'Canberra': 'Canbèra', 'Sydney': 'Sidnée', 'Hobart': 'Hobarte', 'Wellington': 'Ouélingtonne', 'Auckland': 'Okeulande', 'Nuku’alofa': 'Noukou alofa',
   'Funafuti': 'Founafouti', 'Tuvalu': 'Touvalou', 'Suva': 'Souva', 'Port Moresby': 'Porte Morèzebi', 'Nauru': 'Naourou', 'Yaren': 'Yarène', 'Vanuatu': 'Vanouatou',
   'Let’s go': 'Lètse go !', 'fish and chips': 'fiche ènd tchipse', 'OK': 'Oké', 'Wow': 'Woo'

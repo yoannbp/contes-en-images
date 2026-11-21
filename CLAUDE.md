@@ -63,7 +63,11 @@ STORIES.splice(3, 0, {
   (Le jaguar est désormais au Costa Rica ; la Jamaïque a des crocodiles.)
 - Amérique du Sud : Équateur « Monnaie : le peso » (inexact : l'Équateur utilise le dollar américain) ;
   « dans l’Équateur » (plutôt « en Équateur »).
-- Asie : Chypre, « ligne Verte » décrite comme une route (c'est une zone tampon de l'ONU).
+- Asie : « Capitale : Jérusalem » (statut contesté ; la plupart des ambassades sont à Tel-Aviv) ;
+  Arménie « frontalière avec la Géorgie, l’Azerbaïdjan et la Turquie » (oubli de l’Iran, aussi frontalier) ;
+  Ebla « 1 800 tablettes » (à vérifier : les fouilles ont livré environ 17 000 tablettes et fragments) ;
+  mont Fuji « 3 kilomètres » (3 776 m, soit environ 3,8 km) ; « 828 m, la plus grande construction du monde » (plus haute tour) ;
+  graphies corrigées : « Cahabas » en « Kaaba », « Mumbaï » en « Mumbai », « backlava » en « baklava ».
 - Afrique : Afrique du Sud, « capitale : Pretoria » (3 capitales) ;
   « le Kilimandjaro, point culminant du Kenya » (inexact : il est en Tanzanie, scène du Kenya) ;
   « le fleuve Niger commence au Mali » (inexact : il prend sa source en Guinée) ;
