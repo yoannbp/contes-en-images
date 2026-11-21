@@ -82,7 +82,8 @@ Ouvrir via http(s) ou directement `index.html` ; les polices Google (Fredoka, Nu
 
 ## « Publie » (quand Paul dit « publie »)
 1. Forcer la mise à jour de GitHub Pages : changer le commentaire daté en bas de `index.html` (`<!-- maj : AAAA-MM-JJ HH:MM -->`,
-   obtenir l’heure avec `date '+%Y-%m-%d %H:%M'`). Puis commiter et pousser directement sur `main` (voir « Process Git »).
+   obtenir l’heure avec `date '+%Y-%m-%d %H:%M'`) et changer le `?v=AAAAMMJJHHMM` des liens `style.css` et `app.js` de `index.html` et de `comptinios/index.html`
+   (contourne le cache de Safari). Puis commiter et pousser directement sur `main` (voir « Process Git »).
 2. Artifact : `python3 scripts/build_artifact.py <dossier-temporaire>/contes.html`, puis publier ce fichier avec l’outil Artifact
    sur l’URL existante `https://claude.ai/artifact/HdLRtKmshTXRq7rwKNtuDm` (même lien, pas de nouvel artifact).
    Si la publication est refusée, lire la version en ligne, vérifier qu’elle n’a pas d’autres changements, puis republier.
