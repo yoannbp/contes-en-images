@@ -29,7 +29,7 @@ function crocArt() {
   '</svg>';
 }
 var COMPTINES = [
-  { title: 'Ah ! les crocodiles', uri: 'spotify:track:4yYZLeDcuVx4SkrKXFzmec', art: crocArt }
+  { title: 'Ah ! les crocodiles', uri: 'spotify:track:5jjltOC5Jzto54fcojObdK', art: crocArt }
 ];
 
 var $ = function (id) { return document.getElementById(id); };
