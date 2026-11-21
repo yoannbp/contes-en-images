@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Comptinios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="wrap">
+  <header>
+    <h1>Compti<span>nios</span></h1>
+    <p class="lead">Touche une image pour écouter la comptine.</p>
+  </header>
+  <ul class="shelf" id="shelf"></ul>
+  <p class="foot">Les comptines sont jouées par Spotify, avec le petit lecteur en bas de l’écran. Pour les entendre en entier, connecte-toi à Spotify dans ce navigateur. Sinon, on n’entend que 30 secondes.</p>
+  <p class="foot"><a href="../">← Retour à Contes en images</a></p>
+</main>
+
+<section class="stage" id="stage" role="dialog" aria-modal="true" aria-labelledby="stTitle" hidden>
+  <div class="stage-in">
+    <div class="stage-bar">
+      <h2 id="stTitle"></h2>
+      <button class="btn" id="close" type="button">Fermer</button>
+    </div>
+    <div class="frame" id="frame">
+      <div class="art" id="art"></div>
+      <div class="progress">
+        <span class="t" id="elapsed">0:00</span>
+        <div class="bar" id="bar" role="progressbar" aria-label="Avancement de la comptine" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="fill" id="fill"></div></div>
+        <span class="t" id="remain">−0:00</span>
+      </div>
+    </div>
+    <p class="note" id="note" aria-live="polite"></p>
+    <div class="controls">
+      <button class="btn main" id="toggle" type="button">Écouter</button>
+    </div>
+  </div>
+</section>
+
+<div class="spotify" id="spotify" aria-label="Lecteur Spotify"><div id="embed"></div></div>
+
+<script src="app.js"></script>
+<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+</body></html>

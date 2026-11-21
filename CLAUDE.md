@@ -9,6 +9,8 @@ et des dessins SVG apparaissent au fil de la narration. Projet personnel de Paul
 - `app.js` : tout le reste, en un seul script classique (pas de module, pas de bibliothèque, pas de build).
 - `prono.html` : page à part pour écouter, modifier et valider les prononciations (`PRONO`). Générée par `python3 scripts/build_prono.py` :
   la relancer après chaque changement de `PRONO` et commiter le résultat.
+- `comptinios/` : second site « Comptinios » (`index.html`, `style.css`, `app.js`), servi à `/comptinios/`. Lien « Comptinios ♪ » dans l'en-tête de
+  `index.html` (`target="_blank"` : il s'ouvre dans un nouvel onglet juste à droite de Contes en images ; le navigateur choisit la place, pas le site).
 - `scripts/check.py` : vérifie que toutes les scènes s'affichent (voir « Vérifier »).
 
 ## Structure de `app.js` (dans l'ordre, repérer les commentaires `/* ---------- … ---------- */`)
@@ -43,6 +45,13 @@ STORIES.splice(3, 0, {
 - Prononciation : chaque nom propre (lieu, monument, personne…) qui n’est pas évident doit avoir sa propre entrée dans `PRONO` (`app.js`),
   avec une écriture phonétique **à la française** (ex. `'Mumbai': 'Moumbaï'`, `'Gizeh': 'Guizé'`). Le texte affiché reste inchangé ; seule la voix utilise `PRONO`.
   La voix n’est pas testable en ligne de commande : Paul écoute sur l’appareil et ajuste.
+
+## Comptinios
+- Une comptine = une entrée de `COMPTINES` (`comptinios/app.js`) : `title`, `uri` (`spotify:track:ID`), `art` (fonction qui renvoie un SVG 4:3).
+- Musique : lecteur intégré Spotify (iFrame API), visible en bas de l'écran. Non connecté à Spotify : aperçu de 30 s seulement. Pas de fichier audio dans le dépôt.
+- Dans le lecteur : image en grand, trait blanc en bas qui se remplit d'orange, temps écoulé à gauche, temps restant à droite.
+- Les identifiants Spotify viennent d'une recherche web (open.spotify.com) : non écoutés ni vérifiés par Claude.
+- Comptinios n'est pas dans l'artifact (le lien est retiré par `scripts/build_artifact.py`).
 
 ## Vérifier
 - `python3 scripts/check.py` : rend toutes les scènes, cases et couvertures et signale les erreurs JavaScript.

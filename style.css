@@ -111,3 +111,11 @@ h1 span { color: var(--accent); }
   .scene, .tile svg, .card { transition: none; }
   .scene.on .it { animation: none; }
 }
+
+/* Lien vers le site Comptinios (s'ouvre dans un nouvel onglet, à droite de celui-ci) */
+.sister {
+  display: inline-flex; align-items: center; margin-top: 16px; padding: 8px 18px; border-radius: 999px;
+  border: 3px solid var(--edge); background: var(--surface); color: var(--ink); font-weight: 800; text-decoration: none; box-shadow: 0 4px 0 var(--edge);
+}
+.sister:hover { background: var(--accent); color: var(--accent-ink); }
+.sister:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--edge); }
