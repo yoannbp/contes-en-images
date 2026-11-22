@@ -2017,6 +2017,136 @@ STORIES.splice(5, 0, {
   ]
 });
 
+/* ---------- Histoire : l'Antarctique ---------- */
+var ANT_LAND = 'M40 300 Q50 232 120 214 Q150 190 200 200 Q250 186 290 214 Q356 226 366 300Z';
+function emperor(x, y, s) {
+  return penguin(x, y, s) + '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-9 -38 Q0 -30 9 -38 Q4 -30 0 -28 Q-4 -30 -9 -38Z" fill="#FFC93C"/></g>';
+}
+function iceberg(x, y, s) {
+  return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')"><path d="M-70 0 L-44 -56 L-20 -30 L10 -86 L50 -24 L72 -44 L90 0Z" fill="#fff" stroke="#9CC7EE" stroke-width="4" stroke-linejoin="round"/><path d="M10 -86 L50 -24 L30 0 L0 0Z" fill="#D9ECFA"/><path d="M-70 0 H90 L70 28 H-50Z" fill="#B8DAF5"/></g>';
+}
+function antIntroArt() {
+  return scene('Direction l’Antarctique, tout en bas du monde', grad('#7CD0F5', '#2F8FD0'), [
+    it(waves(40, '#fff', .45) + waves(120, '#fff', .3)),
+    it('<path d="' + ANT_LAND + '" fill="#fff" stroke="#9CC7EE" stroke-width="4" stroke-linejoin="round"/>'),
+    it(iceberg(70, 190, .7) + iceberg(334, 180, .5)),
+    it(ocPill(200, 262, 220, 'Antarctique', 28)),
+    stars([[340, 40, 3], [60, 60, 2.5], [200, 30, 3]]).replace(/#FFF3B0/g, '#fff')
+  ]);
+}
+function antCardArt() {
+  return scene('L’Antarctique : 1 500 habitants', grad('#CFE8FA', '#F4FAFF'), [
+    it('<circle cx="200" cy="130" r="96" fill="#7CD0F5" stroke="#14284B" stroke-width="4"/>'),
+    it('<path d="M118 150 Q132 98 186 92 Q244 90 280 128 Q290 170 244 190 Q190 206 140 188 Q116 174 118 150Z" fill="#fff" stroke="#9CC7EE" stroke-width="4"/>'),
+    it(ocPill(200, 40, 220, 'Antarctique', 26)),
+    it(ocPill(200, 260, 250, '1 500 habitants', 26))
+  ]);
+}
+function antNoneArt() {
+  function card(x, title, icon) {
+    return '<rect x="' + x + '" y="40" width="116" height="170" rx="16" fill="#fff" stroke="#14284B" stroke-width="3"/><g transform="translate(' + (x + 58) + ' 112)">' + icon + '</g>' +
+      '<path d="M' + (x + 20) + ' 70 L' + (x + 96) + ' 150 M' + (x + 96) + ' 70 L' + (x + 20) + ' 150" stroke="#E63946" stroke-width="8" stroke-linecap="round"/>' + label(x + 58, 190, title, 20);
+  }
+  var building = '<rect x="-30" y="-30" width="60" height="60" fill="#9AA9BD" stroke="#14284B" stroke-width="3"/><path d="M-36 -30 L0 -52 L36 -30Z" fill="#7A8CA8" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><rect x="-8" y="6" width="16" height="24" fill="#5A3B2E"/>';
+  var bubble = '<path d="M-34 -26 H34 Q42 -26 42 -18 V10 Q42 18 34 18 H0 L-18 34 L-16 18 H-34 Q-42 18 -42 10 V-18 Q-42 -26 -34 -26Z" fill="#fff" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M-22 -10 H22 M-22 4 H10" stroke="#14284B" stroke-width="4" stroke-linecap="round"/>';
+  var coin = '<circle r="34" fill="#FFC93C" stroke="#C9971A" stroke-width="4"/><circle r="24" fill="none" stroke="#C9971A" stroke-width="3"/><path d="M-6 -12 H6 M0 -12 V12" stroke="#C9971A" stroke-width="5" stroke-linecap="round"/>';
+  return scene('Pas de capitale, pas de langue principale, pas de monnaie', grad('#FFE9C7', '#FFF6E4'), [
+    it(card(24, 'Capitale', building)), it(card(142, 'Langue', bubble)), it(card(260, 'Monnaie', coin)),
+    it(ocPill(200, 262, 150, 'aucune', 26))
+  ]);
+}
+function icyDesertArt() {
+  return scene('Un désert chaud et un désert de glace', grad('#BFE8FF', '#F2F9FF'), [
+    sun(70, 54, 24, '#FF9F1C'),
+    it('<path d="M0 300 V190 Q50 160 110 184 Q160 206 200 188 V300Z" fill="#F2C97D"/><path d="M0 300 V240 Q60 220 120 238 Q170 252 200 242 V300Z" fill="#E5B466"/>'),
+    it('<path d="M200 190 Q250 166 300 188 Q350 208 400 180 V300 H200Z" fill="#fff"/><path d="M200 246 Q260 226 320 244 Q370 256 400 240 V300 H200Z" fill="#DCEBFA"/>'),
+    it('<g transform="translate(110 214)"><rect x="-8" y="-52" width="16" height="56" rx="8" fill="#3C9A4A"/><path d="M-8 -26 Q-26 -26 -26 -44 M8 -34 Q26 -34 26 -52" fill="none" stroke="#3C9A4A" stroke-width="9" stroke-linecap="round"/></g>'),
+    it('<path d="M200 0 V300" stroke="#14284B" stroke-width="3" stroke-dasharray="8 7"/>'),
+    it(ocPill(100, 40, 140, 'Désert chaud', 20) + ocPill(300, 40, 150, 'Antarctique', 20))
+  ]);
+}
+function emperorsArt() {
+  return scene('Des manchots empereurs sur la glace', grad('#CFE8FA', '#F4FAFF'), [
+    cloud(40, 56, .8), cloud(300, 44, .7),
+    it('<path d="M0 300 V190 Q100 170 200 188 T400 180 V300Z" fill="#fff"/><path d="M0 300 V250 Q120 234 240 250 T400 244 V300Z" fill="#DCEBFA"/>'),
+    it(emperor(90, 262, 1.25) + emperor(180, 270, 1.4) + emperor(280, 262, 1.25) + emperor(236, 232, .7) + emperor(332, 236, .8)),
+    it(ocPill(200, 40, 280, 'Manchots empereurs', 22))
+  ]);
+}
+function orcaArt() {
+  return scene('Une orque près de manchots sur la glace', grad('#7CD0F5', '#0B3A66'), [
+    it(waves(70, '#fff', .45) + waves(280, '#fff', .3)),
+    it('<path d="M0 70 H150 Q130 110 100 120 H0Z" fill="#fff" stroke="#9CC7EE" stroke-width="3"/>'),
+    it(penguin(40, 74, .8) + penguin(96, 80, .7)),
+    it('<g transform="translate(250 190)"><path d="M-96 0 Q-64 -40 0 -46 Q70 -42 100 -8 L132 -34 L126 4 L136 34 L98 10 Q50 38 -20 36 Q-70 32 -96 0Z" fill="#14284B"/><path d="M-70 8 Q-30 30 20 28 Q60 26 80 8 Q40 14 -10 14 Q-50 14 -70 8Z" fill="#fff"/><ellipse cx="-50" cy="-12" rx="14" ry="8" fill="#fff" transform="rotate(-14 -50 -12)"/><circle cx="-56" cy="-12" r="4" fill="#14284B"/><path d="M-4 -46 L22 -90 L36 -42Z" fill="#14284B"/><path d="M-90 6 Q-72 14 -50 12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>'),
+    bubbles([[330, 110, 6], [346, 90, 4]]),
+    it(ocPill(300, 40, 120, 'Orque', 22))
+  ]);
+}
+function poleSouthArt() {
+  var flags = '', cols = ['#E63946', '#4D96FF', '#FFC93C', '#2FA84F', '#E63946', '#4D96FF', '#FFC93C'];
+  cols.forEach(function (c, i) { var x = 40 + i * 53; flags += '<rect x="' + (x - 1.5) + '" y="206" width="3" height="40" fill="#8A6B4A"/><path d="M' + x + ' 206 h22 v14 h-22Z" fill="' + c + '"/>'; });
+  return scene('Le pôle Sud, au fin fond du monde', grad('#CFE8FA', '#F4FAFF'), [
+    cloud(300, 44, .7),
+    it('<path d="M0 300 V210 Q100 196 200 208 T400 204 V300Z" fill="#fff"/><path d="M0 300 V256 Q120 240 240 256 T400 250 V300Z" fill="#DCEBFA"/>'),
+    it(flags),
+    it('<rect x="192" y="76" width="16" height="170" fill="#fff" stroke="#14284B" stroke-width="3"/><path d="M192 106 H208 M192 136 H208 M192 166 H208 M192 196 H208 M192 226 H208" stroke="#E63946" stroke-width="10"/><circle cx="200" cy="66" r="18" fill="#C9D0DA" stroke="#14284B" stroke-width="3"/><circle cx="194" cy="60" r="5" fill="#fff"/>'),
+    it(ocPill(200, 276, 150, 'Pôle Sud', 24))
+  ]);
+}
+function northArrowArt() {
+  var ticks = '';
+  for (var i = 0; i < 16; i++) { var a = i * Math.PI / 8; ticks += '<path d="M' + (200 + 88 * Math.sin(a)).toFixed(1) + ' ' + (150 - 88 * Math.cos(a)).toFixed(1) + ' L' + (200 + 100 * Math.sin(a)).toFixed(1) + ' ' + (150 - 100 * Math.cos(a)).toFixed(1) + '" stroke="#14284B" stroke-width="' + (i % 4 ? 3 : 5) + '"/>'; }
+  return scene('Tous les chemins partent vers le nord', grad('#FFE9C7', '#FFF6E4'), [
+    it('<circle cx="200" cy="150" r="104" fill="#fff" stroke="#14284B" stroke-width="5"/>' + ticks),
+    it('<path d="M200 56 L226 150 L200 138 L174 150Z" fill="#E63946" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/><path d="M200 244 L226 150 L200 162 L174 150Z" fill="#C9D0DA" stroke="#14284B" stroke-width="3" stroke-linejoin="round"/>'),
+    it(label(200, 44, 'Nord', 34)),
+    it(penguin(330, 262, 1.1) + '<path d="M300 220 q-24 -30 -50 -42" fill="none" stroke="#14284B" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 9"/>')
+  ]);
+}
+function coverAntArt() {
+  return scene('Des manchots devant un iceberg', grad('#38BDF8', '#0B6BA8'), [
+    sparkle(30, 30, 3), sparkle(370, 56, 3), sparkle(340, 20, 2.5),
+    it(waves(210, '#fff', .45) + waves(260, '#fff', .3)),
+    it(iceberg(250, 230, 1.5)),
+    it(penguin(110, 262, 1.7) + penguin(60, 270, 1.2))
+  ]);
+}
+function finAntArt() {
+  return scene('Fin du voyage', grad('#CFE8FA', '#F4FAFF'), [
+    it(label(200, 100, 'Fin', 72)),
+    it('<path d="M0 300 V210 Q100 196 200 208 T400 204 V300Z" fill="#fff"/>'),
+    it(emperor(130, 270, 1.4) + penguin(280, 272, 1.2) + penguin(330, 262, .8))
+  ]);
+}
+function antTile(kind) {
+  return function () {
+    var inner = kind === 0 ? '<circle cx="200" cy="150" r="104" fill="#7CD0F5" stroke="#14284B" stroke-width="5"/><path d="M118 156 Q132 100 190 94 Q252 92 288 132 Q298 176 248 196 Q192 212 140 194 Q114 180 118 156Z" fill="#fff"/>'
+      : kind === 1 ? '<ellipse cx="200" cy="268" rx="130" ry="20" fill="#fff"/>' + emperor(200, 262, 3)
+      : '<rect x="190" y="76" width="20" height="170" fill="#fff" stroke="#14284B" stroke-width="4"/><path d="M190 110 H210 M190 150 H210 M190 190 H210" stroke="#E63946" stroke-width="12"/><circle cx="200" cy="64" r="22" fill="#C9D0DA" stroke="#14284B" stroke-width="4"/><path d="M0 250 H400" stroke="#fff" stroke-width="40"/>';
+    return '<svg viewBox="0 0 400 300" role="img" aria-label="' + ['L’Antarctique', 'Les manchots', 'Le pôle Sud'][kind] + '"><rect width="400" height="300" fill="#DCEBFA"/>' + inner + '</svg>';
+  };
+}
+
+STORIES.splice(6, 0, {
+  title: 'Voyage en Antarctique', coverArt: coverAntArt, mark: '?',
+  tiles: [antTile(0), antTile(1), antTile(2)],
+  scenes: [
+    { tile: -1, text: 'J’ai adoré l’Océanie ! Ouais, direction l’Antarctique !', art: antIntroArt },
+
+    { tile: 0, text: 'Voici le désert de l’Antarctique. 1 500 habitants. Capitale : aucune. Langue principale : aucune. Monnaie : aucune.', art: antCardArt },
+    { tile: 0, text: 'D’accord. Donc il y a pas de capitale ici. Ni de langue principale, ni de monnaie ? Oui.', art: antNoneArt },
+    { tile: 0, text: 'Voici le désert de l’Antarctique. Ce n’est pas un désert. Un désert n’est pas toujours chaud. L’Antarctique est bien un désert.', art: icyDesertArt },
+
+    { tile: 1, text: 'Oh ! Des manchots ! Voici des manchots empereurs.', art: emperorsArt },
+    { tile: 1, text: 'Un orque ! Que mangent les orques ? Par exemple, des manchots. Oh, non !', art: orcaArt },
+
+    { tile: 2, text: 'Allons au… pôle Sud. Voici le pôle Sud. OK. On est au fin fond du monde ? Oui.', art: poleSouthArt },
+    { tile: 2, text: 'Maintenant, où vous irez, ce sera vers le nord. Hein !', art: northArrowArt },
+    { tile: 2, text: 'Fin', art: finAntArt }
+  ]
+});
+
 /* ---------- Étagère ---------- */
 var shelf = document.getElementById('shelf');
 STORIES.forEach(function (s, i) {

@@ -19,7 +19,7 @@ et des dessins SVG apparaissent au fil de la narration. Projet personnel de Paul
    Chaque `it(...)` est un élément qui « surgit » à son tour (ordre d'apparition = ordre dans le tableau).
 2. **Drapeaux** : objet `FL` (`FL.code = [largeur, hauteur, svg]`), `flagArt`, `flagScene`, `flagSceneA`, `flagTile`.
 3. **Histoires** : tableau `STORIES` (3 contes d'origine), puis un bloc par voyage qui s'insère avec
-   `STORIES.unshift(...)` / `STORIES.splice(i, 0, ...)`. Ordre final affiché : Europe, Afrique, Asie, Amérique du Nord, Amérique du Sud, Océanie, puis les 3 contes.
+   `STORIES.unshift(...)` / `STORIES.splice(i, 0, ...)`. Ordre final affiché : Europe, Afrique, Asie, Amérique du Nord, Amérique du Sud, Océanie, Antarctique, puis les 3 contes.
 4. **Étagère** : construit les cartes (durée estimée = nombre de caractères / 14).
 5. **Lecteur** : `openStory`, `start`, synthèse vocale du navigateur (`speechSynthesis`, voix française de l'appareil), bande de cases en bas.
 
@@ -80,6 +80,9 @@ STORIES.splice(3, 0, {
   « fidjien (hindi des îles Fidji) » (le hindi fidjien est une langue distincte du fidjien) ;
   danse de guerre fidjienne : « simbé » (le nom usuel est « cibi », prononcé « thimbi ») ;
   « Bienvenue en Vanuatu » / « Les Vanuatu » (le Vanuatu est un seul pays).
+- Antarctique : « 1 500 habitants » (la population varie : environ 1 000 en hiver, 5 000 en été, des scientifiques) ; pas de drapeau officiel (cases et dessins sans drapeau) ;
+  « Un orque » (on dit aussi « une orque ») ; texte corrigé : « Que mangent les orques ? » et « où vous irez ».
+  La ligne de crédits en fin de fichier Pages (voix, nom des histoires) n'a pas été mise dans l'histoire : elle contient un nom complet, à ne pas publier sans accord de Paul.
 - Hauteurs vérifiées en nov. 2026 : Mont-Blanc 4 807 m, tour Eiffel 330 m.
 
 ## Hébergement
