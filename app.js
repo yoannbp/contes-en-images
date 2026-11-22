@@ -2119,6 +2119,18 @@ function finAntArt() {
     it(emperor(130, 270, 1.4) + penguin(280, 272, 1.2) + penguin(330, 262, .8))
   ]);
 }
+function creditsArt() {
+  var names = [['Europe', '#6DBB5A'], ['Afrique', '#FF9F1C'], ['Asie', '#FF5D8F'], ['Amérique du Nord', '#4D96FF'], ['Amérique du Sud', '#2FA84F'], ['Océanie', '#38BDF8'], ['Antarctique', '#9CC7EE']], out = '';
+  names.forEach(function (n, i) {
+    var col = i % 2, row = Math.floor(i / 2), w = 176, x = 18 + col * 188, y = 98 + row * 42;
+    if (i === 6) x = 112;
+    out += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="34" rx="17" fill="' + n[1] + '" stroke="#14284B" stroke-width="3"/>' + label(x + w / 2, y + 24, n[0], 19, '#14284B');
+  });
+  return scene('Crédits : voix de Paul, vous avez écouté les 7 continents', grad('#CFE8FA', '#F4FAFF'), [
+    it(label(200, 46, 'Crédits', 38)), it(label(200, 80, 'Voix : Paul', 24, '#47608A')),
+    it(out)
+  ]);
+}
 function antTile(kind) {
   return function () {
     var inner = kind === 0 ? '<circle cx="200" cy="150" r="104" fill="#7CD0F5" stroke="#14284B" stroke-width="5"/><path d="M118 156 Q132 100 190 94 Q252 92 288 132 Q298 176 248 196 Q192 212 140 194 Q114 180 118 156Z" fill="#fff"/>'
@@ -2143,7 +2155,8 @@ STORIES.splice(6, 0, {
 
     { tile: 2, text: 'Allons au… pôle Sud. Voici le pôle Sud. OK. On est au fin fond du monde ? Oui.', art: poleSouthArt },
     { tile: 2, text: 'Maintenant, où vous irez, ce sera vers le nord. Hein !', art: northArrowArt },
-    { tile: 2, text: 'Fin', art: finAntArt }
+    { tile: 2, text: 'Fin', art: finAntArt },
+    { tile: 2, text: 'Crédits, voix de Paul. Vous avez écouté les 7 continents.', art: creditsArt }
   ]
 });
 

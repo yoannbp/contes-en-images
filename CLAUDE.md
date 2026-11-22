@@ -82,7 +82,7 @@ STORIES.splice(3, 0, {
   « Bienvenue en Vanuatu » / « Les Vanuatu » (le Vanuatu est un seul pays).
 - Antarctique : « 1 500 habitants » (la population varie : environ 1 000 en hiver, 5 000 en été, des scientifiques) ; pas de drapeau officiel (cases et dessins sans drapeau) ;
   « Un orque » (on dit aussi « une orque ») ; texte corrigé : « Que mangent les orques ? » et « où vous irez ».
-  La ligne de crédits en fin de fichier Pages (voix, nom des histoires) n'a pas été mise dans l'histoire : elle contient un nom complet, à ne pas publier sans accord de Paul.
+  Crédits après « Fin » (texte de Paul) : « Crédits, voix de Paul. Vous avez écouté les 7 continents. » (écran avec les 7 continents).
 - Hauteurs vérifiées en nov. 2026 : Mont-Blanc 4 807 m, tour Eiffel 330 m.
 
 ## Hébergement
