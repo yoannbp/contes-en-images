@@ -28,8 +28,28 @@ function crocArt() {
     '<path d="M0 270 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="3"/>' +
   '</svg>';
 }
+function candyArt() {
+  var id = 'cc' + (++gid), bg = 'cb' + gid;
+  return '<svg viewBox="0 0 400 300" role="img" aria-label="Un gros bonbon rayé avec son papier">' +
+    '<defs><linearGradient id="' + bg + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD6E8"/><stop offset="1" stop-color="#FFF3DC"/></linearGradient>' +
+    '<clipPath id="' + id + '"><circle cx="200" cy="150" r="64"/></clipPath></defs>' +
+    '<rect width="400" height="300" fill="url(#' + bg + ')"/>' +
+    '<g fill="#fff" opacity=".9"><path d="M60 60 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5Z"/><path d="M340 70 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4Z"/><path d="M330 236 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5Z"/><path d="M70 232 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4Z"/></g>' +
+    '<ellipse cx="200" cy="246" rx="96" ry="12" fill="#14284B" opacity=".12"/>' +
+    '<path d="M138 150 L72 108 Q60 150 72 192Z" fill="#FF8FB8" stroke="#14284B" stroke-width="4" stroke-linejoin="round"/>' +
+    '<path d="M262 150 L328 108 Q340 150 328 192Z" fill="#FF8FB8" stroke="#14284B" stroke-width="4" stroke-linejoin="round"/>' +
+    '<path d="M110 140 L82 124 M110 150 L78 150 M110 160 L82 176 M290 140 L318 124 M290 150 L322 150 M290 160 L318 176" stroke="#14284B" stroke-width="3" stroke-linecap="round" opacity=".55"/>' +
+    '<circle cx="200" cy="150" r="64" fill="#FF5D8F"/>' +
+    '<g clip-path="url(#' + id + ')"><g stroke="#fff" stroke-width="14" stroke-linecap="round">' +
+      '<path d="M120 80 L280 220"/><path d="M96 118 L238 250"/><path d="M150 62 L300 192"/><path d="M104 178 L196 266"/><path d="M200 50 L304 150"/></g></g>' +
+    '<circle cx="200" cy="150" r="64" fill="none" stroke="#14284B" stroke-width="4"/>' +
+    '<path d="M162 112 Q176 96 196 92" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".85"/>' +
+    '<circle cx="58" cy="196" r="16" fill="#8FD0F0" stroke="#14284B" stroke-width="3"/><circle cx="330" cy="40" r="14" fill="#FFD23F" stroke="#14284B" stroke-width="3"/>' +
+  '</svg>';
+}
 var COMPTINES = [
-  { title: 'Ah ! les crocodiles', uri: 'spotify:track:5jjltOC5Jzto54fcojObdK', art: crocArt }
+  { title: 'Ah ! les crocodiles', uri: 'spotify:track:5jjltOC5Jzto54fcojObdK', art: crocArt },
+  { title: 'Ah ! vous dirai-je, maman', uri: 'spotify:track:79dF82cCKxxrO7I05CykxP', art: candyArt }
 ];
 
 var $ = function (id) { return document.getElementById(id); };
