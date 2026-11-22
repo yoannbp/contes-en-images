@@ -51,7 +51,9 @@ STORIES.splice(3, 0, {
 - Musique : lecteur intégré Spotify (iFrame API), visible en bas de l'écran. Non connecté à Spotify : aperçu de 30 s seulement. Pas de fichier audio dans le dépôt.
 - Dans le lecteur : image en grand, trait blanc en bas qui se remplit d'orange, temps écoulé à gauche, temps restant à droite.
 - Les identifiants Spotify viennent d'une recherche web (open.spotify.com) : non écoutés ni vérifiés par Claude.
-- Comptinios n'est pas dans l'artifact (le lien est retiré par `scripts/build_artifact.py`).
+- Comptinios a aussi un artifact séparé (`https://claude.ai/artifact/EfQCPK6Zmq3CMwJpeC34vS`, construit par `scripts/build_comptinios_artifact.py`).
+  Dans l'artifact, le lecteur Spotify est bloqué (la sécurité des artifacts refuse le script de open.spotify.com) : on y voit les images et la barre, mais pas de musique.
+  La musique ne marche que sur le site GitHub Pages. L'artifact de Contes en images mène à cet artifact (`build_artifact.py` prend son URL en second argument).
 
 ## Vérifier
 - `python3 scripts/check.py` : rend toutes les scènes, cases et couvertures et signale les erreurs JavaScript.
@@ -88,7 +90,8 @@ Ouvrir via http(s) ou directement `index.html` ; les polices Google (Fredoka, Nu
 1. Forcer la mise à jour de GitHub Pages : changer le commentaire daté en bas de `index.html` (`<!-- maj : AAAA-MM-JJ HH:MM -->`,
    obtenir l’heure avec `date '+%Y-%m-%d %H:%M'`) et changer le `?v=AAAAMMJJHHMM` des liens `style.css` et `app.js` de `index.html` et de `comptinios/index.html`
    (contourne le cache de Safari). Puis commiter et pousser directement sur `main` (voir « Process Git »).
-2. Artifact : `python3 scripts/build_artifact.py <dossier-temporaire>/contes.html`, puis publier ce fichier avec l’outil Artifact
+2. Artifacts : `python3 scripts/build_comptinios_artifact.py <dossier-temporaire>/comptinios.html https://claude.ai/artifact/HdLRtKmshTXRq7rwKNtuDm`, publié sur
+   `https://claude.ai/artifact/EfQCPK6Zmq3CMwJpeC34vS`. Puis `python3 scripts/build_artifact.py <dossier-temporaire>/contes.html https://claude.ai/artifact/EfQCPK6Zmq3CMwJpeC34vS`, puis publier ce fichier avec l’outil Artifact
    sur l’URL existante `https://claude.ai/artifact/HdLRtKmshTXRq7rwKNtuDm` (même lien, pas de nouvel artifact).
    Si la publication est refusée, lire la version en ligne, vérifier qu’elle n’a pas d’autres changements, puis republier.
 3. Répondre avec le lien de l’artifact.
