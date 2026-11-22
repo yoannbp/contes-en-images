@@ -47,9 +47,35 @@ function candyArt() {
     '<circle cx="58" cy="196" r="16" fill="#8FD0F0" stroke="#14284B" stroke-width="3"/><circle cx="330" cy="40" r="14" fill="#FFD23F" stroke="#14284B" stroke-width="3"/>' +
   '</svg>';
 }
+function nightingaleArt() {
+  var bg = 'nb' + (++gid);
+  return '<svg viewBox="0 0 400 300" role="img" aria-label="Un rossignol qui chante sur une branche, la nuit">' +
+    '<defs><linearGradient id="' + bg + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17284F"/><stop offset="1" stop-color="#4A4F8F"/></linearGradient></defs>' +
+    '<rect width="400" height="300" fill="url(#' + bg + ')"/>' +
+    '<circle cx="320" cy="64" r="44" fill="#FFF1B8" opacity=".16"/><circle cx="320" cy="64" r="30" fill="#FFF1B8"/><circle cx="310" cy="56" r="6" fill="#F2DC8F"/><circle cx="330" cy="72" r="8" fill="#F2DC8F"/>' +
+    '<g fill="#FFF3B0"><path d="M50 50 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3Z"/><path d="M130 90 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2Z"/><path d="M250 36 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3Z"/><path d="M60 150 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2Z"/></g>' +
+    '<path d="M0 214 Q80 196 160 206 T320 198 T400 206" fill="none" stroke="#5B3A29" stroke-width="12" stroke-linecap="round"/>' +
+    '<g fill="#3C9A4A"><ellipse cx="40" cy="198" rx="20" ry="8" transform="rotate(-30 40 198)"/><ellipse cx="86" cy="196" rx="20" ry="8" transform="rotate(25 86 196)"/><ellipse cx="300" cy="190" rx="22" ry="8" transform="rotate(-25 300 190)"/><ellipse cx="350" cy="196" rx="20" ry="8" transform="rotate(25 350 196)"/></g>' +
+    '<g transform="translate(190 160)">' +
+      '<path d="M-30 14 Q-90 30 -112 70 Q-70 64 -26 32Z" fill="#8A5A34" stroke="#5B3A29" stroke-width="3" stroke-linejoin="round"/>' +
+      '<path d="M-14 38 L-14 52 M10 38 L10 52" stroke="#E8B88A" stroke-width="5" stroke-linecap="round"/>' +
+      '<ellipse cx="0" cy="8" rx="48" ry="38" fill="#A8703E" stroke="#5B3A29" stroke-width="3" transform="rotate(-10)"/>' +
+      '<path d="M-10 28 Q10 46 36 24 Q20 6 -10 12Z" fill="#F0D7B0"/>' +
+      '<path d="M-36 6 Q-6 -16 26 8 Q4 26 -30 20Z" fill="#7A4A26" stroke="#5B3A29" stroke-width="2.5" stroke-linejoin="round"/>' +
+      '<circle cx="44" cy="-24" r="24" fill="#A8703E" stroke="#5B3A29" stroke-width="3"/>' +
+      '<path d="M30 -20 Q44 -2 62 -14 Q56 -4 44 4 Q34 -2 30 -20Z" fill="#F0D7B0"/>' +
+      '<path d="M66 -30 L96 -40 L68 -22Z" fill="#E8A93A" stroke="#5B3A29" stroke-width="2.5" stroke-linejoin="round"/><path d="M68 -22 L94 -16 L66 -14Z" fill="#E8A93A" stroke="#5B3A29" stroke-width="2.5" stroke-linejoin="round"/>' +
+      '<circle cx="50" cy="-30" r="5.6" fill="#fff"/><circle cx="52" cy="-30" r="3" fill="#14284B"/>' +
+    '</g>' +
+    '<g fill="#FFF3B0" stroke="#FFF3B0" stroke-width="3"><g transform="translate(300 134)"><ellipse rx="8" ry="6" transform="rotate(-20)" stroke="none"/><path d="M7 -2 V-26 Q18 -22 16 -12" fill="none" stroke-linecap="round"/></g>' +
+    '<g transform="translate(338 168)" fill="#FFC93C" stroke="#FFC93C"><ellipse rx="7" ry="5" transform="rotate(-20)" stroke="none"/><path d="M6 -2 V-22 Q16 -18 15 -10" fill="none" stroke-linecap="round"/></g>' +
+    '<g transform="translate(272 96)" fill="#fff" stroke="#fff"><ellipse rx="7" ry="5" transform="rotate(-20)" stroke="none"/><path d="M6 -2 V-22 Q16 -18 15 -10" fill="none" stroke-linecap="round"/></g></g>' +
+  '</svg>';
+}
 var COMPTINES = [
   { title: 'Ah ! les crocodiles', uri: 'spotify:track:5jjltOC5Jzto54fcojObdK', art: crocArt },
-  { title: 'Ah ! vous dirai-je, maman', uri: 'spotify:track:79dF82cCKxxrO7I05CykxP', art: candyArt }
+  { title: 'Ah ! vous dirai-je, maman', uri: 'spotify:track:79dF82cCKxxrO7I05CykxP', art: candyArt },
+  { title: 'À la claire fontaine', uri: 'spotify:track:4aDwh1E15pW1nXRxbvXqHY', art: nightingaleArt }
 ];
 
 var $ = function (id) { return document.getElementById(id); };
