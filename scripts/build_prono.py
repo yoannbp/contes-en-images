@@ -72,7 +72,8 @@ function loadVoices() {
   var cur = vs.value;
   vs.innerHTML = '';
   voices.forEach(function (v, i) { var o = document.createElement('option'); o.value = i; o.textContent = v.name + ' (' + v.lang + ')'; vs.appendChild(o); });
-  var def = voices.findIndex(function (v) { return /^fr[-_]FR/i.test(v.lang); });
+  var def = voices.findIndex(function (v) { return /google.*fran/i.test(v.name); });
+  if (def < 0) def = voices.findIndex(function (v) { return /^fr[-_]FR/i.test(v.lang); });
   vs.value = cur || (def >= 0 ? def : 0);
 }
 if (tts) { loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }

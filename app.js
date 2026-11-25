@@ -2180,7 +2180,7 @@ var frVoice = null;
 function pickVoice() {
   if (!tts) return;
   var vs = speechSynthesis.getVoices();
-  frVoice = vs.filter(function (v) { return /^fr[-_]FR/i.test(v.lang); })[0] || vs.filter(function (v) { return /^fr/i.test(v.lang); })[0] || null;
+  frVoice = vs.filter(function (v) { return /google.*fran/i.test(v.name); })[0] || vs.filter(function (v) { return /^fr[-_]FR/i.test(v.lang); })[0] || vs.filter(function (v) { return /^fr/i.test(v.lang); })[0] || null;
 }
 if (tts) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
 function setToggle(s) {
