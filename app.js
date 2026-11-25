@@ -2265,19 +2265,19 @@ function go(n, t) {
 }
 /* Prononciation : mot affiché -> écriture phonétique, appliquée seulement à la voix (pas au texte affiché). */
 var PRONO = {
-  'Gizeh': 'Guizé', 'Taj Mahal': 'Taje Mahal', 'Mumbai': 'Moumbaille', 'Washington D.C.': 'Washinnegtône Di Ci',
-  'Copenhague': 'Copenag', 'Reykjavik': 'Rèkiavique','Guédiawaye': 'Guédiaouaiye', 'Banjul': 'Bandjoul', 'Mumtaz Mahal': 'Moumtaz Mahal',
+  'Gizeh': 'Guizé', 'Taj Mahal': 'Taje Mahal', 'Mumbai': 'Moumbaille', 'Washington D.C.': 'Wachine-tone Di Ci',
+  'Copenhague': 'Copenague', 'Reykjavik': 'Rèkiavique','Guédiawaye': 'Guédiaouaiye', 'Banjul': 'Bandjoul', 'Mumtaz Mahal': 'Moumtaz Mahal',
   'Shah Jahan': 'Chah Djahan', 'Beethoven': 'Bètoveune', 'Bollywood': 'Bolliwoude', 'Big Ben': 'Bigue Bènn',
-  'Westminster': 'ouést-mine-steur', 'Burj Khalifa': 'Bourj Khalifa', 'Abou Dhabi': 'Abou Dabi', 'Jakarta': 'Djakarta',
+  'Westminster': 'ouést-mine-steur', 'Burj Khalifa': 'Bourj Khalifa', 'Abou Dhabi': 'Abou Dhabi', 'Jakarta': 'Djakarta',
   'Brunei': 'Brunéye', 'Fuji': 'Foudji', 'Machu Picchu': 'Matchou Pitchou', 'Salar d’Uyuni': 'Salar d’Ouyouni',
   'Buenos Aires': 'Bouénoce Aéiresse', 'Rio de Janeiro': 'Rio de Janéiro', 'Brasilia': 'Brazilia', 'Montevideo': 'Montévidéo',
-  'La Boca': 'La Boka', 'Sucre': 'Soucré', 'San José': 'San José', 'Kingston': 'Kinneugstonne', 'Nassau': 'Nasso',
+  'La Boca': 'La Boka', 'Sucre': 'Soucré', 'San José': 'San José', 'Kingston': 'Kine-gstone', 'Nassau': 'Nasso',
   'New York': 'Niou Yorque', 'New Delhi': 'Niou Dèli', 'Sierra Leone': 'Siéra Léone', 'Tunis': 'Tunisse', 'Dubaï': 'Doubaille',
-  'N’Djamena': 'Ndjaména', 'Niamey': 'Niamé', 'Abuja': 'Abouja', 'Mogadiscio': 'Mogadichio', 'Khartoum': 'Kartoum', 'Lagos': 'Lagosse', 'Accra': 'Akra',
+  'N’Djamena': 'Ndjaména', 'Niamey': 'Niamé', 'Abuja': 'Abouja', 'Mogadiscio': 'Mogadisquio', 'Khartoum': 'Kartoum', 'Lagos': 'Lagosse', 'Accra': 'Akra',
   'Erevan': 'Érévane', 'Ebla': 'Ébla', 'Omeyyades': 'Omèyades', 'Ryad': 'Riade', 'Mohammad': 'Mohamade',
-  'Canberra': 'Canbèra', 'Sydney': 'Sidnée', 'Hobart': 'Hobarte', 'Wellington': 'Ouélingtonne', 'Auckland': 'Okeulande', 'Nuku’alofa': 'Noukou alofa',
-  'Funafuti': 'Founafouti', 'Tuvalu': 'Touvalou', 'Suva': 'Souva', 'Port Moresby': 'Porte Morèzebi', 'Nauru': 'Naourou', 'Yaren': 'Yarène', 'Vanuatu': 'Vanouatou',
-  'Let’s go': 'Lètse go !', 'fish and chips': 'fiche ènd tchipse', 'OK': 'Oké', 'Wow': 'Woo'
+  'Canberra': 'Canbèra', 'Sydney': 'Sydney', 'Hobart': 'Hobare', 'Wellington': 'Ouéline-tonne', 'Auckland': 'Oque-lande', 'Nuku’alofa': 'Noukou alofa',
+  'Funafuti': 'Founafouti', 'Tuvalu': 'Touvalou', 'Suva': 'Souva', 'Port Moresby': 'Pore Morèzebi', 'Nauru': 'Noru', 'Yaren': 'Yarène', 'Vanuatu': 'Vanouatou',
+  'Let’s go': 'Lètse go', 'fish and chips': 'fiche ènd tchipse', 'OK': 'Oké', 'Wow': 'Woo'
 };
 function spoken(text) {
   var keys = Object.keys(PRONO);
